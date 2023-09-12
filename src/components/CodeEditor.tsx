@@ -27,7 +27,7 @@ const editorOptions = {
   showPrintMargin: false
 }
 
-const editorOnLoad = (editor) => {
+const editorOnLoad = (editor: any) => {
   editor.renderer.setScrollMargin(10, 10, 0, 0)
   editor.moveCursorTo(0, 0)
 }
@@ -47,7 +47,9 @@ export default function CodeEditor(props: CodeEditorProps) {
     setShowOutput(false)
   }, [code])
 
-  const colorMode = 'light'
+  let colorMode: 'dark' | 'light';
+
+  colorMode = 'light';
 
   const {
     runPython,
@@ -111,7 +113,7 @@ export default function CodeEditor(props: CodeEditorProps) {
         name="CodeBlock"
         fontSize="0.9rem"
         className="min-h-[7rem] overflow-clip rounded-md shadow-md m-4 p-2"
-        theme={colorMode === 'dark' ? 'idle_fingers' : 'textmate'}
+        theme="textmate"
         onChange={(newValue) => setInput(newValue)}
         width="100%"
         maxLines={Infinity}
@@ -120,7 +122,9 @@ export default function CodeEditor(props: CodeEditorProps) {
         setOptions={editorOptions}
       />
 
-      {isAwaitingInput && <Input prompt={prompt} onSubmit={sendInput} />}
+      {isAwaitingInput && prompt !== undefined && (
+        <Input prompt={prompt} onSubmit={sendInput} />
+      )}
 
       {showOutput && (
         <pre className="mt-4 text-left p-2 m-4 mr-0 rounded-md bg-[#f6f7f8]">
