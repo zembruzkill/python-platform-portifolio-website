@@ -1,10 +1,15 @@
 'use client'
 
+// Add logo to the top of the page
+import Image from 'next/image'
+import logo from '../assets/logo.svg'
+
 import { useEffect } from 'react'
 import { PythonProvider } from 'react-py'
 
 import Codeblock from '../components/CodeBlock'
 import CodeEditor from '../components/CodeEditor'
+import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
 export default function Home() {
 
@@ -27,6 +32,16 @@ export default function Home() {
 
   return (
     <>
+    <div className='bg-[#1c2d62] min-h-90'>
+      <Image 
+        className='ml-4'
+        src={logo}
+        alt="Picture of the author"
+        width={250}
+        height={250}
+      />
+    </div>
+    
       <div className='h-screen bg-white'>
         <PythonProvider packages={packages}>
             {/* <Codeblock /> */}
