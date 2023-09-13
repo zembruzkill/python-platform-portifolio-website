@@ -18,7 +18,6 @@ import 'ace-builds/src-noconflict/theme-textmate'
 
 import 'ace-builds/src-noconflict/theme-idle_fingers'
 import 'ace-builds/src-noconflict/ext-language_tools'
-import { ArrowDownLeftIcon, ArrowRightIcon } from '@heroicons/react/20/solid'
 
 const editorOptions = {
   enableBasicAutocompletion: true,
@@ -79,7 +78,7 @@ export default function CodeEditor(props: CodeEditorProps) {
   }
 
   return (
-    <div className="relative mb-10 flex flex-col space-y-2">
+    <div className="relative flex flex-col space-y-2">
       <Controls
         items={[
           {
@@ -95,11 +94,6 @@ export default function CodeEditor(props: CodeEditorProps) {
             icon: ArrowPathIcon,
             onClick: reset,
             disabled: isRunning
-          },
-          {
-            label: 'Next Exercise',
-            icon: ArrowRightIcon,
-            onClick: reset
           }
         ]}
         isAwaitingInput={isAwaitingInput}
@@ -127,7 +121,7 @@ export default function CodeEditor(props: CodeEditorProps) {
       )}
 
       {showOutput && (
-        <pre className="mt-4 text-left p-2 m-4 mr-0 rounded-md bg-[#f6f7f8]">
+        <pre className=" w-full mt-4 text-left p-2 m-4 rounded-md bg-white">
           <code className='text-blue-500'>{stdout}</code>
           <code className="text-red-500">{stderr}</code>
         </pre>
