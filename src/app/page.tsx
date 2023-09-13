@@ -7,9 +7,8 @@ import logo from '../assets/logo.svg'
 import { useEffect } from 'react'
 import { PythonProvider } from 'react-py'
 
-import Codeblock from '../components/CodeBlock'
+
 import CodeEditor from '../components/CodeEditor'
-import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
 export default function Home() {
 
