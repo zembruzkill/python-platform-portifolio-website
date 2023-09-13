@@ -130,7 +130,7 @@ export default function CodeEditor(props: CodeEditorProps) {
       )}
 
       
-        <pre className={`w-full min-h-[10rem] p-4 text-left rounded-md ${showOutput && 'bg-white '}`}>
+        <pre className={`w-full min-h-[5rem] p-4 text-left rounded-md ${showOutput && 'bg-white '}`}>
         {showOutput && (
           <>
             <code className='text-blue-500'>{stdout}</code>

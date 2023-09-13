@@ -1,6 +1,9 @@
 'use client'
 
 import {useState } from 'react'
+
+import { useRouter } from 'next/navigation';
+
 import { Dialog, Popover } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -10,13 +13,14 @@ import logo from '../../../assets/logo.svg'
 import Image from 'next/image'
 
 export default function Example() {
+  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gradient-to-r from-[#172645] to-[#ff80b5]">
+    <header className='bg-gradient-to-r from-[#172645] to-[#ff80b5]'>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a onClick={() => router.push('/')} className="-m-1.5 p-1.5">
           <div className=''>
             <Image 
               className='ml-4'
@@ -40,29 +44,42 @@ export default function Example() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
 
-          <a href="#" className="text-sm font-semibold leading-6 text-white hover:text-[#C6B15E]">
+          <a 
+          onClick={() => router.push('/courses')}
+          className="text-md font-semibold leading-6 text-white hover:text-yellow-300">
             Cursos
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white hover:text-[#C6B15E]">
+          <a 
+          onClick={() => router.push('/pricing')}
+          className="text-md font-semibold leading-6 text-white hover:text-yellow-300">
             Preços
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white hover:text-[#C6B15E]">
+          <a 
+          onClick={() => router.push('/blog')}
+          className="text-md font-semibold leading-6 text-white hover:text-yellow-300">
             Blog
           </a>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-white hover:text-[#C6B15E]">
-            Log in <span aria-hidden="true">&rarr;</span>
+        <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
+          <a onClick={() => router.push('/sign-in')} className="text-md font-semibold leading-6 text-white hover:text-yellow-300">
+            Entrar
           </a>
+          <button
+            onClick={() => router.push('/sign-up')}
+            type="button"
+            className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 bg-yellow-300 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+            Criar Conta Grátis
+          </button>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-[#172645] to-[#ff80b5] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a className="-m-1.5 p-1.5">
             <div className=''>
-            <Image 
+            <Image
+              onClick={() => router.push('/courses')}
               className='ml-4'
               src={logo}
               alt="Logo of the website"
@@ -84,31 +101,37 @@ export default function Example() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-[#C6B15E]"
+                  onClick={() => router.push('/courses')}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow-300"
                 >
-                  Features
+                  Cursos
                 </a>
                 <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-[#C6B15E]"
+                  onClick={() => router.push('/pricing')}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow-300"
                 >
-                  Marketplace
+                  Preços
                 </a>
                 <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-[#C6B15E]"
+                  onClick={() => router.push('/blog')}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow-300"
                 >
-                  Company
+                  Blog
                 </a>
               </div>
               <div className="">
                 <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-[#C6B15E]"
+                  onClick={() => router.push('/sign-in')}
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-yellow-300"
                 >
-                  Log in
+                  Entrar
                 </a>
+                <button
+                  onClick={() => router.push('/sign-up')}
+                  type="button"
+                  className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 bg-yellow-300 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                  Criar Conta Grátis
+                </button>
               </div>
             </div>
           </div>
