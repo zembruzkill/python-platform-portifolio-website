@@ -9,7 +9,7 @@ import { usePython } from 'react-py'
 import Controls from './Controls'
 import Loader from './Loader'
 import Input from './Input'
-import { ArrowPathIcon, PlayIcon, StopIcon } from '@heroicons/react/24/solid'
+import { ArrowPathIcon, PlayIcon, StopIcon, CodeBracketIcon} from '@heroicons/react/24/solid'
 
 import AceEditor from "react-ace";
 
@@ -40,6 +40,14 @@ export default function CodeEditor(props: CodeEditorProps) {
   const { code, packages } = props
   const [input, setInput] = useState(code.trimEnd())
   const [showOutput, setShowOutput] = useState(false)
+
+  const tabs = [
+    {
+      name: 'Editor de Código',
+      icon: <CodeBracketIcon className="mr-3 h-5 w-5 stroke-inherit" />,
+      component: <CodeEditor code={code} />
+    }
+  ]
 
   useEffect(() => {
     setInput(code.trimEnd())
@@ -78,6 +86,7 @@ export default function CodeEditor(props: CodeEditorProps) {
   }
 
   return (
+  <>
     <div className="relative flex flex-col space-y-2">
       <Controls
         items={[
@@ -106,7 +115,7 @@ export default function CodeEditor(props: CodeEditorProps) {
         mode="python"
         name="CodeBlock"
         fontSize="0.9rem"
-        className="min-h-[7rem] overflow-clip rounded-md shadow-md m-4 p-2"
+        className="min-h-[7rem] overflow-clip rounded-md shadow-md"
         theme="textmate"
         onChange={(newValue) => setInput(newValue)}
         width="100%"
@@ -120,12 +129,16 @@ export default function CodeEditor(props: CodeEditorProps) {
         <Input prompt={prompt} onSubmit={sendInput} />
       )}
 
-      {showOutput && (
-        <pre className=" w-full mt-4 text-left p-2 m-4 rounded-md bg-white">
-          <code className='text-blue-500'>{stdout}</code>
-          <code className="text-red-500">{stderr}</code>
+      
+        <pre className={`w-full min-h-[10rem] p-4 text-left rounded-md ${showOutput && 'bg-white '}`}>
+        {showOutput && (
+          <>
+            <code className='text-blue-500'>{stdout}</code>
+            <code className="text-red-500">{stderr}</code>
+          </>
+        )}
         </pre>
-      )}
     </div>
+  </>
   )
 }
