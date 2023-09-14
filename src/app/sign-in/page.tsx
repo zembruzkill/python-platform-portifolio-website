@@ -232,7 +232,7 @@ const SignIn = () => {
                       <input
                         type="submit"
                         value="Login"
-                        className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 font-bold text-black transition hover:bg-opacity-90"
+                        className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 font-bold text-black transition hover:bg-opacity-60"
                       />
                       <div onClick={() => router.push('/forgot-password')} className="flex items-center pt-2">
                       <button className="pr-2 hover:text-indigo-600">Esqueceu sua senha?</button>

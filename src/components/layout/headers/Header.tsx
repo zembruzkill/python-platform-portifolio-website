@@ -23,7 +23,7 @@ export default function Header(props: any) {
           <a onClick={() => router.push('/')} className="-m-1.5 p-1.5">
           <div className=''>
             <Image 
-              className='ml-4'
+              className=''
               src={logo}
               alt="Logo of the website"
               width={220}

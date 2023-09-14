@@ -232,7 +232,7 @@ const SignUp = () => {
                       <input
                         type="submit"
                         value="Criar conta grátis"
-                        className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 font-bold text-black transition hover:bg-opacity-90"
+                        className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 font-bold text-black transition hover:bg-opacity-60"
                       />
                     </div>
 
