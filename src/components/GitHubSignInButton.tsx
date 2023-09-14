@@ -22,5 +22,3 @@ function GitHubSignInButton(props: any) {
 }
 
 export default GitHubSignInButton
-
-

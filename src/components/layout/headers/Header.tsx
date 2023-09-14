@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 
-import { useRouter } from 'next/navigation';
-
 import { Dialog, Popover } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -12,15 +10,16 @@ import {
 import logo from '../../../assets/logo.svg'
 import Image from 'next/image'
 
+import AuthHeader from '@/components/AuthHeader'
+
 export default function Header(props: any) {
-  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <header className='bg-gradient-to-r from-[#172645] to-[#ff80b5]'>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8">
         <div className="flex lg:flex-1">
-          <a onClick={() => router.push('/')} className="-m-1.5 p-1.5">
+          <a href='/' className="-m-1.5 p-1.5">
             <div className=''>
               <Image
                 className=''
@@ -46,32 +45,22 @@ export default function Header(props: any) {
             </div>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <a
-                onClick={() => router.push('/courses')}
+                href="/courses"
                 className="text-md font-semibold leading-6 text-white hover:text-primary">
                 Cursos
               </a>
               <a
-                onClick={() => router.push('/pricing')}
+                href="/pricing"
                 className="text-md font-semibold leading-6 text-white hover:text-primary">
                 Preços
               </a>
               <a
-                onClick={() => router.push('/blog')}
+                href="/blog"
                 className="text-md font-semibold leading-6 text-white hover:text-primary">
                 Blog
               </a>
             </Popover.Group>
-            <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
-              <a onClick={() => router.push('/sign-in')} className="text-md font-semibold leading-6 text-white hover:text-primary">
-                Entrar
-              </a>
-              <button
-                onClick={() => router.push('/sign-up')}
-                type="button"
-                className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                Criar Conta Grátis
-              </button>
-            </div>
+            <AuthHeader />
           </>
         )}
       </nav>
@@ -79,10 +68,9 @@ export default function Header(props: any) {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-[#172645] to-[#ff80b5] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
-            <a className="-m-1.5 p-1.5">
+            <a href='/' className="-m-1.5 p-1.5">
               <div className=''>
                 <Image
-                  onClick={() => router.push('/courses')}
                   className='ml-4'
                   src={logo}
                   alt="Logo of the website"
@@ -104,19 +92,19 @@ export default function Header(props: any) {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a
-                  onClick={() => router.push('/courses')}
+                  href="/courses"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
                 >
                   Cursos
                 </a>
                 <a
-                  onClick={() => router.push('/pricing')}
+                  href="/pricing"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
                 >
                   Preços
                 </a>
                 <a
-                  onClick={() => router.push('/blog')}
+                  href="/blog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
                 >
                   Blog
@@ -124,17 +112,17 @@ export default function Header(props: any) {
               </div>
               <div className="">
                 <a
-                  onClick={() => router.push('/sign-in')}
+                  href="/sign-in"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-primary"
                 >
                   Entrar
                 </a>
-                <button
-                  onClick={() => router.push('/sign-up')}
+                <a
+                  href="/sign-up"
                   type="button"
                   className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                   Criar Conta Grátis
-                </button>
+                </a>
               </div>
             </div>
           </div>

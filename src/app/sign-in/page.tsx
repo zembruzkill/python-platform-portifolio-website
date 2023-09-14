@@ -1,15 +1,19 @@
-'use client'
-
 import Header from "../../components/layout/headers/Header";
-import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import Link from "next/link";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import GoogleSignInButton from "@/components/GoogleSignInButton";
 import GitHubSignInButton from "@/components/GitHubSignInButton";
+import { getServerSession } from "next-auth";
+import { config } from "../../../lib/auth";
 
-const SignIn = () => {
-  const router = useRouter();
+export default async function SignIn() {
+
+  const session = await getServerSession(config);
+
+  if (session) return redirect('/dashboard');
+
   return (
     <div>
       <div className='h-screen bg-gradient-to-r from-[#F6F6F6] to-[#F6F6F6]'>
@@ -236,14 +240,14 @@ const SignIn = () => {
                         value="Login"
                         className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 font-bold text-black transition hover:bg-opacity-60"
                       />
-                      <div onClick={() => router.push('/forgot-password')} className="flex items-center pt-2">
-                        <button className="pr-2 hover:text-indigo-600">Esqueceu sua senha?</button>
-                        <FaArrowRight onClick={() => router.push('/forgot-password')} size={20} color="rgb(79 70 229)" />
+                      <div className="flex items-center pt-2">
+                        <a href="/forgot-password" className="pr-2 hover:text-indigo-600">Esqueceu sua senha?</a>
+                        <FaArrowRight href="/forgot-password" size={20} color="rgb(79 70 229)" />
                       </div>
                     </div>
 
                     <GoogleSignInButton name={'Login com Google'} />
-                    <GitHubSignInButton name={'Login com GitHub'} />
+                    {/* <GitHubSignInButton name={'Login com GitHub'} /> */}
 
                     <div className=" flex mt-6 text-center text-black items-center">
                       <p>
@@ -252,21 +256,19 @@ const SignIn = () => {
                           Cadastre agora
                         </Link>
                       </p>
-                      <FaArrowRight onClick={() => router.push('/sign-up')} size={20} color="rgb(79 70 229)" />
+                      <FaArrowRight href="/sign-up" size={20} color="rgb(79 70 229)" />
                     </div>
                   </form>
                 </div>
               </div>
             </div>
           </div>
-          <div onClick={() => router.push('/')} className="pt-4 flex items-center">
-            <FaArrowLeft onClick={() => router.push('/')} size={20} color="rgb(79 70 229)" />
-            <button className="pl-2 hover:text-indigo-600">Voltar ao Início</button>
+          <div className="pt-4 flex items-center">
+            <FaArrowLeft href="/" size={20} color="rgb(79 70 229)" />
+            <a href="/" className="pl-2 hover:text-indigo-600">Voltar ao Início</a>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-export default SignIn;
