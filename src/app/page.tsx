@@ -1,6 +1,7 @@
 import Hero  from "@/components/layout/Hero";
 
-import  Header  from "../components/layout/headers/Header";
+import Header from "../components/layout/headers/Header";
+import Footer from "@/components/layout/footers/Footer";
 
 export const metadata = {
   title: 'Curso Python Online | CursoPython.pro',
@@ -15,6 +16,7 @@ export default function HomePage() {
       {/* <Header /> */}
       <div>
         <Hero />
+        <Footer />
       </div>
     </>
   );

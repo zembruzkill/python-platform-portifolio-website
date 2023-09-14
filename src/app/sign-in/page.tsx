@@ -277,13 +277,14 @@ const SignIn = () => {
                       Login com Google
                     </button>
 
-                    <div className="mt-6 text-center text-black">
+                    <div className=" flex mt-6 text-center text-black items-center">
                       <p>
                         Ainda não tem uma conta?{" "}
-                        <Link href="/sign-up" className="text-indigo-600 font-bold">
+                        <Link href="/sign-up" className="text-black font-bold pr-1 hover:text-indigo-600">
                           Cadastre agora
                         </Link>
                       </p>
+                      <FaArrowRight onClick={() => router.push('/sign-up')}  size={20} color="rgb(79 70 229)" />
                     </div>
                   </form>
                 </div>
