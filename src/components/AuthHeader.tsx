@@ -27,7 +27,7 @@ export default function AuthHeader() {
                 <a href="/sign-in" className="text-md font-semibold leading-6 text-white hover:text-primary">
                 {session?.user?.name}
                 </a>
-                <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image} alt="Bordered avatar"/>
+                <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image ?? "default-image.jpg"} alt="Bordered avatar"/>
             </div>
         )}
     </>
