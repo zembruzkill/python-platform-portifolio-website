@@ -12,7 +12,7 @@ import {
 import logo from '../../../assets/logo.svg'
 import Image from 'next/image'
 
-export default function Example() {
+export default function Header(props: any) {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -32,6 +32,8 @@ export default function Example() {
           </div>
           </a>
         </div>
+        {props.items && (
+        <>
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -43,34 +45,35 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-
           <a 
           onClick={() => router.push('/courses')}
-          className="text-md font-semibold leading-6 text-white hover:text-yellow-300">
+          className="text-md font-semibold leading-6 text-white hover:text-primary">
             Cursos
           </a>
           <a 
           onClick={() => router.push('/pricing')}
-          className="text-md font-semibold leading-6 text-white hover:text-yellow-300">
+          className="text-md font-semibold leading-6 text-white hover:text-primary">
             Preços
           </a>
           <a 
           onClick={() => router.push('/blog')}
-          className="text-md font-semibold leading-6 text-white hover:text-yellow-300">
+          className="text-md font-semibold leading-6 text-white hover:text-primary">
             Blog
           </a>
         </Popover.Group>
         <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
-          <a onClick={() => router.push('/sign-in')} className="text-md font-semibold leading-6 text-white hover:text-yellow-300">
+          <a onClick={() => router.push('/sign-in')} className="text-md font-semibold leading-6 text-white hover:text-primary">
             Entrar
           </a>
           <button
             onClick={() => router.push('/sign-up')}
             type="button"
-            className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 bg-yellow-300 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+            className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
             Criar Conta Grátis
           </button>
         </div>
+        </>
+        )}
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
@@ -102,19 +105,19 @@ export default function Example() {
               <div className="space-y-2 py-6">
                 <a
                   onClick={() => router.push('/courses')}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow-300"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
                 >
                   Cursos
                 </a>
                 <a
                   onClick={() => router.push('/pricing')}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow-300"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
                 >
                   Preços
                 </a>
                 <a
                   onClick={() => router.push('/blog')}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow-300"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
                 >
                   Blog
                 </a>
@@ -122,14 +125,14 @@ export default function Example() {
               <div className="">
                 <a
                   onClick={() => router.push('/sign-in')}
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-yellow-300"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-primary"
                 >
                   Entrar
                 </a>
                 <button
                   onClick={() => router.push('/sign-up')}
                   type="button"
-                  className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 bg-yellow-300 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                  className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 bg-primary text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                   Criar Conta Grátis
                 </button>
               </div>
