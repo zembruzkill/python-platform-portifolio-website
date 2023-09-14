@@ -89,7 +89,7 @@ const Pricing = () => {
                           <div className="pt-8">
                               <p className="text-gray-400 text-center">
                                   <span className="pl-2">
-                                  Check out our solutions for businesses, which include Custom Python Courses, Assignments, User Progress Tracking and much more.
+                                  Confira nossas soluções para empresas, que incluem cursos personalizados de Python, tarefas, acompanhamento do progresso do usuário e muito mais.
                                   </span>
                               </p>
 
@@ -107,7 +107,7 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-      <div className="relative w-full bg-white px-6 pt-10 pb-8 mt-12 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10 mb-12">
+      <div className="relative w-full bg-white px-6 pt-10 pb-8 mt-12 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-4xl sm:rounded-lg sm:px-10 mb-12">
           <div className="mx-auto px-5">
               <div className="flex flex-col items-center">
                   <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">FAQ</h2>
@@ -115,11 +115,11 @@ const Pricing = () => {
 
                   </p>
               </div>
-              <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+              <div className="mx-auto mt-8 grid max-w-2xl divide-y divide-neutral-200">
                   <div className="py-5">
                       <details className="group">
                           <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                              <span> How does the billing work?</span>
+                              <span> Como posso testar o curso?</span>
                               <span className="transition group-open:rotate-180">
                                       <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                           stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -128,17 +128,14 @@ const Pricing = () => {
                                       </svg>
                                   </span>
                           </summary>
-                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Springerdata offers a variety of
-                              billing options, including monthly and annual subscription plans, as well as pay-as-you-go
-                              pricing for certain services. Payment is typically made through a credit card or other
-                              secure online payment method.
+                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Se você deseja apenas verificar a aparência da interface do aplicativo, como funciona e quais recursos possui, escolha o plano de conta Gratuito. Isso lhe dará acesso à seção gratuita de todos os cursos. Você pode optar por atualizar sua conta gratuita para um plano pago a qualquer momento.
                           </p>
                       </details>
                   </div>
                   <div className="py-5">
                       <details className="group">
                           <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                              <span> Can I get a refund for my subscription?</span>
+                              <span> Tenho que assinar um contrato de longo prazo?</span>
                               <span className="transition group-open:rotate-180">
                                       <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                           stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -147,18 +144,14 @@ const Pricing = () => {
                                       </svg>
                                   </span>
                           </summary>
-                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a 30-day money-back
-                              guarantee for most of its subscription plans. If you are not satisfied with your
-                              subscription within the first 30 days, you can request a full refund. Refunds for
-                              subscriptions that have been active for longer than 30 days may be considered on a
-                              case-by-case basis.
+                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Não, não há contrato. Dependendo do plano, você pagará uma taxa única e terá acesso vitalício a cursos individuais, no caso do plano Curso Único, ou a todo o nosso currículo, se decidir adquirir o plano Vitalício.
                           </p>
                       </details>
                   </div>
                   <div className="py-5">
                       <details className="group">
                           <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                              <span> How do I cancel my subscription?</span>
+                              <span> Você precisa de um cartão de crédito para registrar uma conta de teste?</span>
                               <span className="transition group-open:rotate-180">
                                       <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                           stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -167,16 +160,14 @@ const Pricing = () => {
                                       </svg>
                                   </span>
                           </summary>
-                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">To cancel your subscription, you can
-                              log in to your account and navigate to the subscription management page. From there, you
-                              should be able to cancel your subscription and stop future billing.
+                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Não. Ao se registrar em um plano de conta de teste, você não será solicitado a fornecer nenhuma informação de faturamento. Portanto, nenhum cartão de crédito é necessário, apenas seu nome e endereço de e-mail. Você precisará fornecer informações de cobrança somente quando quiser fazer upgrade para um plano pago..
                           </p>
                       </details>
                   </div>
                   <div className="py-5">
                       <details className="group">
                           <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                              <span> Is there a free trial?</span>
+                              <span> Quais as opções de pagamento disponíveis?</span>
                               <span className="transition group-open:rotate-180">
                                       <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                           stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -185,16 +176,14 @@ const Pricing = () => {
                                       </svg>
                                   </span>
                           </summary>
-                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a free trial of our software
-                              for a limited time. During the trial period, you will have access to a limited set of
-                              features and functionality, but you will not be charged.
+                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Aceitamos todos os principais cartões de crédito, incluindo Visa, MasterCard, Elo, American Express, Boleto Bancário e Pix.
                           </p>
                       </details>
                   </div>
                   <div className="py-5">
                       <details className="group">
                           <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                              <span> How do I contact support?</span>
+                              <span> Posso alterar meu plano de conta?</span>
                               <span className="transition group-open:rotate-180">
                                       <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                           stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -203,16 +192,14 @@ const Pricing = () => {
                                       </svg>
                                   </span>
                           </summary>
-                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">If you need help with our platform or
-                              have any other questions, you can contact the company's support team by submitting a support
-                              request through the website or by emailing support@ourwebsite.com.
+                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Sim. Você sempre pode atualizar seu plano a qualquer momento..
                           </p>
                       </details>
                   </div>
                   <div className="py-5">
                       <details className="group">
                           <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                              <span> Do you offer any discounts or promotions?</span>
+                              <span> Posso encerrar minha conta?</span>
                               <span className="transition group-open:rotate-180">
                                       <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                           stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -221,9 +208,7 @@ const Pricing = () => {
                                       </svg>
                                   </span>
                           </summary>
-                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We may offer discounts or promotions
-                              from time to time. To stay up-to-date on the latest deals and special offers, you can sign
-                              up for the company's newsletter or follow it on social media.
+                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Você pode remover sua conta a qualquer momento através da opção Fechar conta em Meu perfil.
                           </p>
                       </details>
                   </div>
