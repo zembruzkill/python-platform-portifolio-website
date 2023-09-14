@@ -4,14 +4,18 @@ import  Header  from "../../components/layout/headers/Header";
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
 
+import {
+  UserIcon,
+} from '@heroicons/react/24/outline'
+
 const SignIn = () => {
   const router = useRouter();
     return (
       <div>
-        <div className='h-screen bg-gradient-to-r from-[#172645] to-[#ff80b5]'>
+        <div className='h-screen bg-gradient-to-r from-[#F6F6F6] to-[#F6F6F6]'>
           <Header items={false}/>
           <div className="mx-auto max-w-7xl items-center p-4 lg:px-8 pt-6">
-            <div className="w-full items-center rounded-md bg-gradient-to-r from-[white] to-[white] shadow-default">
+            <div className="w-full items-center rounded-md bg-gradient-to-r from-[white] to-[white] shadow-lg">
             <div className=" flex flex-wrap items-center">
               <div className="hidden w-full xl:block xl:w-1/2">
                 <div className="py-17.5 px-26 text-center">
@@ -142,14 +146,13 @@ const SignIn = () => {
 
               <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
                 <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
-                  <span className="mb-1.5 block font-medium text-black">Começe Agora Grátis</span>
-                  <h2 className="mb-9 text-2xl font-bold text-indigo-600 dark:text-white sm:text-title-xl2">
-                    Faça login em Curso Python.pro
+                  <h2 className="mb-6 text-2xl font-bold text-indigo-600 dark:text-white sm:text-title-xl2">
+                    Faça login
                   </h2>
 
                   <form>
                     <div className="mb-4">
-                      <label className="mb-2.5 block font-medium text-black dark:text-white">
+                      <label className="block font-medium text-black dark:text-white">
                         Email
                       </label>
                       <div className="relative">
@@ -180,7 +183,7 @@ const SignIn = () => {
                     </div>
 
                     <div className="mb-6">
-                      <label className="mb-2.5 block font-medium text-black dark:text-white">
+                      <label className="block font-medium text-black dark:text-white">
                         Senha
                       </label>
                       <div className="relative">
@@ -263,7 +266,7 @@ const SignIn = () => {
                       <p>
                         Ainda não tem uma conta?{" "}
                         <Link href="/sign-up" className="text-indigo-600 font-bold">
-                          Cadastre Agora
+                          Cadastre agora
                         </Link>
                       </p>
                     </div>
