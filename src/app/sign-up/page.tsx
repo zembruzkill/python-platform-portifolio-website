@@ -4,9 +4,7 @@ import  Header  from "../../components/layout/headers/Header";
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
 
-import {
-  UserIcon,
-} from '@heroicons/react/24/outline'
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const SignUp = () => {
   const router = useRouter();
@@ -233,7 +231,7 @@ const SignUp = () => {
                     <div className="mb-5">
                       <input
                         type="submit"
-                        value="Criar Conta"
+                        value="Criar conta grátis"
                         className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 font-bold text-black transition hover:bg-opacity-90"
                       />
                     </div>
@@ -287,6 +285,10 @@ const SignUp = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div onClick={() => router.push('/')} className="pt-4 flex items-center">
+            <FaArrowLeft onClick={() => router.push('/')}  size={20} color="rgb(79 70 229)" />
+            <button className="pl-2 hover:text-indigo-600">Voltar ao Início</button>
           </div>
         </div>
         </div>
