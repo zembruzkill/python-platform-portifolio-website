@@ -87,7 +87,7 @@ export default function CodeEditor(props: CodeEditorProps) {
 
   return (
   <>
-    <div className="relative flex flex-col space-y-2">
+    <div className="relative z-0 flex flex-col space-y-2">
       <Controls
         items={[
           {

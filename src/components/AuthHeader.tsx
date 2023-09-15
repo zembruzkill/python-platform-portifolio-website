@@ -2,7 +2,7 @@
 
 import { useSession, signOut } from 'next-auth/react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
@@ -10,6 +10,7 @@ import { ChevronDownIcon} from '@heroicons/react/20/solid'
 
 export default function AuthHeader() {
   const { data: session } = useSession()
+  const [loading, setLoading] = useState(true);
 
   function handleLogout() {
     signOut()
@@ -20,13 +21,6 @@ export default function AuthHeader() {
     { name: 'Meu Perfil', href: '/my-profile'},
     { name: 'Pagamentos e Faturas', href: 'payment-billing'},
   ]
-
-  if (!session) {
-    return (
-        <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
-        </div>
-    );
-  }
 
   return (
     <>
@@ -43,8 +37,8 @@ export default function AuthHeader() {
                 </a>
             </div>
         )}
-            {session && (
-                <>
+        {session && (
+            <>
                 <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
                 <Popover.Group className="">
                     <Popover className="relative">
@@ -64,7 +58,7 @@ export default function AuthHeader() {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                         >
-                        <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 overflow-hidden rounded bg-white shadow-lg ring-1 ring-white/5">
+                        <Popover.Panel className="absolute -left-8 top-full z-1 mt-3 overflow-hidden rounded bg-white shadow-lg ring-1 ring-white/5">
                         <div className="">
                             <div className='flex gap-2 p-4 bg-primary items-center'>
                                 <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image ?? "default-image.jpg"} alt="Bordered avatar"/>
