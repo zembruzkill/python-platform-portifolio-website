@@ -12,6 +12,7 @@ import Image from 'next/image'
 
 import AuthHeader from '@/components/AuthHeader'
 import AuthHeaderMobile from '@/components/AuthHeaderMobile'
+import Link from 'next/link'
 
 export default function Header(props: any) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -20,17 +21,17 @@ export default function Header(props: any) {
     <header className='bg-gradient-to-r from-[#172645] to-[#ff80b5]'>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href='/' className="-m-1.5 p-1.5">
-            <div className=''>
+          <div className="-m-1.5 p-1.5">
+            <Link href='/'>
               <Image
                 className=''
                 src={logo}
-                alt="Logo of the website"
+                alt="Logo of the website"xw
                 width={220}
                 height={220}
               />
-            </div>
-          </a>
+            </Link>
+          </div>
         </div>
         {props.items && (
           <>
@@ -45,21 +46,21 @@ export default function Header(props: any) {
               </button>
             </div>
             <div className="hidden lg:flex lg:gap-x-12">
-              <a
+              <Link
                 href="/courses"
                 className="text-md font-semibold leading-6 text-white hover:text-primary">
                 Cursos
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/pricing"
                 className="text-md font-semibold leading-6 text-white hover:text-primary">
                 Preços
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/blog"
                 className="text-md font-semibold leading-6 text-white hover:text-primary">
                 Blog
-              </a>
+              </Link>
             </div>
             <AuthHeader />
           </>
