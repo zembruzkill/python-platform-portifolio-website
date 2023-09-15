@@ -8,7 +8,7 @@ import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 import { ChevronDownIcon} from '@heroicons/react/20/solid'
 
-export default function AuthHeader() {
+export default function AuthHeaderMobile() {
   const { data: session } = useSession()
   const [loading, setLoading] = useState(true);
 
@@ -25,21 +25,24 @@ export default function AuthHeader() {
   return (
     <>
         {!session && (
-            <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
-                <a href="/sign-in" className="text-md font-semibold leading-6 text-white hover:text-primary">
-                Entrar
+            <div className="">
+                <a
+                    href="/sign-in"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-primary"
+                    >
+                    Entrar
                 </a>
                 <a
-                href="/sign-up"
-                type="button"
-                className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                Criar Conta Grátis
+                    href="/sign-up"
+                    type="button"
+                    className="inline-block rounded px-6 py-2 text-md font-semibold leading-6 bg-primary text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                    Criar Conta Grátis
                 </a>
             </div>
         )}
         {session && (
             <>
-                <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
+                <div className="p-4 items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
                 <Popover.Group className="">
                     <Popover className="relative">
                         <Popover.Button className="flex items-center gap-x-1 text-md font-bold leading-6 text-white hover:text-primary">

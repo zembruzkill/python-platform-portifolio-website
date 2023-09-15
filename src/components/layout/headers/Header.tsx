@@ -11,6 +11,7 @@ import logo from '../../../assets/logo.svg'
 import Image from 'next/image'
 
 import AuthHeader from '@/components/AuthHeader'
+import AuthHeaderMobile from '@/components/AuthHeaderMobile'
 
 export default function Header(props: any) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -110,9 +111,7 @@ export default function Header(props: any) {
                   Blog
                 </a>
               </div>
-              
-              <AuthHeader />
-
+              <AuthHeaderMobile />
             </div>
           </div>
         </Dialog.Panel>
