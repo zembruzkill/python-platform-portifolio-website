@@ -10,7 +10,7 @@ export default async function Dashboard() {
 
   return (
     <div>
-      <Header items={true} />
+      <Header items={true}/>
       <h1 className="">Dashboard</h1>
     </div>
   );

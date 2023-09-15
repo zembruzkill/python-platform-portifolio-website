@@ -4,7 +4,6 @@ import { getServerSession } from "next-auth"
 
 import Google from "next-auth/providers/google"
 import GitHub from "next-auth/providers/github"
-import { useSession } from "next-auth/react"
 import { redirect } from "next/navigation"
 
 export const config: NextAuthOptions = {

@@ -43,7 +43,7 @@ export default function Header(props: any) {
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <Popover.Group className="hidden lg:flex lg:gap-x-12">
+            <div className="hidden lg:flex lg:gap-x-12">
               <a
                 href="/courses"
                 className="text-md font-semibold leading-6 text-white hover:text-primary">
@@ -59,7 +59,7 @@ export default function Header(props: any) {
                 className="text-md font-semibold leading-6 text-white hover:text-primary">
                 Blog
               </a>
-            </Popover.Group>
+            </div>
             <AuthHeader />
           </>
         )}
@@ -110,20 +110,9 @@ export default function Header(props: any) {
                   Blog
                 </a>
               </div>
-              <div className="">
-                <a
-                  href="/sign-in"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-primary"
-                >
-                  Entrar
-                </a>
-                <a
-                  href="/sign-up"
-                  type="button"
-                  className="inline-block rounded bg-primary px-6 py-2 text-md font-semibold leading-6 text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                  Criar Conta Grátis
-                </a>
-              </div>
+              
+              <AuthHeader />
+
             </div>
           </div>
         </Dialog.Panel>

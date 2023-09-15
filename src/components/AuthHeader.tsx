@@ -1,11 +1,32 @@
 'use client'
 
-import { useSession } from 'next-auth/react'
+import { useSession, signOut } from 'next-auth/react'
+import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
+
+import { FaArrowRightFromBracket } from "react-icons/fa6";
+
+import { ChevronDownIcon} from '@heroicons/react/20/solid'
 
 export default function AuthHeader() {
   const { data: session } = useSession()
 
-  console.log(session)
+  function handleLogout() {
+    signOut()
+  }
+
+  const profile_options = [
+    { name: 'Dashboard', href: '/dashboard'},
+    { name: 'Meu Perfil', href: '/my-profile'},
+    { name: 'Pagamentos e Faturas', href: 'payment-billing'},
+  ]
+
+  if (!session) {
+    return (
+        <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
+        </div>
+    );
+  }
 
   return (
     <>
@@ -23,12 +44,62 @@ export default function AuthHeader() {
             </div>
         )}
             {session && (
+                <>
                 <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
-                <a href="/sign-in" className="text-md font-semibold leading-6 text-white hover:text-primary">
-                {session?.user?.name}
-                </a>
-                <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image ?? "default-image.jpg"} alt="Bordered avatar"/>
-            </div>
+                <Popover.Group className="">
+                    <Popover className="relative">
+                        <Popover.Button className="flex items-center gap-x-1 text-md font-bold leading-6 text-white hover:text-indigo-600">
+                            {session?.user?.name}
+                            <ChevronDownIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+                            <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image ?? "default-image.jpg"} alt="Profile Picture"/>
+                        </Popover.Button>
+                        <Popover.Overlay className="fixed inset-0 bg-black opacity-60" />
+        
+                        <Transition
+                            as={Fragment}
+                            enter="transition ease-out duration-200"
+                            enterFrom="opacity-0 translate-y-1"
+                            enterTo="opacity-100 translate-y-0"
+                            leave="transition ease-in duration-150"
+                            leaveFrom="opacity-100 translate-y-0"
+                            leaveTo="opacity-0 translate-y-1"
+                        >
+                        <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 overflow-hidden rounded bg-white shadow-lg ring-1 ring-white/5">
+                        <div className="">
+                            <div className='flex gap-2 p-4 bg-primary items-center'>
+                                <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image ?? "default-image.jpg"} alt="Bordered avatar"/>
+                                <p className="lex items-center gap-x-1 text-md font-bold leading-6 text-black">{session?.user?.name}</p>
+                            </div>
+        
+                            {profile_options.map((item) => (
+                            <div
+                                key={item.name}
+                                className="pt-4 group relative flex items-center gap-x-6 rounded-lg p-4 pb-2 text-md leading-6">
+                                <div className="flex-auto">
+                                <a href={item.href} className="block text-md font-bold text-black hover:text-indigo-600">
+                                    {item.name}
+                                </a>
+                                </div>
+                            </div>
+                            ))}
+                            <hr
+                            className="my-1 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+                            <div className='flex gap-2 items-center'>
+                                <a onClick={handleLogout} className="p-4 block text-md font-bold text-black hover:text-indigo-600">
+                                    Sair
+                                </a>
+                                <span>
+                                <FaArrowRightFromBracket onClick={handleLogout} size={20} color="rgb(79 70 229)"/>
+                                </span>
+                            </div>
+                            
+                        </div>
+                        </Popover.Panel>
+                    </Transition>
+                    </Popover>
+                </Popover.Group>
+                </div>
+            </>
         )}
     </>
   )
