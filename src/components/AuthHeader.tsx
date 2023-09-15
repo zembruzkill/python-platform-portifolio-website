@@ -7,6 +7,7 @@ import { Fragment, useState, useEffect } from 'react'
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 import { ChevronDownIcon} from '@heroicons/react/20/solid'
+import Link from 'next/link';
 
 export default function AuthHeader() {
   const { data: session } = useSession()
@@ -70,9 +71,9 @@ export default function AuthHeader() {
                                 key={item.name}
                                 className="pt-4 group relative flex items-center gap-x-6 rounded-lg p-4 pb-2 text-md leading-6">
                                 <div className="flex-auto">
-                                <a href={item.href} className="block text-md font-bold text-black hover:text-indigo-600">
+                                <Link href={item.href} className="block text-md font-bold text-black hover:text-indigo-600">
                                     {item.name}
-                                </a>
+                                </Link>
                                 </div>
                             </div>
                             ))}
