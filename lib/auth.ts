@@ -21,11 +21,6 @@ export const config: NextAuthOptions = {
     ]
 }
 
-console.log('Google ID: ', process.env.AUTH_GOOGLE_ID)
-console.log('Google Secret: ', process.env.AUTH_GOOGLE_SECRET)
-console.log('NextAuth Secret: ', process.env.NEXTAUTH_SECRET)
-console.log('NextAuth URL: ', process.env.NEXTAUTH_URL)
-
 // Helper function to get session without passing config every time
 // https://next-auth.js.org/configuration/nextjs#getserversession
 export function auth(...args: [GetServerSidePropsContext["req"], GetServerSidePropsContext["res"]] | [NextApiRequest, NextApiResponse] | []) {
