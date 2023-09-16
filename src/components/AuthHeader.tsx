@@ -27,7 +27,7 @@ export default function AuthHeader() {
     <>
         {!session && (
             <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
-                <a href="/sign-in" className="text-md font-semibold leading-6 text-white hover:text-primary">
+                <a href="/sign-in" className="text-md leading-6 text-white hover:text-primary">
                 Entrar
                 </a>
                 <a
@@ -43,7 +43,7 @@ export default function AuthHeader() {
                 <div className="hidden items-center lg:flex lg:flex-1 lg:justify-end space-x-4">
                 <Popover.Group className="">
                     <Popover className="relative">
-                        <Popover.Button className="flex items-center gap-x-1 text-md font-bold leading-6 text-white hover:text-primary">
+                        <Popover.Button className="flex items-center gap-x-1 text-md font-semibold leading-6 text-white hover:text-primary">
                             {session?.user?.name}
                             <ChevronDownIcon className="h-5 w-5 flex-none" aria-hidden="true" />
                             {session?.user?.image ? (
@@ -91,7 +91,7 @@ export default function AuthHeader() {
                                 </svg>
                                 </span>
                             )}
-                                <p className="lex items-center gap-x-1 text-md font-bold leading-6 text-black">{session?.user?.name}</p>
+                                <p className="lex items-center gap-x-1 text-md leading-6 text-black">{session?.user?.name}</p>
                             </div>
         
                             {profile_options.map((item) => (
@@ -99,7 +99,7 @@ export default function AuthHeader() {
                                 key={item.name}
                                 className="pt-4 group relative flex items-center gap-x-6 rounded-lg p-4 pb-2 text-md leading-6">
                                 <div className="flex-auto">
-                                <Link href={item.href} className="block text-md font-bold text-black hover:text-indigo-600">
+                                <Link href={item.href} className="block text-md text-black hover:text-indigo-600">
                                     {item.name}
                                 </Link>
                                 </div>
