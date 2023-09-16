@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/dashboard/*', '/api/*', '/_next/*', '/auth/*'],
+      disallow: ['/dashboard/*', '/api/*', '/auth/*'],
     },
     sitemap: 'https://cursopython.pro/sitemap.xml',
   }
