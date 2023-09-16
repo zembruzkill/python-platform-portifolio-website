@@ -11,7 +11,7 @@ function GoogleSignInButton(props: any) {
 
   return (
     <>
-      <button onClick={handleGoogleSignIn} className="flex w-full mb-2 font-bold text-black items-center justify-center gap-3.5 rounded-lg border border-stroke bg-gray p-4 hover:bg-opacity-50 dark:border-strokedark dark:bg-meta-4 dark:hover:bg-opacity-50">
+      <button onClick={handleGoogleSignIn} className="flex w-full mb-2 font-bold text-black items-center justify-center gap-3.5 rounded-lg border border-stroke bg-gray p-4 hover:bg-opacity-50 ">
         <span>
           <svg
             width="20"

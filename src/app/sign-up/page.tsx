@@ -148,35 +148,35 @@ export default async function SignUp() {
                 </div>
               </div>
 
-              <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
+              <div className="w-full border-stroke  xl:w-1/2 xl:border-l-2">
                 <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
-                  <h2 className="mb-6 text-2xl font-bold text-indigo-600 dark:text-white sm:text-title-xl2">
+                  <h2 className="mb-6 text-2xl font-bold text-indigo-600 sm:text-title-xl2">
                     Criar conta grátis
                   </h2>
 
                   <form>
                     <div className="mb-4">
-                      <label className="block font-medium text-black dark:text-white">
+                      <label className="block font-medium text-blac0">
                         Nome Completo
                       </label>
                       <div className="relative">
                         <input
                           type="name"
                           placeholder="Nome Completo"
-                          className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                          className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none "
                         />
                       </div>
                     </div>
 
                     <div className="mb-4">
-                      <label className="block font-medium text-black dark:text-white">
+                      <label className="block font-medium text-blac0">
                         Email
                       </label>
                       <div className="relative">
                         <input
                           type="email"
                           placeholder="Email"
-                          className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                          className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none "
                         />
 
                         <span className="absolute right-4 top-4">
@@ -200,14 +200,14 @@ export default async function SignUp() {
                     </div>
 
                     <div className="mb-6">
-                      <label className="block font-medium text-black dark:text-white">
+                      <label className="block font-medium text-blac0">
                         Senha
                       </label>
                       <div className="relative">
                         <input
                           type="password"
                           placeholder="Senha"
-                          className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary"
+                          className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none "
                         />
 
                         <span className="absolute right-4 top-4">
