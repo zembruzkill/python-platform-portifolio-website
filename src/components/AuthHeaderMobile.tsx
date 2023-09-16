@@ -7,6 +7,7 @@ import { Fragment, useState, useEffect } from 'react'
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 import { ChevronDownIcon} from '@heroicons/react/20/solid'
+import Link from 'next/link';
 
 export default function AuthHeaderMobile() {
   const { data: session } = useSession()
@@ -26,18 +27,18 @@ export default function AuthHeaderMobile() {
     <>
         {!session && (
             <div className="">
-                <a
+                <Link
                     href="/sign-in"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-primary"
                     >
                     Entrar
-                </a>
-                <a
+                </Link>
+                <Link
                     href="/sign-up"
                     type="button"
                     className="inline-block rounded px-6 py-2 text-md font-semibold leading-6 bg-primary text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
                     Criar Conta Grátis
-                </a>
+                </Link>
             </div>
         )}
         {session && (
@@ -73,9 +74,9 @@ export default function AuthHeaderMobile() {
                                 key={item.name}
                                 className="pt-4 group relative flex items-center gap-x-6 rounded-lg p-4 pb-2 text-md leading-6">
                                 <div className="flex-auto">
-                                <a href={item.href} className="block text-md font-bold text-black hover:text-indigo-600">
+                                <Link href={item.href} className="block text-md font-bold text-black hover:text-indigo-600">
                                     {item.name}
-                                </a>
+                                </Link>
                                 </div>
                             </div>
                             ))}
@@ -94,6 +95,25 @@ export default function AuthHeaderMobile() {
                     </Transition>
                     </Popover>
                 </Popover.Group>
+                {profile_options.map((item) => (
+                    <div
+                        key={item.name}
+                        className="pt-4 relative flex items-center gap-x-6 p-4 pb-2 text-md leading-6">
+                        <div className="flex-auto">
+                        <Link href={item.href} className="text-md font-bold text-white hover:text-indigo-600">
+                            {item.name}
+                        </Link>
+                        </div>
+                    </div>
+                ))}
+                </div>
+                <div className='flex gap-2 items-center'>
+                    <a onClick={handleLogout} className="p-4 block text-md font-bold text-white hover:text-indigo-600">
+                        Sair
+                    </a>
+                    <span>
+                    <FaArrowRightFromBracket onClick={handleLogout} size={20} color="rgb(79 70 229)"/>
+                    </span>
                 </div>
             </>
         )}
