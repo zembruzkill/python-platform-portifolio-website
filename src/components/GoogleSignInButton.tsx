@@ -4,7 +4,8 @@ import { signIn } from 'next-auth/react'
 
 
 function GoogleSignInButton(props: any) {
-  const handleGoogleSignIn = () => {
+  function handleGoogleSignIn(e: any) {
+    e.preventDefault()
     signIn('google')
   }
 
