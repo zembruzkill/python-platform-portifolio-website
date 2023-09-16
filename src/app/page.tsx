@@ -5,9 +5,7 @@ import Footer from "@/components/layout/footers/Footer";
 
 export const metadata = {
   title: 'Curso Python Online | CursoPython.pro',
-  description:
-    'Seu portal para o mundo python',
-  
+  description: 'Seu Portal Para o Mundo Python',
 }
 
 export default function HomePage() {
