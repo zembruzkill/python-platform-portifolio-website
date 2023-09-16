@@ -1,18 +1,73 @@
+'use client'
+
 import Header from "../../components/layout/headers/Header";
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Link from "next/link";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import GoogleSignInButton from "@/components/GoogleSignInButton";
 import GitHubSignInButton from "@/components/GitHubSignInButton";
-import { getServerSession } from "next-auth";
-import { config } from "../../../lib/auth";
+import { useSession } from "next-auth/react";
+import { useState } from "react";
 
-export default async function SignUp() {
+interface IUser {
+  name: string;
+  email: "",
+  password: ""
+}
 
-  const session = await getServerSession(config);
+export default  function SignUp() {
+  const [data, setData] = useState<IUser>({
+    name: "",
+    email: "",
+    password: ""
+  });
 
-  if (session) return redirect('/dashboard');
+  const router = useRouter();
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function onSubmit(event: React.SyntheticEvent) {
+    event.preventDefault();
+    setIsLoading(true);
+
+    setData({
+      name: "",
+      email: "",
+      password: ""
+    });
+
+    const request = await fetch('/api/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    const response = await request.json();
+
+    if (response.error){
+      console.log(response);
+    } else {
+      router.push('/sign-in');
+    }
+
+    setIsLoading(false);
+  }
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setData((prev) => {
+      return {
+        ...prev,
+        [event.target.name]: event.target.value
+      }
+    }
+  )}
+
+  const {data: session } = useSession();
+
+  if (session) router.push('/dashboard');
 
   return (
     <div>
@@ -154,28 +209,43 @@ export default async function SignUp() {
                     Criar conta grátis
                   </h2>
 
-                  <form>
+                  <form onSubmit={onSubmit}>
                     <div className="mb-4">
-                      <label className="block font-medium text-blac0">
+                      <label className="block font-medium text-black">
                         Nome Completo
                       </label>
                       <div className="relative">
                         <input
                           type="name"
-                          placeholder="Nome Completo"
+                          placeholder="João da Silva"
+                          disabled={isLoading}
+                          onChange={handleChange}
+                          autoCapitalize="none"
+                          autoComplete="email"
+                          autoCorrect="off"
+                          autoFocus={true}
+                          name="name"
+                          value={data.name}
                           className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none "
                         />
                       </div>
                     </div>
 
                     <div className="mb-4">
-                      <label className="block font-medium text-blac0">
+                      <label className="block font-medium text-black">
                         Email
                       </label>
                       <div className="relative">
                         <input
+                          disabled={isLoading}
+                          onChange={handleChange}
+                          autoCapitalize="none"
+                          autoComplete="email"
+                          autoCorrect="off"
                           type="email"
-                          placeholder="Email"
+                          name="email"
+                          value={data.email}
+                          placeholder="nome@exemplo.com"
                           className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none "
                         />
 
@@ -200,12 +270,18 @@ export default async function SignUp() {
                     </div>
 
                     <div className="mb-6">
-                      <label className="block font-medium text-blac0">
+                      <label className="block font-medium text-black">
                         Senha
                       </label>
                       <div className="relative">
                         <input
+                          disabled={isLoading}
+                          onChange={handleChange}
+                          autoCapitalize="none"
+                          autoCorrect="off"
                           type="password"
+                          name="password"
+                          value={data.password}
                           placeholder="Senha"
                           className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none "
                         />

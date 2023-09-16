@@ -13,6 +13,8 @@ export default function AuthHeaderMobile() {
   const { data: session } = useSession()
   const [loading, setLoading] = useState(true);
 
+  const defaultAvatar = require('../assets/images/user-empty.jpeg')
+
   function handleLogout() {
     signOut()
   }
@@ -49,7 +51,7 @@ export default function AuthHeaderMobile() {
                         <Popover.Button className="flex items-center gap-x-1 text-md font-bold leading-6 text-white hover:text-primary">
                             {session?.user?.name}
                             <ChevronDownIcon className="h-5 w-5 flex-none" aria-hidden="true" />
-                            <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image ?? "default-image.jpg"} alt="Profile Picture"/>
+                            <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image || defaultAvatar.default} alt="Profile Picture"/>
                         </Popover.Button>
                         <Popover.Overlay className="fixed inset-0 bg-black opacity-60" />
         
@@ -65,7 +67,7 @@ export default function AuthHeaderMobile() {
                         <Popover.Panel className="absolute -left-8 top-full z-1 mt-3 overflow-hidden rounded bg-white shadow-lg ring-1 ring-white/5">
                         <div className="">
                             <div className='flex gap-2 p-4 bg-primary items-center'>
-                                <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image ?? "default-image.jpg"} alt="Bordered avatar"/>
+                                <img className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={session?.user?.image|| defaultAvatar.default} alt="Bordered avatar"/>
                                 <p className="lex items-center gap-x-1 text-md font-bold leading-6 text-black">{session?.user?.name}</p>
                             </div>
         

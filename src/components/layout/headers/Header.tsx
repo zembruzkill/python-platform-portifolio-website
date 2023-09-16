@@ -10,6 +10,8 @@ import {
 import logo from '../../../assets/logo.svg'
 import Image from 'next/image'
 
+import { FaBars, FaXmark } from 'react-icons/fa6'
+
 import AuthHeader from '@/components/AuthHeader'
 import AuthHeaderMobile from '@/components/AuthHeaderMobile'
 import Link from 'next/link'
@@ -42,7 +44,7 @@ export default function Header(props: any) {
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                <FaBars size={25} color="#FFFFFF" className="" aria-hidden="true" />
               </button>
             </div>
             <div className="hidden lg:flex lg:gap-x-12">
@@ -87,7 +89,7 @@ export default function Header(props: any) {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <FaXmark size={25} color="#FFFFFF" className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
