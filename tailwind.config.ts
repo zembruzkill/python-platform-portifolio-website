@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   mode: 'jit',
@@ -48,6 +49,12 @@ const config: Config = {
         success: "#219653",
         danger: "#D34053",
         warning: "#FFA70B",
+      },
+      screens: {
+        "2xsm": "375px",
+        xsm: "425px",
+        "3xl": "2000px",
+        ...defaultTheme.screens,
       },
       fontSize: {
         "title-xxl": ["44px", "55px"],

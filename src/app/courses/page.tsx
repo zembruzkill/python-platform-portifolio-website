@@ -24,6 +24,7 @@ export default function Courses() {
       popularity: 5,
       level: 'Basico',
       categories: ['begginers', 'python programming'],
+      description: "Quer ver se programar é para você? Esta é a mini faixa perfeita! Aprenda o básico do Python conosco."
     },
     {
       id: 2,
@@ -34,27 +35,41 @@ export default function Courses() {
       popularity: 4,
       level: 'Avançado',
       categories: ['data science', 'python programming'],
+      description: "Já se perguntou o que você precisa fazer para começar a analisar dados em Python? Então, esta mini faixa é a resposta..."
     },
     {
       id: 3,
-      name: 'Python para Ciência de Dados',
-      imageSrc: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697160269/Python_para_Cie%CC%82ncia_de_Dados_r7fooq.png',
-      imageAlt: "Front of men's Basic Tee in black.",
-      href: '/courses/python-data-science',
+      name: 'Python com Interface Gráfica - QtDesigner e Qt6/PySide6',
+      imageSrc: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697173347/Design_Python_bl1xow.png',
+      imageAlt: "Banner Curso Criando Aplicações Python com Interface Gráfica utilizando o QtDesigner e Qt6/PySide6.",
+      href: 'https://pythonsimplificado.com.br/curso-criando-aplicacoes-com-qtdesigner-e-pyside6/',
       popularity: 3,
       level: 'Avançado',
       categories: ['data science', 'python programming'],
+      description: "Pare de procurar como criar aplicações Python com interface — está tudo aqui..."
     },
     {
       id: 4,
-      name: 'Python para Ciência de Dados',
-      imageSrc: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697160269/Python_para_Cie%CC%82ncia_de_Dados_r7fooq.png',
-      imageAlt: "Front of men's Basic Tee in black.",
-      href: '/courses/python-data-science',
-      popularity: 5,
+      name: 'Python com Interface Gráfica - QtDesigner e Qt6/PySide6',
+      imageSrc: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697173347/Design_Python_bl1xow.png',
+      imageAlt: "Banner Curso Criando Aplicações Python com Interface Gráfica utilizando o QtDesigner e Qt6/PySide6.",
+      href: 'https://pythonsimplificado.com.br/curso-criando-aplicacoes-com-qtdesigner-e-pyside6/',
+      popularity: 3,
       level: 'Avançado',
-      categories: ['data science'],
+      categories: ['data science', 'python programming'],
+      description: "Pare de procurar como criar aplicações Python com interface — está tudo aqui..."
     },
+    {
+      id: 5,
+      name: 'Python com Interface Gráfica - QtDesigner e Qt6/PySide6',
+      imageSrc: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697173347/Design_Python_bl1xow.png',
+      imageAlt: "Banner Curso Criando Aplicações Python com Interface Gráfica utilizando o QtDesigner e Qt6/PySide6.",
+      href: 'https://pythonsimplificado.com.br/curso-criando-aplicacoes-com-qtdesigner-e-pyside6/',
+      popularity: 3,
+      level: 'Avançado',
+      categories: ['data science', 'python programming'],
+      description: "Pare de procurar como criar aplicações Python com interface — está tudo aqui..."
+    }
   ]
 
   const [selectedLevel, setSelectedLevel] = useState('Todos');
@@ -122,7 +137,7 @@ export default function Courses() {
     <>
     <Header items={true}/>
     <header className='bg-white p-6'>
-    <div className="mx-auto md:flex max-w-7xl justify-between lg:px-8 gap-2 sm:space-y-2 md:space-y-0 lg:space-y-0">
+    <div className="mx-auto md:flex max-w-7xl justify-between lg:px-8 gap-2 space-y-2 2xl:space-y-0 xl:space-y-0 lg:space-y-0 md:space-y-0">
     <div className="flex items-center gap-2 w-full">
       <label className="block">Pesquisar</label>
       <input
@@ -133,7 +148,7 @@ export default function Courses() {
           onChange={handleSearchChange}
         />
     </div>
-        <div id="filter" className="flex items-center lg:justify-end lg:gap-8 md:gap-4 sm:gap-2 w-full">
+        <div id="filter" className="flex items-center justify-end lg:gap-8 md:gap-4 sm:gap-2 w-full">
           <div className="flex items-center gap-2">
               <label className="block text-black">Ordenar</label>
               <select
@@ -160,10 +175,9 @@ export default function Courses() {
         </div>
       </div>
     </header>
-    <div className="mx-auto flex justify-between bg-[#F0F3F6] lg:px-8 items-center">
-      <div className="lg:flex md:flex h-screen p-8">
+      <div className="mx-auto lg:flex md:flex h-screen p-8 bg-[#F1F3F6]">
         {/* Menu Lateral Fixo */}
-        <div className="w-1/4 bg-gray-800 p-4">
+        <div className="w-1/5 min-w-75">
           <h3 className="font-bold">Filtros Rápidos</h3>
           <ul className="p-4">
         <li className="sm:flex">
@@ -213,21 +227,17 @@ export default function Courses() {
       </ul>
         </div>
         {/* Área de Conteúdo */}
-        <div className="w-3/4 h-screen">
-          <div className="">
-          <div className="mx-auto max-w-2xl px-4 py-4 sm:py-4 lg:max-w-7xl lg:px-8">
-            <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+        <div className="w-4/5 h-screen ">
+          <div className="mx-auto px-4 py-4 sm:py-4 ">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 xl:gap-x-8">
               {filteredProducts.map((product) => (
                 <div key={product.id} className="group relative">
                   <div className="w-full max-w-sm bg-white border border-[#CFCFCF] rounded-lg hover:shadow-[#666666] hover:shadow-6">
                     <Link href={product.href}>
-                      <img className="w-full p-4" src={product.imageSrc} alt={product.imageAlt} />
+                      <img className="w-full p-4 rounded-lg" src={product.imageSrc} alt={product.imageAlt} />
                     </Link>
-                    <div className="px-5 pb-5">
-                        <a href="#">
-                            <h5 className="text-xl font-semibold tracking-tight text-gray-900">{product.name}</h5>
-                        </a>
-                        <div className="flex items-center mt-2.5 mb-5">
+                    <div className="px-4 pb-4">
+                    <div className="flex items-center mb-2">
                             <svg className="w-4 h-4 text-yellow-300 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                             </svg>
@@ -245,6 +255,10 @@ export default function Courses() {
                             </svg>
                             <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded  ml-3">5.0</span>
                         </div>
+                        <a href={product.href}>
+                            <h5 className="text-xl font-semibold tracking-tight text-gray-900">{product.name}</h5>
+                        </a>
+                        <p className="mt-2 text-gray-500 text-sm text-justify">{product.description}</p>
                         <div className="flex mt-6 text-center text-black items-center">
                         <p>
                           <Link href={product.href} className="text-balck hover:text-indigo-600 pr-1">
@@ -261,10 +275,8 @@ export default function Courses() {
             </div>
           </div>
         </div>
-        </div>
       </div>
-    </div>
-    {/* <Footer /> */}
+    <Footer />
     </>
   )
 }
