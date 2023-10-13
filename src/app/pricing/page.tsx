@@ -54,7 +54,7 @@ const Pricing = () => {
                           <h1 className="text-black font-semibold text-2xl">Vitalício</h1>
                           <p className="pt-2 tracking-wide">
                               <span className="text-black  text-bold align-top">R$ </span>
-                              <span className="text-3xl text-black font-bold">99,90</span>
+                              <span className="text-3xl text-black font-bold">49,90</span>
                           </p>
                           <div className="pt-8">
                               <p className="text-black text-center">
@@ -84,7 +84,7 @@ const Pricing = () => {
                           <h1 className="text-black font-semibold text-2xl">Enterprise</h1>
                           <p className="pt-2 tracking-wide">
                               <span className="text-gray-400 align-top">R$ </span>
-                              <span className="text-3xl font-semibold">35</span>
+                              <span className="text-3xl font-semibold">99,00</span>
                           </p>
                           <div className="pt-8">
                               <p className="text-gray-400 text-center">
