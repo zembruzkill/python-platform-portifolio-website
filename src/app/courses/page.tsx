@@ -150,7 +150,7 @@ export default function Courses() {
     </div>
         <div id="filter" className="flex items-center justify-end lg:gap-8 md:gap-4 sm:gap-2 w-full">
           <div className="flex items-center gap-2">
-              <label className="block text-black">Ordenar</label>
+              <label className="text-black">Ordenar</label>
               <select
                 value={sortOrder}
                 onChange={handleSortOrderChange}
@@ -161,7 +161,7 @@ export default function Courses() {
               </select>
           </div>
           <div className="flex items-center gap-2">
-              <label className="block text-gray-900">Nível</label>
+              <label className="text-gray-900">Nível</label>
               <select
                 value={selectedLevel}
                 onChange={handleLevelChange}
@@ -175,7 +175,7 @@ export default function Courses() {
         </div>
       </div>
     </header>
-      <div className="mx-auto lg:flex md:flex h-screen p-8 bg-[#F1F3F6]">
+      <div className="mx-auto lg:flex md:flex h-full p-8 bg-[#F1F3F6] sticky top">
         {/* Menu Lateral Fixo */}
         <div className="w-1/5 min-w-75">
           <h3 className="font-bold">Filtros Rápidos</h3>
@@ -227,8 +227,7 @@ export default function Courses() {
       </ul>
         </div>
         {/* Área de Conteúdo */}
-        <div className="w-4/5 h-screen ">
-          <div className="mx-auto px-4 py-4 sm:py-4 ">
+        <div id='main' className="w-full">
             <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 xl:gap-x-8">
               {filteredProducts.map((product) => (
                 <div key={product.id} className="group relative">
@@ -275,8 +274,7 @@ export default function Courses() {
             </div>
           </div>
         </div>
-      </div>
-    <Footer />
+    <Footer/>
     </>
   )
 }
