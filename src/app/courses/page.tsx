@@ -164,7 +164,7 @@ export default function Courses() {
               type="checkbox"
               checked={filters.todosCursos}
               onChange={() => toggleFilter("todosCursos")}
-              className="mr-2"
+              className="mr-2 rounded"
             />
             Todos os Cursos
           </label>
@@ -175,7 +175,7 @@ export default function Courses() {
               type="checkbox"
               checked={filters.iniciantes}
               onChange={() => toggleFilter("iniciantes")}
-              className="mr-2"
+              className="mr-2 rounded"
             />
             Iniciantes
           </label>
@@ -186,7 +186,7 @@ export default function Courses() {
               type="checkbox"
               checked={filters.programacaoPython}
               onChange={() => toggleFilter("programacaoPython")}
-              className="mr-2"
+              className="mr-2 rounded"
             />
             Programação Python
           </label>
@@ -197,7 +197,7 @@ export default function Courses() {
               type="checkbox"
               checked={filters.cienciaDeDados}
               onChange={() => toggleFilter("cienciaDeDados")}
-              className="mr-2"
+              className="mr-2 rounded"
             />
             Ciência de Dados
           </label>
@@ -248,7 +248,7 @@ export default function Courses() {
                 </div>
                 </div>
               ))}
-              {!filteredProducts.length && <p className="text-center p-4">Ajuste os filtros para listar os cursos.</p>}
+              {!filteredProducts.length && <h2 className="text-center p-4 font-bold">Ajuste os filtros para listar os cursos.</h2>}
             </div>
           </div>
         </div>
