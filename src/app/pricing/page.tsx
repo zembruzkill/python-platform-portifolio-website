@@ -25,9 +25,10 @@ const Pricing = () => {
                   <div className="pt-24 flex flex-row">
                       <div className="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
                           <h1 className="text-black font-semibold text-2xl">Individual</h1>
+                          <p className="">A partir de </p>
                           <p className="pt-2 tracking-wide">
                               <span className="text-gray-400 align-top">R$ </span>
-                              <span className="text-3xl font-semibold">27,90</span>
+                              <span className="text-3xl font-semibold">37,90</span>
                           </p>
                           <div className="pt-8">
                               <p className="text-gray-400 text-center">
@@ -54,7 +55,7 @@ const Pricing = () => {
                           <h1 className="text-black font-semibold text-2xl">Vitalício</h1>
                           <p className="pt-2 tracking-wide">
                               <span className="text-black  text-bold align-top">R$ </span>
-                              <span className="text-3xl text-black font-bold">49,90</span>
+                              <span className="text-3xl text-black font-bold">499,90</span>
                           </p>
                           <div className="pt-8">
                               <p className="text-black text-center">
@@ -84,7 +85,7 @@ const Pricing = () => {
                           <h1 className="text-black font-semibold text-2xl">Enterprise</h1>
                           <p className="pt-2 tracking-wide">
                               <span className="text-gray-400 align-top">R$ </span>
-                              <span className="text-3xl font-semibold">99,00</span>
+                              <span className="text-3xl font-semibold">999,00</span>
                           </p>
                           <div className="pt-8">
                               <p className="text-gray-400 text-center">
@@ -128,7 +129,7 @@ const Pricing = () => {
                                       </svg>
                                   </span>
                           </summary>
-                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Se você deseja apenas verificar a aparência da interface do aplicativo, como funciona e quais recursos possui, escolha o plano de conta Gratuito. Isso lhe dará acesso à seção gratuita de todos os cursos. Você pode optar por atualizar sua conta gratuita para um plano pago a qualquer momento.
+                          <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Se você deseja testar algumas lições dos cursos, como funciona a didática de aprendizado e quais recursos possui, escolha o plano de conta Gratuito. Isso lhe dará acesso à seção gratuita de todos os cursos. Você pode optar por atualizar sua conta gratuita para um plano pago a qualquer momento.
                           </p>
                       </details>
                   </div>
