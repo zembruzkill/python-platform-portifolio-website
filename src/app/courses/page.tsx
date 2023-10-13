@@ -47,28 +47,6 @@ export default function Courses() {
       level: 'Avançado',
       categories: ['data science', 'python programming'],
       description: "Pare de procurar como criar aplicações Python com interface — está tudo aqui..."
-    },
-    {
-      id: 4,
-      name: 'Python com Interface Gráfica - QtDesigner e Qt6/PySide6',
-      imageSrc: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697173347/Design_Python_bl1xow.png',
-      imageAlt: "Banner Curso Criando Aplicações Python com Interface Gráfica utilizando o QtDesigner e Qt6/PySide6.",
-      href: 'https://pythonsimplificado.com.br/curso-criando-aplicacoes-com-qtdesigner-e-pyside6/',
-      popularity: 3,
-      level: 'Avançado',
-      categories: ['data science', 'python programming'],
-      description: "Pare de procurar como criar aplicações Python com interface — está tudo aqui..."
-    },
-    {
-      id: 5,
-      name: 'Python com Interface Gráfica - QtDesigner e Qt6/PySide6',
-      imageSrc: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697173347/Design_Python_bl1xow.png',
-      imageAlt: "Banner Curso Criando Aplicações Python com Interface Gráfica utilizando o QtDesigner e Qt6/PySide6.",
-      href: 'https://pythonsimplificado.com.br/curso-criando-aplicacoes-com-qtdesigner-e-pyside6/',
-      popularity: 3,
-      level: 'Avançado',
-      categories: ['data science', 'python programming'],
-      description: "Pare de procurar como criar aplicações Python com interface — está tudo aqui..."
     }
   ]
 

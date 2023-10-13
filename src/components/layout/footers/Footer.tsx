@@ -7,12 +7,25 @@ import { useRouter } from 'next/navigation';
 import logo from '../../../assets/logo.svg'
 import Image from 'next/image'
 
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+
 export default function Footer() {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <footer className="bg-[#172645] dark:bg-gray-900">
+        <FloatingWhatsApp 
+        phoneNumber="+5555997239401"
+        accountName="Luciano"
+        statusMessage="Usualmente responde em 1 hora!"
+        chatMessage='Olá, como posso te ajudar?'
+        placeholder="Digite uma mensagem..."
+        avatar='https://res.cloudinary.com/doorwkexf/image/upload/v1697224011/profile_pic_aqmy9c.jpg'
+        darkMode={true}
+        allowEsc
+        notification
+        notificationSound />
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

@@ -1,11 +1,14 @@
 import  Header  from "../../components/layout/headers/Header";
 
+import Footer from "@/components/layout/footers/Footer";
+
 const Blog = () => {
     return (
-      <div>
+      <>
         <Header items={true}/>
-        <h1 className="">Blog</h1>
-      </div>
+        <h1 className="h-screen">Blog</h1>
+        <Footer />
+      </>
     );
   };
   
