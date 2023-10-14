@@ -1,13 +1,13 @@
 ---
 title: "Aprenda Python: Guia para Iniciantes"
 subtitle: "Comece sua jornada de programação com Python"
-image: "https://images.unsplash.com/photo-1624953587687-daf255b6b80a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3474&q=80"
-category: "Tutorial"
+image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80"
+category: "tutorial"
 date: "28/10/2023"
 author: "Luciano Zembruzki"
 ---
 
-![Aprenda Python: Guia para Iniciantes](https://images.unsplash.com/photo-1624953587687-daf255b6b80a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3474&q=80)
+![Aprenda Python: Guia para Iniciantes](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80)
 
 Python é uma linguagem de programação versátil e fácil de aprender, tornando-a uma escolha popular para iniciantes em programação. Neste guia para iniciantes, você aprenderá os conceitos fundamentais da programação em Python e dará seus primeiros passos na criação de programas simples.
 

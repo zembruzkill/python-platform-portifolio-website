@@ -38,7 +38,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 </div>
                 <div id="content" className="mx-auto max-w-7xl flex mb-12">
                   <div className="flex-1 mt-4">
-                    <article className="prose prose-blue mx-auto mt-12 dark:prose-invert md:prose-lg max-w-none">
+                    <article className="prose prose-blue mx-auto mt-12 md:prose-lg max-w-none">
                       <ReactMarkdown remarkPlugins={[[remarkGfm]]}>
                         {post?.markdown}
                       </ReactMarkdown>

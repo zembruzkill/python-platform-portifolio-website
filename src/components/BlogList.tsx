@@ -1,3 +1,4 @@
+import CategoryButton from "./CategoryButton";
 
 interface Post {
         slug: string;
@@ -24,13 +25,22 @@ export default async function BlogList({posts, categories}: Props) {
           <p className="text-zinc-600 sm:text-xl ">Usamos uma abordagem ágil para testar suposições e nos conectar com as necessidades do seu público desde o início e com frequência.</p>
         </div> 
           <div className="container mx-auto 2xl:flex xl:flex lg:flex gap-4">
-            <div className="w-2/3">
+            <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 mb-4">
             <ul className='space-y-4'>
               {posts.map(({ slug, title, date, author, subtitle, image, category}) => (
-                <li className='' key={slug}>
-                <a href={`/blog/post/${slug}`} className="flex flex-col items-center bg-white border border-[#CFCFCF] rounded-lg shadow md:flex-row hover:bg-gray-100">
+                <li className='sm:w-full' key={slug}>
+                <a href={`/blog/post/${slug}`} className="flex flex-col items-center bg-white border border-[#CFCFCF] rounded-lg shadow lg:flex-row hover:bg-gray-100">
                   <img className="object-cover w-full rounded-t-lg lg:w-60 " src={image} alt=""></img>
                   <div className="flex flex-col justify-between leading-normal pl-4">
+                    <div className="flex gap-2 pt-2">
+                    {category.split(',').map((category_post) => (
+                        <button
+                        className="p-1 bg-zinc-200 text-zinc-700 rounded text-title-xxsm uppercase text-center flex items-center justify-center"
+                        >
+                        {category_post}
+                      </button>
+                    ))}
+                    </div>
                       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{title}</h5>
                       <p className="font-light text-gray-700 mt-1 mb-1">{subtitle}</p>
                       <div className='flex gap-2'>
@@ -47,20 +57,9 @@ export default async function BlogList({posts, categories}: Props) {
             <div className="2xl:w-1/3 xl:w-1/3 lg:w-1/3 h-full flex flex-col gap-1 sm:w-full">
               <p className='font-bold'>Selecione uma categoria:</p>
               <div className="grid grid-cols-4 grid-rows-3 gap-1">
-                <a
-                    href={`/blog/`}
-                    className="p-1 bg-zinc-200 text-zinc-700 rounded hover:bg-zinc-300 text-title-xxsm uppercase text-center"
-                  >
-                    TODOS
-                  </a>
+                <CategoryButton category={'todos'} index={1} href={'/blog/'}/>
                 {categories.map((category, index) => (
-                  <a
-                    href={`/blog/category/${category}`}
-                    key={index}
-                    className="p-1 bg-zinc-200 text-zinc-700 rounded hover:bg-zinc-300 text-title-xxsm uppercase text-center"
-                  >
-                    {category}
-                  </a>
+                  <CategoryButton category={category} index={index} href={"/blog/category/" + category}/>
                 ))}
               </div>
               <div className="border border-[#CFCFCF] rounded-lg p-4">

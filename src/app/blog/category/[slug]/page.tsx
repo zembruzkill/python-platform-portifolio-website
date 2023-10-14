@@ -8,7 +8,7 @@ import { getUniqueCategories } from "../../../../../lib/posts";
 import BlogList from '@/components/BlogList';
 
 export default async function BlogCategory({ params }: { params: { slug: string } }) {  
-        const decodedSlug = decodeURIComponent(params.slug); // decode the slug
+        const decodedSlug = decodeURIComponent(params.slug);
         const posts = await getPosts();
         const categories = await getUniqueCategories();
 
@@ -17,7 +17,7 @@ export default async function BlogCategory({ params }: { params: { slug: string 
         return (
             <>
                 <Header items={true}/>
-                        <BlogList posts={category_posts} categories={categories}/>
+                    <BlogList posts={category_posts} categories={categories}/>
                 <Footer />
             </>
         );
