@@ -2,7 +2,7 @@
 interface Props {
     index: number;
     href: string;
-    category: string[];
+    category: string;
 }
 
 export default async function CategoryButton({category, index, href}: Props) {  

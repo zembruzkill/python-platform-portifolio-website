@@ -25,14 +25,14 @@ export default async function BlogList({posts, categories}: Props) {
           <p className="text-zinc-600 sm:text-xl ">Usamos uma abordagem ágil para testar suposições e nos conectar com as necessidades do seu público desde o início e com frequência.</p>
         </div> 
           <div className="container mx-auto 2xl:flex xl:flex lg:flex gap-4">
-            <div className="w-2/3">
+            <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 mb-4">
             <ul className='space-y-4'>
               {posts.map(({ slug, title, date, author, subtitle, image, category}) => (
-                <li className='' key={slug}>
-                <a href={`/blog/post/${slug}`} className="flex flex-col items-center bg-white border border-[#CFCFCF] rounded-lg shadow md:flex-row hover:bg-gray-100">
+                <li className='sm:w-full' key={slug}>
+                <a href={`/blog/post/${slug}`} className="flex flex-col items-center bg-white border border-[#CFCFCF] rounded-lg shadow lg:flex-row hover:bg-gray-100">
                   <img className="object-cover w-full rounded-t-lg lg:w-60 " src={image} alt=""></img>
                   <div className="flex flex-col justify-between leading-normal pl-4">
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 pt-2">
                     {category.split(',').map((category_post) => (
                         <button
                         className="p-1 bg-zinc-200 text-zinc-700 rounded text-title-xxsm uppercase text-center flex items-center justify-center"
