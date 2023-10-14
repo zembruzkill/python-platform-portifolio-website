@@ -57,7 +57,7 @@ const config: Config = {
         ...defaultTheme.screens,
       },
       fontSize: {
-        "title-xxl": ["44px", "55px"],
+        "title-xxl": ["54px", "65px"],
         "title-xl": ["36px", "45px"],
         "title-xl2": ["33px", "45px"],
         "title-lg": ["28px", "35px"],
@@ -253,6 +253,9 @@ const config: Config = {
         },
       },
     },
-  plugins: [require('@tailwindcss/forms'),],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
 }
 export default config

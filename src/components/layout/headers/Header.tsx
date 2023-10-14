@@ -21,7 +21,7 @@ export default function Header(props: any) {
 
   return (
     <header className='bg-gradient-to-r from-[#172645] to-[#ff80b5]'>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-2">
         <div className="flex lg:flex-1">
           <div className="-m-1.5 p-1.5">
             <Link href='/'>
