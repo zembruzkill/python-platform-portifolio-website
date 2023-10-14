@@ -16,6 +16,8 @@ const getPosts = async () => {
         slug: filename.replace(/\.md$/, ""),
         title: document.data.title,
         subtitle: document.data.subtitle,
+        image: document.data.image,
+        category: document.data.category,
         date: document.data.date,
         author: document.data.author,
         markdown: document.content,
@@ -25,3 +27,19 @@ const getPosts = async () => {
 };
 
 export default getPosts;
+
+export const getUniqueCategories = async () => {
+  const posts = await getPosts();
+  const allCategories: string[] = posts.reduce((categories: string[], post) => {
+    // Divide a string de categoria em um array de categorias
+    const postCategories = post.category.split(',');
+    // Adiciona as categorias do post à lista geral de categorias
+    categories.push(...postCategories);
+    return categories;
+  }, []);
+
+  // Use um Set para remover duplicatas e, em seguida, converta-o de volta para um array
+  const uniqueCategories = Array.from(new Set(allCategories));
+
+  return uniqueCategories;
+};
