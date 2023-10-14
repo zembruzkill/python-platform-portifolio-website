@@ -57,14 +57,15 @@ const config: Config = {
         ...defaultTheme.screens,
       },
       fontSize: {
-        "title-xxl": ["44px", "55px"],
+        "title-xxl": ["54px", "65px"],
         "title-xl": ["36px", "45px"],
         "title-xl2": ["33px", "45px"],
         "title-lg": ["28px", "35px"],
         "title-md": ["24px", "30px"],
         "title-md2": ["26px", "30px"],
         "title-sm": ["20px", "26px"],
-        "title-xsm": ["18px", "24px"],
+        "title-xsm": ["14px", "16px"],
+        "title-xxsm": ["12px", "13px"],
       },
       spacing: {
         4.5: "1.125rem",
@@ -253,6 +254,9 @@ const config: Config = {
         },
       },
     },
-  plugins: [require('@tailwindcss/forms'),],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
 }
 export default config
