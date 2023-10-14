@@ -12,7 +12,7 @@ export default async function BlogCategory({ params }: { params: { slug: string 
         const posts = await getPosts();
         const categories = await getUniqueCategories();
 
-        const category_posts = posts.filter(post => post.category.split(',').map(c => c.trim()).includes(decodedSlug))
+        const category_posts = posts.filter(post => post.category.split(',').map((c: string) => c.trim()).includes(decodedSlug))
 
         return (
             <>
