@@ -6,7 +6,7 @@ const Blog = () => {
     return (
       <>
         <Header items={true}/>
-        <h1 className="h-screen">Blog</h1>
+        <h1 className="h-screen">Nenhuma postagem disponível</h1>
         <Footer />
       </>
     );
