@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footers/Footer";
 import getPosts from "../../../../../lib/posts";
 import { getUniqueCategories } from "../../../../../lib/posts";
 import BlogList from '@/components/BlogList';
+import { redirect } from 'next/navigation';
 
 export default async function BlogCategory({ params }: { params: { slug: string } }) {  
         const decodedSlug = decodeURIComponent(params.slug);
@@ -14,10 +15,15 @@ export default async function BlogCategory({ params }: { params: { slug: string 
 
         const category_posts = posts.filter(post => post.category.split(',').map((c: string) => c.trim()).includes(decodedSlug))
 
+        if (category_posts.length == 0) {
+            redirect('/404');
+            return null;
+          }
+
         return (
             <>
                 <Header items={true}/>
-                    <BlogList posts={category_posts} categories={categories}/>
+                    <BlogList all_posts={posts} posts={category_posts} categories={categories} />
                 <Footer />
             </>
         );
