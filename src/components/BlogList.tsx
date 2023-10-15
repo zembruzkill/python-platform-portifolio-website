@@ -20,11 +20,6 @@ export default async function BlogList({all_posts, posts, categories}: Props) {
 
     return (
       <>
-        <div className="mx-auto max-w-7xl items-center pt-6 mb-8">
-        <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-          <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-zinc-900 ">Nosso Blog</h2>
-          <p className="text-zinc-600 sm:text-xl ">Explorando o Mundo da Programação Python: Dicas, Truques e Inspiração para Tornar seu Código Mais Poderoso.</p>
-        </div> 
           <div className="container mx-auto 2xl:flex xl:flex lg:flex gap-4">
             <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 mb-4">
             <ul className='space-y-4'>
@@ -42,7 +37,7 @@ export default async function BlogList({all_posts, posts, categories}: Props) {
                       </button>
                     ))}
                     </div>
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{title}</h5>
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-[#182646] ">{title}</h5>
                       <p className="font-light text-gray-700 mt-1 mb-1">{subtitle}</p>
                       <div className='flex gap-2'>
                         <p className="font-extralight text-gray-700 ">{author}</p>
@@ -83,7 +78,6 @@ export default async function BlogList({all_posts, posts, categories}: Props) {
               </div>
             </div>
           </div>
-        </div>
       </>
     );
   };
