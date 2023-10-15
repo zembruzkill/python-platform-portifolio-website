@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import LecturesHeader from "@/components/layout/headers/LeacturesHeader";
 
 import courses from "../../../../../../data/courses";
-import LecturesContent from "@/components/LeacturesContent";
+import LecturesContent from "@/components/lectures/LecturesContent";
 
 export default function SingleLecture({ params }: { params: { lecture: string, course: string } }) {
 
@@ -21,7 +21,6 @@ export default function SingleLecture({ params }: { params: { lecture: string, c
 
   return (
     <>
-      <LecturesHeader/>
       <LecturesContent course={foundCourse} currentLecture={params.lecture}/>
     </>
   )
