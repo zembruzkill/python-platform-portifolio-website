@@ -11,18 +11,19 @@ interface Post {
 }
 
 interface Props {
+    all_posts: Post[];
     posts: Post[];
     categories: string[];
 }
 
-export default async function BlogList({posts, categories}: Props) {  
+export default async function BlogList({all_posts, posts, categories}: Props) {
 
     return (
       <>
         <div className="mx-auto max-w-7xl items-center pt-6 mb-8">
         <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
           <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-zinc-900 ">Nosso Blog</h2>
-          <p className="text-zinc-600 sm:text-xl ">Usamos uma abordagem ágil para testar suposições e nos conectar com as necessidades do seu público desde o início e com frequência.</p>
+          <p className="text-zinc-600 sm:text-xl ">Explorando o Mundo da Programação Python: Dicas, Truques e Inspiração para Tornar seu Código Mais Poderoso.</p>
         </div> 
           <div className="container mx-auto 2xl:flex xl:flex lg:flex gap-4">
             <div className="2xl:w-2/3 xl:w-2/3 lg:w-2/3 mb-4">
@@ -35,7 +36,7 @@ export default async function BlogList({posts, categories}: Props) {
                     <div className="flex gap-2 pt-2">
                     {category.split(',').map((category_post) => (
                         <button
-                        className="p-1 bg-zinc-200 text-zinc-700 rounded text-title-xxsm uppercase text-center flex items-center justify-center"
+                        className="p-1 bg-blue-200 text-zinc-700 rounded text-title-xxsm uppercase text-center flex items-center justify-center"
                         >
                         {category_post}
                       </button>
@@ -66,12 +67,12 @@ export default async function BlogList({posts, categories}: Props) {
                   <p className="text-title-xxsm font-bold uppercase">Destaques</p>
                   <div className="pt-4">
                     <ul className="space-y-2">
-                      {posts.map(({ slug, title, date}, index) => (
+                      {all_posts.map(({ slug, title, date}, index) => (
                         <li className='' key={slug}>
                           <div className="flex gap-2">
                             <p>{index + 1}</p>
                             <div>
-                              <h3 className=""> {title}</h3>
+                              <a href={"/blog/post/" + slug} className=""> {title}</a>
                               <h4 className="font-extralight pt-2 text-title-xsm">{date}</h4>
                             </div> 
                           </div>

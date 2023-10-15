@@ -9,15 +9,15 @@ import getPosts from "../../../lib/posts";
 import { getUniqueCategories } from "../../../lib/posts";
 import Link from "next/link";
 
-export default async function Blog() {  
+export default async function Blog() {
 
     const posts = await getPosts();
     const categories = await getUniqueCategories();
-
+    
     return (
       <>
         <Header items={true}/>
-          <BlogList posts={posts} categories={categories}/>
+          <BlogList all_posts={posts} posts={posts} categories={categories}/>
         <Footer />
       </>
     );
