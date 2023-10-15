@@ -64,6 +64,8 @@ const config: Config = {
         "title-md": ["24px", "30px"],
         "title-md2": ["26px", "30px"],
         "title-sm": ["20px", "26px"],
+        "title-ssm": ["18px", "20px"],
+        "title-sssm": ["16px", "18px"],
         "title-xsm": ["14px", "16px"],
         "title-xxsm": ["12px", "13px"],
       },
@@ -248,6 +250,7 @@ const config: Config = {
         "spin-3": "spin 3s linear infinite",
       },
       backgroundImage: {
+          'status-icon': "url('https://res.cloudinary.com/doorwkexf/image/upload/v1697358076/course-incomplete_ybjy03.png')",
           'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
           'gradient-conic':
             'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
