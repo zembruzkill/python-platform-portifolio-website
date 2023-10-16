@@ -9,7 +9,12 @@ import { usePython } from 'react-py'
 import Controls from './Controls'
 import Loader from './Loader'
 import Input from './Input'
-import { ArrowPathIcon, PlayIcon, StopIcon, CodeBracketIcon} from '@heroicons/react/24/solid'
+import { ArrowPathIcon, PlayIcon, StopIcon, CodeBracketIcon, CommandLineIcon} from '@heroicons/react/24/solid'
+
+// import {
+//   CodeBracketIcon,
+// ,
+// } from '@heroicons/react/24/outline'
 
 import AceEditor from "react-ace";
 
@@ -18,7 +23,8 @@ import 'ace-builds/src-noconflict/theme-dracula'
 
 import 'ace-builds/src-noconflict/theme-idle_fingers'
 import 'ace-builds/src-noconflict/ext-language_tools'
-import Console from './Console'
+
+
 
 const editorOptions = {
   enableBasicAutocompletion: true,
@@ -81,11 +87,9 @@ export default function CodeEditor(props: CodeEditorProps) {
   return (
   <>
     <div>
-      <button className='text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-blue-300'>Editor - main.py</button>
+      <button className='text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-blue-300'><span className='flex items-center gap-2'><span><CodeBracketIcon className=" h-5 w-5" /></span>Editor - main.py</span></button>
     </div>
     <div className="p-2 rounded-r-lg space-y-2 text-black bg-[#282A36]">
-
-      {isLoading && <Loader />}
 
       <div>
         <AceEditor
@@ -93,7 +97,7 @@ export default function CodeEditor(props: CodeEditorProps) {
           mode="python"
           name="CodeBlock"
           fontSize="0.9rem"
-          className="min-h-[7rem] overflow-clip"
+          className="min-h-[20rem] overflow-clip"
           theme="dracula"
           onChange={(newValue) => setInput(newValue)}
           width="100%"
@@ -125,15 +129,16 @@ export default function CodeEditor(props: CodeEditorProps) {
         isAwaitingInput={isAwaitingInput}
       />
       </div>
-
     </div>
+    
+    {isLoading && <Loader />}
 
     <div className='pt-4'>
       <div>
-        <button className='text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-yellow-300'>Console - Saída</button>
+        <button className='text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-yellow-300'><span className='flex items-center gap-2'><span><CommandLineIcon className=" h-5 w-5" /></span>Console - Saída</span></button>
       </div>
       <div className="p-2 rounded-r-lg space-y-2 text-black bg-[#282A36]">
-          <pre className={`w-full min-h-[5rem] text-left rounded-md bg-[#282a36] p-8`}>
+          <pre className={`w-full min-h-[15rem] text-left rounded-md bg-[#282a36] p-8`}>
           {showOutput && (
             <>
               <code className='text-title-xxsm text-blue-500'>$ python3 main.py</code>

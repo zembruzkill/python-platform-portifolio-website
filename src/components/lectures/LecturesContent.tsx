@@ -103,6 +103,7 @@ export default function LecturesContent({course, currentLecture}: {course: any, 
                   <div>
                     {lecture.type === 'video' && (
                     <LecturesVideoPlayer url={lecture.href} autoplay={lecture.autoplay} allow={"autoplay; fullscreen; picture-in-picture"}/>
+                    
                     )}
                   </div>
                   <div>

@@ -6,7 +6,7 @@ export default function LecturesPythonEditor({lecture}: {lecture: any}) {
 
   return (
     <>
-      <div className="bg-black p-4 text-white">
+      <div className="bg-black p-4 text-white min-h-screen">
         <div className="flex gap-2">
           <div className="w-3/6">
             <div className="prose max-w-none prose-invert">

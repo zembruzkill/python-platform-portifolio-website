@@ -4,10 +4,6 @@ import { useEffect, useState } from 'react'
 import { PythonProvider } from 'react-py'
 
 import CodeEditor from './CodeEditor'
-import Console from './Console'
-
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
 
 import { snippets } from '../data/snippets'
 
@@ -16,10 +12,6 @@ import {
   CommandLineIcon,
 } from '@heroicons/react/24/outline'
 
-import {
-  ArrowTopRightOnSquareIcon,
-  ArrowPathIcon
-} from '@heroicons/react/24/solid'
 
 export default function Editor() {
 
@@ -43,7 +35,7 @@ export default function Editor() {
 
   const packages = {
     official: [],
-    micropip: ['pyodide-http'],
+    micropip: [],
   }
 
   useEffect(() => {
