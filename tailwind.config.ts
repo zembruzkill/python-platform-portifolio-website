@@ -196,6 +196,8 @@ const config: Config = {
       },
       minWidth: {
         22.5: "5.625rem",
+        25: "6.25rem",
+        30: "7.5rem",
         42.5: "10.625rem",
         47.5: "11.875rem",
         75: "18.75rem",

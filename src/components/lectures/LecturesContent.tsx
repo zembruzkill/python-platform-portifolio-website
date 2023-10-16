@@ -1,3 +1,7 @@
+'use client'
+
+import { useState } from 'react';
+
 import LecturesHeader from '../layout/headers/LeacturesHeader';
 
 import LecturesCourseName from './LecturesCourseName';
@@ -7,17 +11,17 @@ import LecturesVideoPlayer from './LecturesVideoPlayer';
 import { redirect } from "next/navigation";
 import LecturesBlockedLecture from "./LecturesBlockedLecture";
 
+import { FaHouseChimney, FaGear, FaAngleRight, FaAngleLeft, FaListCheck } from "react-icons/fa6";
+
+import Image from 'next/image';
+import logo from '@/assets/logo.svg';
+
 export default function LecturesContent({course, currentLecture}: {course: any, currentLecture: any}) {
 
-  let isHidden = false; // Defina uma variável para controlar a visibilidade da div
+  const [isHidden, setIsHidden] = useState(false);
 
-  // Função para alternar a visibilidade da div
   const toggleVisibility = () => {
-    isHidden = !isHidden;
-    const div = document.getElementById('your-div'); // Selecione a div pelo ID
-    if (div) {
-      div.style.display = isHidden ? 'none' : 'block';
-    }
+    setIsHidden(!isHidden);
   };
 
   let lecture = null;
@@ -43,25 +47,55 @@ export default function LecturesContent({course, currentLecture}: {course: any, 
 
   return (
     <>
-      <LecturesHeader home={course.href}/>
+      <header className='bg-gradient-to-r from-[#0D1224] to-[#0D1224] sticky'>
+        <nav className=" mx-auto flex items-center justify-between bg-gray-300 border-b border-[#1C1836]">
+          <div className="flex min-w-30 w-1/5 border-r min-w-10 border-[#1C1836] justify-between pt-7 pb-6 pr-4 pl-4 gap-2">
+            <a href={course.href}>
+              <FaHouseChimney color="#A3A3A3" size={20} />
+            </a>
+            <div className='flex gap-2'>
+              <FaGear color="#A3A3A3" size={20} />
+              <button
+                onClick={toggleVisibility}
+                className="2xl:hidden xl:hidden lg:hidden"
+              >
+                <FaListCheck color="#A3A3A3" size={20} />
+              </button>
+            </div>
+          </div>
+          <div className="flex w-4/5 justify-between p-4 gap-3">
+            <Image
+              className=''
+              src={logo}
+              alt="Logo of the website"
+              width={150}
+              height={150}
+            />
+            <div className='flex gap-3 '>
+              <button className='text-white font-bold border border-[#1C1836] hover:border-white hover:text-zinc-400 rounded p-2 flex items-center'><span><FaAngleLeft /></span> <span className='hidden 2xl:block xl:block lg:block'>Aula Anterior</span></button>
+              <button className='text-white font-bold bg-[#6432c7] hover:bg-[#7234EF] border border-[#A3A3A3] hover:border-white rounded p-2 flex items-center'><span className='hidden 2xl:block xl:block lg:block'>Proxima Aula</span><span><FaAngleRight /></span></button>
+            </div>
+          </div>
+        </nav>
+      </header>
       <div className='bg-gradient-to-r from-[#0D1224] to-[#0D1224]'>
         <div className="mx-auto justify-between bg-gray-300 border-[#1C1836] 2xl:flex xl:flex lg:flex md:block">
-        <div className="2xl:w-1/5 xl:w-1/5 lg:w-1/5 md:w-full sm:w-full xsm:w-full min-w-75 border-r-1 border-[#1C1836] 2xl:h-screen xl:h-screen lg:h-screen overflow-y-auto">
-          <LecturesCourseName courseName={course.name} />
-          {course.lectures.modules.map((module: any, index: number) => (
-            <div key={index}>
-              <LecturesModuleName index={index} moduleName={module.name} />
-              {module.classes.map((classe: any, classIndex: number) => (
-                <ul key={classIndex}>
-                  <li>
-                    <LecturesLectureName index={classIndex} lectureName={classe.name} currentLecture={classe.class_id === currentLecture} href={classe.class_id}/>
-                  </li>
-                </ul>
-              ))}
-            </div>
-          ))}
-        </div>
-          <div className="xsm:w-full sm:w-full w-4/5 relative border-white">
+          <div className={`w-full 2xl:w-1/5 xl:w-1/5 lg:w-1/5 min-w-75 border-r-1 border-[#1C1836] 2xl:h-screen xl:h-screen lg:h-screen overflow-y-auto ${isHidden ? 'hidden' : 'block'}`}>
+            <LecturesCourseName courseName={course.name} />
+            {course.lectures.modules.map((module: any, index: number) => (
+              <div key={index}>
+                <LecturesModuleName index={index} moduleName={module.name} />
+                {module.classes.map((classe: any, classIndex: number) => (
+                  <ul key={classIndex}>
+                    <li>
+                      <LecturesLectureName index={classIndex} lectureName={classe.name} currentLecture={classe.class_id === currentLecture} href={classe.class_id}/>
+                    </li>
+                  </ul>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="w-full lg:w-4/5 xl:w-4/5 2xl:w-4/5 relative border-white">
             <div>
               {lecture.is_public && (
                 <div>
