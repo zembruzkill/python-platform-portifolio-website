@@ -13,7 +13,7 @@ const courses = [
       modules: [
         {
           module_id: '2z7ramxejw',
-          name: 'MÓDULO 1 - CONSTRUINDO UMA APLICAÇÃO DE FRENTE DE CAIXA COM BANCO DE DADOS',
+          name: 'Módulo 1 - Boas vindas e configuração do ambiente de desenvolvimento',
           is_public: true,
           total_duration: '00:15:00',
           classes: [
@@ -22,7 +22,7 @@ const courses = [
               is_public: true,
               liberation_days: 0,
               liberation_type: 'by_days',
-              name: 'Aula 1 - Configuração do ambiente e estrutura inicial de arquivos do projeto',
+              name: 'Configuração do ambiente',
               autoplay: false,
               description: 'Nesta aula, vamos configurar o ambiente de desenvolvimento e criar a estrutura inicial de arquivos do projeto.',
               page_order: 1,
