@@ -11,15 +11,15 @@ function Codeblock() {
   
     return (
       <>
-        {isLoading ? <p>Loading...</p> : <p>Ready!</p>}
+        {isLoading ? <p>Carregando...</p> : <p>Pronto!</p>}
         <form>
           <textarea
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Enter your code here"
+            placeholder="Digite seu código aqui"
           />
           <input
             type="submit"
-            value={!isRunning ? 'Run' : 'Running...'}
+            value={!isRunning ? 'Executar' : 'Executando...'}
             disabled={isLoading || isRunning}
             onClick={(e) => {
               e.preventDefault()

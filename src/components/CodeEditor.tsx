@@ -14,10 +14,11 @@ import { ArrowPathIcon, PlayIcon, StopIcon, CodeBracketIcon} from '@heroicons/re
 import AceEditor from "react-ace";
 
 import 'ace-builds/src-noconflict/mode-python'
-import 'ace-builds/src-noconflict/theme-textmate'
+import 'ace-builds/src-noconflict/theme-dracula'
 
 import 'ace-builds/src-noconflict/theme-idle_fingers'
 import 'ace-builds/src-noconflict/ext-language_tools'
+import Console from './Console'
 
 const editorOptions = {
   enableBasicAutocompletion: true,
@@ -40,14 +41,6 @@ export default function CodeEditor(props: CodeEditorProps) {
   const { code, packages } = props
   const [input, setInput] = useState(code.trimEnd())
   const [showOutput, setShowOutput] = useState(false)
-
-  const tabs = [
-    {
-      name: 'Editor de Código',
-      icon: <CodeBracketIcon className="mr-3 h-5 w-5 stroke-inherit" />,
-      component: <CodeEditor code={code} />
-    }
-  ]
 
   useEffect(() => {
     setInput(code.trimEnd())
@@ -87,19 +80,43 @@ export default function CodeEditor(props: CodeEditorProps) {
 
   return (
   <>
-    <div className="relative z-0 flex flex-col space-y-2">
-      <Controls
+    <div>
+      <button className='text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-blue-300'>Editor - main.py</button>
+    </div>
+    <div className="p-2 rounded-r-lg space-y-2 text-black bg-[#282A36]">
+
+      {isLoading && <Loader />}
+
+      <div>
+        <AceEditor
+          value={input}
+          mode="python"
+          name="CodeBlock"
+          fontSize="0.9rem"
+          className="min-h-[7rem] overflow-clip"
+          theme="dracula"
+          onChange={(newValue) => setInput(newValue)}
+          width="100%"
+          maxLines={Infinity}
+          onLoad={editorOnLoad}
+          editorProps={{ $blockScrolling: true }}
+          setOptions={editorOptions}
+        />
+
+        <hr className="my-4 border-zinc-700" />
+
+        <Controls
         items={[
           {
-            label: 'Run',
+            label: 'Executar',
             icon: PlayIcon,
             onClick: run,
             disabled: isLoading || isRunning,
             hidden: isRunning
           },
-          { label: 'Stop', icon: StopIcon, onClick: stop, hidden: !isRunning },
+          { label: 'Parar', icon: StopIcon, onClick: stop, hidden: !isRunning },
           {
-            label: 'Reset',
+            label: '',
             icon: ArrowPathIcon,
             onClick: reset,
             disabled: isRunning
@@ -107,37 +124,29 @@ export default function CodeEditor(props: CodeEditorProps) {
         ]}
         isAwaitingInput={isAwaitingInput}
       />
+      </div>
 
-      {isLoading && <Loader />}
+    </div>
 
-      <AceEditor
-        value={input}
-        mode="python"
-        name="CodeBlock"
-        fontSize="0.9rem"
-        className="min-h-[7rem] overflow-clip rounded-md shadow-md"
-        theme="textmate"
-        onChange={(newValue) => setInput(newValue)}
-        width="100%"
-        maxLines={Infinity}
-        onLoad={editorOnLoad}
-        editorProps={{ $blockScrolling: true }}
-        setOptions={editorOptions}
-      />
-
-      {isAwaitingInput && prompt !== undefined && (
-        <Input prompt={prompt} onSubmit={sendInput} />
-      )}
-
-      
-        <pre className={`w-full min-h-[5rem] p-4 text-left rounded-md ${showOutput && 'bg-white '}`}>
-        {showOutput && (
-          <>
-            <code className='text-blue-500'>{stdout}</code>
-            <code className="text-red-500">{stderr}</code>
-          </>
-        )}
+    <div className='pt-4'>
+      <div>
+        <button className='text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-yellow-300'>Console - Saída</button>
+      </div>
+      <div className="p-2 rounded-r-lg space-y-2 text-black bg-[#282A36]">
+          <pre className={`w-full min-h-[5rem] text-left rounded-md bg-[#282a36] p-8`}>
+          {showOutput && (
+            <>
+              <code className='text-title-xxsm text-blue-500'>$ python3 main.py</code>
+              {isAwaitingInput && prompt !== undefined && (
+                <Input prompt={prompt} onSubmit={sendInput} />
+              )}
+              <br />
+              <code className='text-title-xxsm text-white'>{stdout}</code>
+              <code className="text-title-xxsm text-red-500">{stderr}</code>
+            </>
+          )}
         </pre>
+      </div>
     </div>
   </>
   )

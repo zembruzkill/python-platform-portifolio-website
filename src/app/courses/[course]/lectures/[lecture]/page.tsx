@@ -1,10 +1,11 @@
 import { redirect } from "next/navigation";
-import LecturesHeader from "@/components/layout/headers/LeacturesHeader";
 
 import courses from "../../../../../../data/courses";
 import LecturesContent from "@/components/lectures/LecturesContent";
+import { getServerSession } from "next-auth";
+import { config, loginIsRequiredClientSide } from "../../../../../../lib/auth";
 
-export default function SingleLecture({ params }: { params: { lecture: string, course: string } }) {
+export default async function SingleLecture({ params }: { params: { lecture: string, course: string } }) {
 
   let foundCourse = null
 

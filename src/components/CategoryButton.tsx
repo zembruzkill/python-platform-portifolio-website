@@ -12,7 +12,7 @@ export default async function CategoryButton({category, index, href}: Props) {
         <a
           href={`${href}`}
           key={index}
-          className="p-1 bg-blue-200 text-zinc-700 rounded hover:bg-blue-300 text-title-xxsm uppercase text-center flex items-center justify-center"
+          className="p-1 bg-blue-200 rounded hover:bg-blue-300 text-title-xxsm uppercase text-center flex items-center justify-center"
         >
           {category}
         </a>

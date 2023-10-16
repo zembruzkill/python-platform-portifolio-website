@@ -13,7 +13,7 @@ const courses = [
       modules: [
         {
           module_id: '2z7ramxejw',
-          name: 'Bem-vindo ao curso',
+          name: 'MÓDULO 1 - CONSTRUINDO UMA APLICAÇÃO DE FRENTE DE CAIXA COM BANCO DE DADOS',
           is_public: true,
           total_duration: '00:15:00',
           classes: [
@@ -22,10 +22,12 @@ const courses = [
               is_public: true,
               liberation_days: 0,
               liberation_type: 'by_days',
-              name: 'Introdução ao curso',
+              name: 'Aula 1 - Configuração do ambiente e estrutura inicial de arquivos do projeto',
+              autoplay: false,
+              description: 'Nesta aula, vamos configurar o ambiente de desenvolvimento e criar a estrutura inicial de arquivos do projeto.',
               page_order: 1,
               duration: '00:05:00',
-              href: 'https://player.vimeo.com/video/873550054?autoplay=1',
+              href: 'https://player.vimeo.com/video/873550054',
               type: 'video'
             },
             {
@@ -34,21 +36,51 @@ const courses = [
               liberation_days: 0,
               liberation_type: 'by_days',
               name: 'Instalação do Python',
+              autoplay: true,
               page_order: 2,
               duration: '00:05:00',
-              href: 'https://player.vimeo.com/video/76979871?autoplay=1',
+              href: 'https://player.vimeo.com/video/76979871',
               type: 'video'
             },
             {
               class_id: '2z7ram6ej4sa76dd',
-              is_public: true,
-              liberation_days: 0,
-              liberation_type: 'by_days',
-              name: 'Instalação do VSCode',
-              page_order: 3,
-              duration: '00:05:00',
-              href: 'https://player.vimeo.com/video/76979871?autoplay=1',
-              type: 'video'
+  is_public: true,
+  liberation_days: 0,
+  liberation_type: 'by_days',
+  name: 'Instalação do VSCode',
+  autoplay: true,
+  page_order: 3,
+  duration: '00:05:00',
+  markdown: `
+## Exercício de Python - Calculadora de Média
+
+### **Enunciado:**
+Crie um programa Python que permita calcular a média de três notas. O programa deve solicitar ao usuário que insira as três notas, calcular a média e exibir o resultado.
+
+### **Entradas:**
+
+O programa deve solicitar ao usuário que insira três notas, uma de cada vez. As notas são números de ponto flutuante.
+
+### **Saída Esperada:**
+
+O programa deve exibir a média das três notas com duas casas decimais.
+
+### **Exemplo:**
+
+\`\`\`
+Por favor, insira a primeira nota: 7.5
+Por favor, insira a segunda nota: 8.0
+Por favor, insira a terceira nota: 6.5
+
+A média das notas é: 7.33
+\`\`\`
+
+Neste exemplo, o programa solicita ao usuário que insira três notas, que são 7.5, 8.0 e 6.5. Em seguida, calcula a média (que é (7.5 + 8.0 + 6.5) / 3) e exibe a média com duas casas decimais.
+
+Lembre-se de fornecer instruções claras aos alunos sobre como realizar a entrada de dados e calcular a média. Isso é um exercício introdutório para familiarizá-los com a entrada/saída e cálculos simples em Python.
+  `,
+  href: 'https://player.vimeo.com/video/76979871',
+  type: 'editor',
             },
           ],
         },
@@ -64,9 +96,10 @@ const courses = [
               liberation_days: 0,
               liberation_type: 'by_days',
               name: 'Hello World',
+              autoplay: true,
               page_order: 1,
               duration: '00:05:00',
-              href: 'https://player.vimeo.com/video/76979871?autoplay=1',
+              href: 'https://player.vimeo.com/video/76979871',
               type: 'video',
             },
           ],
@@ -83,9 +116,10 @@ const courses = [
                   liberation_days: 0,
                   liberation_type: "by_days",
                   name: "Estruturas Condicionais",
+                  autoplay: true,
                   page_order: 1,
                   duration: "00:10:00",
-                  href: "https://player.vimeo.com/video/23456789?autoplay=1",
+                  href: "https://player.vimeo.com/video/23456789",
                   type: "video"
               },
               {
@@ -94,9 +128,10 @@ const courses = [
                   liberation_days: 0,
                   liberation_type: "by_days",
                   name: "Estruturas de Repetição",
+                  autoplay: true,
                   page_order: 2,
                   duration: "00:10:00",
-                  href: "https://player.vimeo.com/video/34567890?autoplay=1",
+                  href: "https://player.vimeo.com/video/34567890",
                   type: "video"
               }
           ]

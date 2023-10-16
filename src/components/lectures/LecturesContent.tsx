@@ -15,6 +15,8 @@ import { FaHouseChimney, FaGear, FaAngleRight, FaAngleLeft, FaListCheck } from "
 
 import Image from 'next/image';
 import logo from '@/assets/logo.svg';
+import LecturesExtraContent from './LecturesExtraContent';
+import LecturesPythonEditor from './LecturesPythonEditor';
 
 export default function LecturesContent({course, currentLecture}: {course: any, currentLecture: any}) {
 
@@ -47,7 +49,7 @@ export default function LecturesContent({course, currentLecture}: {course: any, 
 
   return (
     <>
-      <header className='bg-gradient-to-r from-[#0D1224] to-[#0D1224] sticky'>
+      <header className='bg-gradient-to-r from-[#0D1224] to-[#0D1224] sticky text-white'>
         <nav className=" mx-auto flex items-center justify-between bg-gray-300 border-b border-[#1C1836]">
           <div className="flex min-w-30 w-1/5 border-r min-w-10 border-[#1C1836] justify-between pt-7 pb-6 pr-4 pl-4 gap-2">
             <a href={course.href}>
@@ -57,7 +59,6 @@ export default function LecturesContent({course, currentLecture}: {course: any, 
               <FaGear color="#A3A3A3" size={20} />
               <button
                 onClick={toggleVisibility}
-                className="2xl:hidden xl:hidden lg:hidden"
               >
                 <FaListCheck color="#A3A3A3" size={20} />
               </button>
@@ -72,8 +73,8 @@ export default function LecturesContent({course, currentLecture}: {course: any, 
               height={150}
             />
             <div className='flex gap-3 '>
-              <button className='text-white font-bold border border-[#1C1836] hover:border-white hover:text-zinc-400 rounded p-2 flex items-center'><span><FaAngleLeft /></span> <span className='hidden 2xl:block xl:block lg:block'>Aula Anterior</span></button>
-              <button className='text-white font-bold bg-[#6432c7] hover:bg-[#7234EF] border border-[#A3A3A3] hover:border-white rounded p-2 flex items-center'><span className='hidden 2xl:block xl:block lg:block'>Proxima Aula</span><span><FaAngleRight /></span></button>
+              <button className='font-bold border border-[#1C1836] hover:border-white hover:text-zinc-400 rounded p-2 flex items-center'><span><FaAngleLeft /></span> <span className='hidden 2xl:block xl:block lg:block'>Aula Anterior</span></button>
+              <button className='font-bold bg-[#6432c7] hover:bg-[#7234EF] border border-[#A3A3A3] hover:border-white rounded p-2 flex items-center'><span className='hidden 2xl:block xl:block lg:block'>Proxima Aula</span><span><FaAngleRight /></span></button>
             </div>
           </div>
         </nav>
@@ -88,21 +89,28 @@ export default function LecturesContent({course, currentLecture}: {course: any, 
                 {module.classes.map((classe: any, classIndex: number) => (
                   <ul key={classIndex}>
                     <li>
-                      <LecturesLectureName index={classIndex} lectureName={classe.name} currentLecture={classe.class_id === currentLecture} href={classe.class_id}/>
+                      <LecturesLectureName index={classIndex} lectureName={classe.name} lectureType={classe.type} currentLecture={classe.class_id === currentLecture} href={classe.class_id}/>
                     </li>
                   </ul>
                 ))}
               </div>
             ))}
           </div>
-          <div className="w-full lg:w-4/5 xl:w-4/5 2xl:w-4/5 relative border-white">
+          <div className={`${isHidden ? 'w-full' : 'lg:w-4/5 xl:w-4/5 2xl:w-4/5 '} relative`}>
             <div>
               {lecture.is_public && (
                 <div>
-                  <LecturesVideoPlayer url={lecture.href} allow={"autoplay; fullscreen; picture-in-picture"}/>
-                  <div className='p-4'>
-                    <p className='text-white'> Extra Content </p>
+                  <div>
+                    {lecture.type === 'video' && (
+                    <LecturesVideoPlayer url={lecture.href} autoplay={lecture.autoplay} allow={"autoplay; fullscreen; picture-in-picture"}/>
+                    )}
                   </div>
+                  <div>
+                  {lecture.type === 'editor' && (
+                    <LecturesPythonEditor lecture={lecture} />
+                    )}
+                  </div>
+                  <LecturesExtraContent module={modules} lecture={lecture} />
                 </div>
               )}
             </div>

@@ -1,6 +1,6 @@
-import { FaVideo } from "react-icons/fa6";
+import { FaVideo, FaLaptopCode } from "react-icons/fa6";
 
-export default function LecturesLectureName({index, lectureName, currentLecture, href }: {index: any, lectureName: any, currentLecture: any, href: any}) {
+export default function LecturesLectureName({index, lectureName, lectureType, currentLecture, href }: {index: any, lectureName: any, lectureType: any, currentLecture: any, href: any}) {
 
   return (
     <>
@@ -10,7 +10,13 @@ export default function LecturesLectureName({index, lectureName, currentLecture,
           <span className="w-4 h-4 min-w-10 min-h-10 rounded-lg ring-2 ring-[#434656] bg-blue-500 bg-status-icon" style={{ minWidth: '16px', minHeight: '16px', width: '16px', height: '16px' }}>
             &nbsp;
           </span>
-          <FaVideo color="#434656" size={20} />
+          <div>
+            {lectureType === 'video' ? (
+              <FaVideo color="#434656" size={20} />
+            ) : lectureType === 'editor' ? (
+              <FaLaptopCode color="#434656" size={20} />
+            ) : null}
+          </div>
           <label>{index + 1} - {lectureName}</label><br />
         </a>
       )}
@@ -21,7 +27,13 @@ export default function LecturesLectureName({index, lectureName, currentLecture,
           <span className="w-4 h-4 inline-block rounded-lg ring-2 ring-[#A3A3A3]" style={{ minWidth: '16px', minHeight: '16px', width: '16px', height: '16px' }}>
             &nbsp;
           </span>
-          <FaVideo color="#434656" size={20} />
+          <div>
+            {lectureType === 'video' ? (
+              <FaVideo color="#434656" size={20} />
+            ) : lectureType === 'editor' ? (
+              <FaLaptopCode color="#434656" size={20} />
+            ) : null}
+          </div>
           <label >{index + 1} - {lectureName}</label><br />
         </a>
       )}
