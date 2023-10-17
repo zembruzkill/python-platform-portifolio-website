@@ -16,7 +16,7 @@ export default function LecturesPythonEditor({lecture}: {lecture: any}) {
             </div>
           </div>
           <div className="w-3/6">
-            <Editor />
+            <Editor code={''}/>
           </div>
         </div>
       </div>

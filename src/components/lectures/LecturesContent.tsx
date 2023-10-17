@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 
-import LecturesHeader from '../layout/headers/LeacturesHeader';
-
 import LecturesCourseName from './LecturesCourseName';
 import LecturesModuleName from './LecturesModuleName';
 import LecturesLectureName from './LecturesLectureName';

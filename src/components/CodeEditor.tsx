@@ -24,18 +24,18 @@ import 'ace-builds/src-noconflict/theme-dracula'
 import 'ace-builds/src-noconflict/theme-idle_fingers'
 import 'ace-builds/src-noconflict/ext-language_tools'
 
-
-
 const editorOptions = {
   enableBasicAutocompletion: true,
   enableLiveAutocompletion: true,
   highlightActiveLine: false,
-  showPrintMargin: false
+  showPrintMargin: false,
+  autoScrollEditorIntoView: true
 }
 
 const editorOnLoad = (editor: any) => {
   editor.renderer.setScrollMargin(10, 10, 0, 0)
   editor.moveCursorTo(0, 0)
+  editor.setScrollSpeed(0)
 }
 
 interface CodeEditorProps {
@@ -87,17 +87,17 @@ export default function CodeEditor(props: CodeEditorProps) {
   return (
   <>
     <div>
-      <div className='w-35 text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-blue-300'><span className='flex items-center gap-2'><span><CodeBracketIcon className=" h-5 w-5" /></span>Editor - main.py</span></div>
+      <div className='w-35 text-white text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-blue-300'><span className='flex items-center gap-2'><span><CodeBracketIcon className=" h-5 w-5" /></span>Editor - main.py</span></div>
     </div>
-    <div className="p-2 rounded-r-lg space-y-2 text-black bg-[#282A36]">
+    <div className="p-2 rounded-r-lg space-y-2 bg-[#282A36]">
 
       <div>
         <AceEditor
           value={input}
           mode="python"
           name="CodeBlock"
-          fontSize="0.9rem"
-          className="min-h-[15rem] overflow-clip"
+          fontSize="0.8rem"
+          className="min-h-[15rem] overflow-y-auto"
           theme="dracula"
           onChange={(newValue) => setInput(newValue)}
           width="100%"
@@ -135,7 +135,7 @@ export default function CodeEditor(props: CodeEditorProps) {
 
     <div className='pt-2'>
       <div>
-        <div className='w-35 text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-yellow-300'><span className='flex items-center gap-2'><span><CommandLineIcon className=" h-5 w-5" /></span>Console - Saída</span></div>
+        <div className='text-white w-35 text-title-xxsm bg-[#282A36] p-2 rounded-tr-lg border-t-2 border-yellow-300'><span className='flex items-center gap-2'><span><CommandLineIcon className=" h-5 w-5" /></span>Console - Saída</span></div>
       </div>
       <div className="p-2 rounded-r-lg space-y-2 text-black bg-[#282A36]">
           <pre className={`w-full min-h-[15rem] text-left rounded-md bg-[#282a36] p-8`}>

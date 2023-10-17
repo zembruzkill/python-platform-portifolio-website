@@ -54,7 +54,7 @@ export default function Hero() {
         </div>
         </div>
         <div className="w-full p-4 py-32">
-          <Editor />
+          <Editor code={``}/>
         </div>
       </div>
     </div>
