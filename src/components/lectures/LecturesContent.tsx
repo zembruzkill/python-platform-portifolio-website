@@ -20,9 +20,7 @@ import Link from 'next/link';
 export default function LecturesContent({course, currentLecture, searchParams}: {course: any, currentLecture: any, searchParams: {
   [key: string]: string | string[] | undefined; }}) {
 
-  const isHidden = searchParams.menu;
-
-  console.log(isHidden);
+  const menuParam = searchParams.menu;
 
   let lecture = null;
   let modules = null;
@@ -56,7 +54,7 @@ export default function LecturesContent({course, currentLecture, searchParams}: 
             <div className='flex gap-2'>
               {/* <FaGear color="#A3A3A3" size={20} /> */}
               <Link
-              href={isHidden === 'hidden' ? `?menu=show` : `?menu=hidden`}
+              href={menuParam === 'hidden' ? `?menu=show` : `?menu=hidden`}
               >
                 <FaList color="#A3A3A3" size={20} />
               </Link>
@@ -79,7 +77,7 @@ export default function LecturesContent({course, currentLecture, searchParams}: 
       </header>
       <div className='bg-gradient-to-r from-[#0D1224] to-[#0D1224]'>
         <div className="mx-auto justify-between bg-gray-300 border-[#1C1836] 2xl:flex xl:flex lg:flex md:block">
-          <div className={`w-full 2xl:w-1/5 xl:w-1/5 lg:w-1/5 min-w-75 border-r-1 border-[#1C1836] 2xl:h-screen xl:h-screen lg:h-screen overflow-y-auto ${isHidden === 'hidden' ? 'hidden' : 'block'}`}>
+          <div className={`w-full 2xl:w-1/5 xl:w-1/5 lg:w-1/5 min-w-75 border-r-1 border-[#1C1836] 2xl:h-screen xl:h-screen lg:h-screen overflow-y-auto ${menuParam === 'hidden' ? 'hidden' : 'block'}`}>
             <LecturesCourseName courseName={course.name} />
             {course.lectures.modules.map((module: any, index: number) => (
               <div key={index}>
@@ -94,7 +92,7 @@ export default function LecturesContent({course, currentLecture, searchParams}: 
               </div>
             ))}
           </div>
-          <div className={`${isHidden === 'hidden' ? 'w-full' : 'lg:w-4/5 xl:w-4/5 2xl:w-4/5 '} relative`}>
+          <div className={`${menuParam === 'hidden' ? 'w-full' : 'lg:w-4/5 xl:w-4/5 2xl:w-4/5 '} relative`}>
             <div>
               {lecture.is_public && (
                 <div>

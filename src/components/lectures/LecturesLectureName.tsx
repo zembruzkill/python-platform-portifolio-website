@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaVideo, FaLaptopCode } from "react-icons/fa6";
 
 export default function LecturesLectureName({index, lectureName, lectureType, currentLecture, href }: {index: any, lectureName: any, lectureType: any, currentLecture: any, href: any}) {
@@ -23,7 +24,7 @@ export default function LecturesLectureName({index, lectureName, lectureType, cu
     </div>
     <div>
       {!currentLecture && (
-        <a href={href} className='text-zinc-300 p-4 border border-[#1C1836] hover:bg-[#000000] flex gap-4 items-center cursor-pointer transition duration-300 ease-in-out'>
+        <Link href={href} className='text-zinc-300 p-4 border border-[#1C1836] hover:bg-[#000000] flex gap-4 items-center cursor-pointer transition duration-300 ease-in-out'>
           <span className="w-4 h-4 inline-block rounded-lg ring-2 ring-[#A3A3A3]" style={{ minWidth: '16px', minHeight: '16px', width: '16px', height: '16px' }}>
             &nbsp;
           </span>
@@ -35,7 +36,7 @@ export default function LecturesLectureName({index, lectureName, lectureType, cu
             ) : null}
           </div>
           <label >{index + 1} - {lectureName}</label><br />
-        </a>
+        </Link>
       )}
     </div>
     </>
