@@ -33,7 +33,7 @@ export default function Controls(props: ControlProps) {
                   ? 'hover:cursor-pointer'
                   : 'hover:cursor-not-allowed',
                 i === 0 && 'rounded-md bg-blue-500 text-white',
-                i === visibleItems.length - 1 && 'rounded-md bg-white'
+                i === visibleItems.length - 1 && 'rounded-md bg-white text-black'
               )}
             >
               <item.icon

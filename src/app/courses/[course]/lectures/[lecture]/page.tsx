@@ -5,7 +5,8 @@ import LecturesContent from "@/components/lectures/LecturesContent";
 import { getServerSession } from "next-auth";
 import { config, loginIsRequiredClientSide } from "../../../../../../lib/auth";
 
-export default async function SingleLecture({ params }: { params: { lecture: string, course: string } }) {
+export default async function SingleLecture({ params, searchParams}: { params: { lecture: string, course: string }, searchParams: {
+  [key: string]: string | string[] | undefined; } }) {
 
   let foundCourse = null
 
@@ -22,7 +23,7 @@ export default async function SingleLecture({ params }: { params: { lecture: str
 
   return (
     <>
-      <LecturesContent course={foundCourse} currentLecture={params.lecture}/>
+      <LecturesContent course={foundCourse} currentLecture={params.lecture} searchParams={searchParams}/>
     </>
   )
 }
