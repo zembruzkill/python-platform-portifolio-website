@@ -2,7 +2,7 @@ export default function Iam() {
 
   return (
     <>
-        <div className="container mx-auto">
+        <div className="container mx-auto pt-12">
         <section className="flex flex-col">
           <header className="text-center">
             <p className="font-medium my-4 text-violet-500 text-sm tracking-widest uppercase">Olá,</p>

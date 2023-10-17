@@ -13,7 +13,7 @@ const Pricing = () => {
         <div className='bg-[#0D1224] pb-16'>
             <div className="bg-grid-background">
             <Header className="" items={true}/>
-            <div className="mx-auto max-w-7xl items-center p-4 z-[100]">
+            <div className="mx-auto max-w-7xl items-center p-4">
             <div className="min-h-screen flex justify-center items-center">
                 <div className="">
                     <div className="text-center font-semibold">
