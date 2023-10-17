@@ -22,9 +22,13 @@ export default async function BlogCategory({ params }: { params: { slug: string 
 
         return (
             <>
-                <Header items={true}/>
-                    <BlogList all_posts={posts} posts={category_posts} categories={categories} />
-                <Footer />
+                <div className='bg-[#0D1224] pb-16'>
+                    <div className="bg-grid-background">
+                        <Header items={true}/>
+                            <BlogList all_posts={posts} posts={category_posts} categories={categories} />
+                        <Footer />
+                    </div>
+                </div>
             </>
         );
     };

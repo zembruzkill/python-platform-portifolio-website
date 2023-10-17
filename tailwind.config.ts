@@ -252,6 +252,7 @@ const config: Config = {
         "spin-3": "spin 3s linear infinite",
       },
       backgroundImage: {
+        'grid-background': "url('https://res.cloudinary.com/doorwkexf/image/upload/v1697519975/bg-grid-background_kyucqy.svg')",
           'status-icon': "url('https://res.cloudinary.com/doorwkexf/image/upload/v1697358076/course-incomplete_ybjy03.png')",
           'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
           'gradient-conic':

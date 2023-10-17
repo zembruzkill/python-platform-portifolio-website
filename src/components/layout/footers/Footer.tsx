@@ -14,7 +14,7 @@ export default function Footer() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <footer className="bg-[#172645] dark:bg-gray-900">
+    <footer className="bg-[#0D1224] dark:bg-gray-900">
         <FloatingWhatsApp 
         phoneNumber="+5555997239401"
         accountName="Luciano"

@@ -29,13 +29,13 @@ const editorOptions = {
   enableLiveAutocompletion: true,
   highlightActiveLine: false,
   showPrintMargin: false,
-  autoScrollEditorIntoView: true
+  vScrollBarAlwaysVisible: true,
+  scrollPastEnd: true,
 }
 
 const editorOnLoad = (editor: any) => {
   editor.renderer.setScrollMargin(10, 10, 0, 0)
   editor.moveCursorTo(0, 0)
-  editor.setScrollSpeed(0)
 }
 
 interface CodeEditorProps {
@@ -97,13 +97,12 @@ export default function CodeEditor(props: CodeEditorProps) {
           mode="python"
           name="CodeBlock"
           fontSize="0.8rem"
-          className="min-h-[15rem] overflow-y-auto"
+          className="min-h-[15rem]"
           theme="dracula"
           onChange={(newValue) => setInput(newValue)}
-          width="100%"
           maxLines={Infinity}
           onLoad={editorOnLoad}
-          editorProps={{ $blockScrolling: true }}
+          editorProps={{ $blockScrolling: false }}
           setOptions={editorOptions}
         />
 

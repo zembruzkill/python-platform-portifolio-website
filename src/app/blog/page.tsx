@@ -16,9 +16,13 @@ export default async function Blog() {
     
     return (
       <>
-        <Header items={true}/>
-          <BlogList all_posts={posts} posts={posts} categories={categories}/>
-        <Footer />
+        <div className='bg-[#0D1224] pb-16'>
+          <div className="bg-grid-background">
+            <Header items={true}/>
+              <BlogList all_posts={posts} posts={posts} categories={categories}/>
+            <Footer />
+          </div>
+        </div>
       </>
     );
   };
