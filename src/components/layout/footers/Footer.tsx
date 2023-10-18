@@ -14,7 +14,9 @@ export default function Footer() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <footer className="bg-[#0D1224] dark:bg-gray-900">
+    <>
+    <div id="blur" className="absolute w-full bg-gradient-to-r from-transparent via-violet-900 to-transparent h-1"></div>
+    <footer className="bg-[#0D1224] dark:bg-gray-900 pt-8">
         <FloatingWhatsApp 
         phoneNumber="+5555997239401"
         accountName="Luciano"
@@ -64,7 +66,7 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-        <hr className="my-6 border-white sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 border-violet-900 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-white sm:text-center dark:text-gray-400">© 2023 <a href="/" className="hover:underline">Curso Python Pro™</a>. All Rights Reserved.
             </span>
@@ -112,5 +114,6 @@ export default function Footer() {
         </div>
         </div>
     </footer>
+    </>
   )
   }

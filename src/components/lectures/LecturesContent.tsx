@@ -1,7 +1,3 @@
-// 'use client'
-
-// import { useState } from 'react';
-
 import LecturesCourseName from './LecturesCourseName';
 import LecturesModuleName from './LecturesModuleName';
 import LecturesLectureName from './LecturesLectureName';
@@ -9,13 +5,14 @@ import LecturesVideoPlayer from './LecturesVideoPlayer';
 import { redirect, useSearchParams } from "next/navigation";
 import LecturesBlockedLecture from "./LecturesBlockedLecture";
 
-import { FaHouseChimney, FaGear, FaAngleRight, FaAngleLeft, FaList } from "react-icons/fa6";
+import { FaGear, FaAngleRight, FaAngleLeft, FaList } from "react-icons/fa6";
 
 import Image from 'next/image';
 import logo from '@/assets/logo.svg';
 import LecturesExtraContent from './LecturesExtraContent';
 import LecturesPythonEditor from './LecturesPythonEditor';
 import Link from 'next/link';
+import Footer from '../layout/footers/Footer';
 
 export default function LecturesContent({course, currentLecture, searchParams}: {course: any, currentLecture: any, searchParams: {
   [key: string]: string | string[] | undefined; }}) {
@@ -45,18 +42,18 @@ export default function LecturesContent({course, currentLecture, searchParams}: 
 
   return (
     <>
-      <header className='bg-gradient-to-r from-[#0D1224] to-[#0D1224] sticky text-white'>
+      <header className='bg-[#0D1224] sticky text-white'>
         <nav className=" mx-auto flex items-center justify-between bg-gray-300 border-b border-[#1C1836]">
           <div className="flex min-w-30 w-1/5 border-r min-w-10 border-[#1C1836] justify-between pt-7 pb-6 pr-4 pl-4 gap-2">
             <a href={course.href}>
-              <FaHouseChimney color="#A3A3A3" size={20} />
+              <FaAngleLeft color="#FFFFFF" size={20} />
             </a>
             <div className='flex gap-2'>
-              {/* <FaGear color="#A3A3A3" size={20} /> */}
+              {/* <FaGear color="#FFFFFF" size={20} /> */}
               <Link
               href={menuParam === 'hidden' ? `?menu=show` : `?menu=hidden`}
               >
-                <FaList color="#A3A3A3" size={20} />
+                <FaList color="#FFFFFF" size={20} />
               </Link>
             </div>
           </div>
@@ -75,9 +72,9 @@ export default function LecturesContent({course, currentLecture, searchParams}: 
           </div>
         </nav>
       </header>
-      <div className='bg-gradient-to-r from-[#0D1224] to-[#0D1224]'>
+      <div className='bg-[#0D1224]'>
         <div className="mx-auto justify-between bg-gray-300 border-[#1C1836] 2xl:flex xl:flex lg:flex md:block">
-          <div className={`w-full 2xl:w-1/5 xl:w-1/5 lg:w-1/5 min-w-75 border-r-1 border-[#1C1836] 2xl:h-screen xl:h-screen lg:h-screen overflow-y-auto ${menuParam === 'hidden' ? 'hidden' : 'block'}`}>
+          <div className={`bg-[#0D1224] w-full 2xl:w-1/5 xl:w-1/5 lg:w-1/5 min-w-75 border-r-1 border-[#1C1836] 2xl:h-full xl:h-full lg:h-full overflow-y-auto ${menuParam === 'hidden' ? 'hidden' : 'block'}`}>
             <LecturesCourseName courseName={course.name} />
             {course.lectures.modules.map((module: any, index: number) => (
               <div key={index}>
@@ -99,7 +96,6 @@ export default function LecturesContent({course, currentLecture, searchParams}: 
                   <div>
                     {lecture.type === 'video' && (
                     <LecturesVideoPlayer url={lecture.href} autoplay={lecture.autoplay} allow={"autoplay; fullscreen; picture-in-picture"}/>
-                    
                     )}
                   </div>
                   <div>
@@ -119,6 +115,7 @@ export default function LecturesContent({course, currentLecture, searchParams}: 
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
