@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footers/Footer";
 
 import courses from '../../../../data/courses';
 import Link from 'next/link';
+import PythonBegginers from '@/components/pages/PythonBegginers';
 
 export default function SingleCourse({ params }: { params: { course: string } }) {
 
@@ -22,16 +23,7 @@ export default function SingleCourse({ params }: { params: { course: string } })
 
   return (
     <>
-      <div className='bg-[#0D1224]'>
-        <div className="bg-grid-background">
-          <Header items={true}/>
-          <div className='text-white'>
-            <Link href={`/courses/${params.course}/lectures`}>
-              <button className='p-4 bg-blue-600 rounded-lg'>Lectures</button>
-            </Link>
-          </div>
-        </div>
-      </div>
+      {params.course === 'python-beginners' && <PythonBegginers />}
       <Footer/>
     </>
   )

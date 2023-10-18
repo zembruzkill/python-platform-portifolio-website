@@ -35,7 +35,7 @@ export default function LecturesContent({course, currentLecture, searchParams}: 
     }
   }
 
-  if (!lecture.class_id) {
+  if (!lecture) {
     redirect('/404');
     return null;
   }

@@ -9,7 +9,7 @@ export default function Iam() {
             <h2 className=" text-white text-3xl">Eu sou o Professor Luciano.</h2>
           </header>
           <div className="flex flex-col items-center text-zinc-100">
-            <p className="text-zinc-400 mb-10 text-center max-w-[50ch] text-lg lg:text-xl lg:leading-8">Você está se sentindo preso ou sobrecarregado em sua jornada para aprender programação? Não se preocupe, eu te protejo! Juntos, trabalharemos para aprimorar suas habilidades, aumentar seu potencial de ganhos e construir um futuro melhor.</p>
+            <p className="pl-2 pr-2 text-zinc-400 mb-10 text-center max-w-[50ch] text-lg lg:text-xl lg:leading-8">Você está se sentindo preso ou sobrecarregado em sua jornada para aprender programação? Não se preocupe, eu te protejo! Juntos, trabalharemos para aprimorar suas habilidades, aumentar seu potencial de ganhos e construir um futuro melhor.</p>
             <div className="max-w-[725px] mx-auto px-3 w-full">
               <video src="" poster="https://res.cloudinary.com/doorwkexf/image/upload/v1697512674/poster-video_ppjc9o.webp"></video>
             </div>
