@@ -56,8 +56,8 @@ export default function SignIn() {
   if (session) return redirect('/dashboard');
 
   return (
-    <div>
-      <div className='h-screen bg-gradient-to-r from-[#F6F6F6] to-[#F6F6F6]'>
+    <div className='bg-[#0D1224] h-screen'>
+      <div className="bg-grid-background">
         <Header items={false} />
         <div className="mx-auto max-w-7xl items-center p-4 lg:px-8 pt-6">
           <div className="w-full items-center rounded-md bg-gradient-to-r from-[white] to-[white] shadow-lg">
@@ -320,7 +320,7 @@ export default function SignIn() {
           </div>
           <div className="pt-4 flex items-center">
             <FaArrowLeft href="/" size={20} color="rgb(79 70 229)" />
-            <a href="/" className="pl-2 hover:text-indigo-600">Voltar ao Início</a>
+            <a href="/" className=" text-white pl-2 hover:text-indigo-600">Voltar ao Início</a>
           </div>
         </div>
       </div>
