@@ -19,7 +19,7 @@ export default function Hero() {
           <div className="p-2 pb-20 md:pb-10 flex flex-col justify-center items-start lg:pt-10 xl:max-w-xl">
             <h1 className="text-4xl lg:text-[2.6rem] md:font-extrabold lg:leading-[2.9rem] font-bold text-white leading-10">Torne-se o<span className="text-green-400 mx-2">engenheiro de software</span>que as empresas<span className="text-pink-500 mx-2">adoram contratar</span></h1>
             <p className="leading-relaxed text-zinc-300 text-lg my-5 md:my-7 md:text-xl">Todos os<strong className="text-white mx-1">cursos de programação</strong>de que você precisa para se destacar<strong className="text-white mx-1">em um só lugar.</strong></p>
-            <a className="group inline-block px-6 py-3 text-sm no-underline uppercase text-center text-white tracking-wider font-medium md:font-semibold rounded-full bg-gradient-to-r from-pink-500 to-violet-600 transition-all duration-200 ease-out hover:text-white hover:no-underline undefined" role="button" href="/courses">Ver Cursos<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="w-6 h-4 inline-block transition-all duration-200 ease-out group-hover:ml-3"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"></path></svg></a>
+            <a className="group inline-block px-6 py-3 text-sm no-underline uppercase text-center text-white tracking-wider font-medium md:font-semibold rounded-full bg-gradient-to-r from-pink-500 to-violet-600 transition-all duration-200 ease-out hover:text-white hover:no-underline undefined" role="button" href="/courses">Ver Cursos<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="w-6 h-4 inline-block transition-all duration-200 ease-out group-hover:ml-3"><path fillRule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clipRule="evenodd"></path></svg></a>
           </div>
           </div>
           <div className="p-4 pt-4 2xl:pt-32 xl:pt-32">
@@ -35,7 +35,7 @@ export default function Hero() {
                   <div className="rounded-full bg-green-200 w-3 h-3"></div>
                 </div>
               </div>
-              <div className="px-8 py-8 border-t-[2px] border-indigo-900 overflow-hidden">
+              <div className="px-8 py-8 border-t-[2px] border-[#0A0C38] overflow-hidden">
                 <CodeSnippet code={`class Programador:
     def __init__(self, nome, habilidades, trabalhador_dedicado):
         self.nome = nome
