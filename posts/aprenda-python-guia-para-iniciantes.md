@@ -1,10 +1,10 @@
 ---
-title: "Aprenda Python: Guia para Iniciantes"
-subtitle: "Comece sua jornada de programação com Python"
-image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80"
-category: "tutoriais"
-date: "28/10/2023"
-author: "Luciano Zembruzki"
+title: 'Aprenda Python: Guia para Iniciantes'
+subtitle: 'Comece sua jornada de programação com Python'
+image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80'
+category: 'tutoriais'
+date: '28/10/2023'
+author: 'Luciano Zembruzki'
 ---
 
 ![Aprenda Python: Guia para Iniciantes](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80)
@@ -13,11 +13,11 @@ Python é uma linguagem de programação versátil e fácil de aprender, tornand
 
 ## Por que Aprender Python?
 
-- **Sintaxe Simples**: A sintaxe clara e legível do Python torna mais fácil para os iniciantes entenderem o código.
+-   **Sintaxe Simples**: A sintaxe clara e legível do Python torna mais fácil para os iniciantes entenderem o código.
 
-- **Ampla Comunidade**: Python tem uma grande comunidade de desenvolvedores disposta a ajudar e oferecer suporte.
+-   **Ampla Comunidade**: Python tem uma grande comunidade de desenvolvedores disposta a ajudar e oferecer suporte.
 
-- **Versatilidade**: Python pode ser usado para desenvolvimento web, análise de dados, automação, jogos e muito mais.
+-   **Versatilidade**: Python pode ser usado para desenvolvimento web, análise de dados, automação, jogos e muito mais.
 
 ## Configurando seu Ambiente Python
 
@@ -43,12 +43,12 @@ Você verá a mensagem "Olá, Mundo!" impressa no terminal.
 
 Ao aprender Python, você se familiarizará com conceitos importantes, como:
 
-- Variáveis e tipos de dados
-- Estruturas de controle (if, for, while)
-- Funções
-- Listas e dicionários
-- Tratamento de exceções
-- Bibliotecas e módulos
+-   Variáveis e tipos de dados
+-   Estruturas de controle (if, for, while)
+-   Funções
+-   Listas e dicionários
+-   Tratamento de exceções
+-   Bibliotecas e módulos
 
 ## Pratique, Pratique, Pratique
 

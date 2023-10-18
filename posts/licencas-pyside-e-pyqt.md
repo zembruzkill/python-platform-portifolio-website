@@ -1,10 +1,10 @@
 ---
-title: "Licenças - PySide e PyQt"
-subtitle: "Descubra de uma vez por todas qual a diferênça entre o licenciamento dessas bibliotecas"
-image: "https://res.cloudinary.com/doorwkexf/image/upload/v1697340080/licenca-pyside_dgoiwj.png"
-category: "duvidas"
-date: "28/10/2023"
-author: "Luciano Zembruzki"
+title: 'Licenças - PySide e PyQt'
+subtitle: 'Descubra de uma vez por todas qual a diferênça entre o licenciamento dessas bibliotecas'
+image: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697340080/licenca-pyside_dgoiwj.png'
+category: 'duvidas'
+date: '28/10/2023'
+author: 'Luciano Zembruzki'
 ---
 
 ## Tudo o que você precisa saber sobre LGPL e GPL para suas aplicações PySide ou PyQt
@@ -71,9 +71,9 @@ Você pode facilmente migrar do PyQt para o PySide e _vice-versa_. Dê uma olh[a
 
 Depende muito de você. As duas questões-chave para mais projetos são
 
-- Qual é o problema de distribuir o código-fonte da aplicação?
-- Deseja comprar uma licença (ou obter suporte pago)?
-- Para a aplicação que você está construindo, você consegue encontrar bons tutoriais/exemplos na biblioteca que está usando?
+-   Qual é o problema de distribuir o código-fonte da aplicação?
+-   Deseja comprar uma licença (ou obter suporte pago)?
+-   Para a aplicação que você está construindo, você consegue encontrar bons tutoriais/exemplos na biblioteca que está usando?
 
 O último _geralmente_ meu conselho seria familiarizar-se o mais rápido possível com as diferenças para que você possa converter qualquer código que encontrar entre uma biblioteca e outra.
 
@@ -81,9 +81,9 @@ O último _geralmente_ meu conselho seria familiarizar-se o mais rápido possív
 
 Os pontos-chave novamente
 
-- PyQt5 é licenciado pela GPL, PySide2 é licenciado pela LGPL.
-- Ambas as licenças não têm efeito sobre se você pode vender seu software comercialmente. Você pode _vender_ software licenciado GPL e software licenciado LGPL.
-- Ambas as licenças _podem_ exigir que você compartilhe o código-fonte em circunstâncias específicas, mas é muito improvável que a LGPL se aplique a um projeto Python.
+-   PyQt5 é licenciado pela GPL, PySide2 é licenciado pela LGPL.
+-   Ambas as licenças não têm efeito sobre se você pode vender seu software comercialmente. Você pode _vender_ software licenciado GPL e software licenciado LGPL.
+-   Ambas as licenças _podem_ exigir que você compartilhe o código-fonte em circunstâncias específicas, mas é muito improvável que a LGPL se aplique a um projeto Python.
 
 Para aplicações criadas com PyQt (GPL), se você distribuir o software, também deverá disponibilizar o código-fonte do seu software para os usuários (_isso não significa torná-lo disponível publicamente, você pode enviá-lo mediante solicitação_).
 

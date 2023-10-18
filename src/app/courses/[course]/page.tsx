@@ -1,30 +1,33 @@
 import { redirect } from 'next/navigation'
-import  Header  from "../../../components/layout/headers/Header";
-import Footer from "@/components/layout/footers/Footer";
+import Header from '../../../components/layout/headers/Header'
+import Footer from '@/components/layout/footers/Footer'
 
-import courses from '../../../../data/courses';
-import Link from 'next/link';
-import PythonBegginers from '@/components/pages/PythonBegginers';
+import courses from '../../../../data/courses'
+import Link from 'next/link'
+import PythonBegginers from '@/components/pages/PythonBegginers'
 
-export default function SingleCourse({ params }: { params: { course: string } }) {
+export default function SingleCourse({
+    params,
+}: {
+    params: { course: string }
+}) {
+    let foundCourse = null
 
-  let foundCourse = null
+    courses.forEach((course) => {
+        if (course.href === '/courses/' + params.course) {
+            foundCourse = course
+        }
+    })
 
-  courses.forEach(course => {
-    if (course.href === "/courses/" + params.course) {
-      foundCourse = course
+    if (!foundCourse) {
+        redirect('/404')
+        return null
     }
-  })
 
-  if (!foundCourse) {
-    redirect('/404');
-    return null;
-  }
-
-  return (
-    <>
-      {params.course === 'python-beginners' && <PythonBegginers />}
-      <Footer/>
-    </>
-  )
+    return (
+        <>
+            {params.course === 'python-beginners' && <PythonBegginers />}
+            <Footer />
+        </>
+    )
 }

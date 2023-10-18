@@ -1,10 +1,10 @@
 ---
-title: "A Importância do Python no Mundo da Ciência de Dados"
-subtitle: "Explorando o Impacto Crescente de Python na Ciência de Dados"
-image: "https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-category: "atualidades,ciência de dados"
-date: "14/10/2023"
-author: "Luciano Zembruzki"
+title: 'A Importância do Python no Mundo da Ciência de Dados'
+subtitle: 'Explorando o Impacto Crescente de Python na Ciência de Dados'
+image: 'https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+category: 'atualidades,ciência de dados'
+date: '14/10/2023'
+author: 'Luciano Zembruzki'
 ---
 
 ![A Importância do Python no Mundo da Ciência de Dados](https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)
@@ -15,27 +15,27 @@ Python tem se estabelecido como uma das linguagens de programação mais popular
 
 Python é a linguagem de escolha para muitos cientistas de dados e analistas de dados por várias razões:
 
-- **Ecossistema Rico**: Python possui uma ampla variedade de bibliotecas e frameworks dedicados à ciência de dados, como NumPy, pandas, Matplotlib, Seaborn, scikit-learn e TensorFlow. Essas bibliotecas oferecem ferramentas poderosas para análise de dados, visualização e aprendizado de máquina.
+-   **Ecossistema Rico**: Python possui uma ampla variedade de bibliotecas e frameworks dedicados à ciência de dados, como NumPy, pandas, Matplotlib, Seaborn, scikit-learn e TensorFlow. Essas bibliotecas oferecem ferramentas poderosas para análise de dados, visualização e aprendizado de máquina.
 
-- **Comunidade Ativa**: Python tem uma comunidade de desenvolvedores e cientistas de dados ativa e engajada. Isso significa que você pode facilmente encontrar suporte, tutoriais e recursos online para ajudar no seu trabalho.
+-   **Comunidade Ativa**: Python tem uma comunidade de desenvolvedores e cientistas de dados ativa e engajada. Isso significa que você pode facilmente encontrar suporte, tutoriais e recursos online para ajudar no seu trabalho.
 
-- **Facilidade de Aprendizado**: Python é conhecido por ser uma linguagem amigável para iniciantes. Sua sintaxe clara e legível facilita a entrada na ciência de dados, mesmo para aqueles sem experiência anterior em programação.
+-   **Facilidade de Aprendizado**: Python é conhecido por ser uma linguagem amigável para iniciantes. Sua sintaxe clara e legível facilita a entrada na ciência de dados, mesmo para aqueles sem experiência anterior em programação.
 
-- **Versatilidade**: Além de análise de dados, Python é usado em várias etapas do processo de ciência de dados, desde coleta e limpeza de dados até a criação de modelos de machine learning e a implantação de aplicativos baseados em dados.
+-   **Versatilidade**: Além de análise de dados, Python é usado em várias etapas do processo de ciência de dados, desde coleta e limpeza de dados até a criação de modelos de machine learning e a implantação de aplicativos baseados em dados.
 
 ## Aplicações da Ciência de Dados em Python
 
 A ciência de dados em Python é usada em diversos setores e domínios, incluindo:
 
-- **Medicina e Saúde**: Análise de dados médicos, previsão de doenças e desenvolvimento de terapias.
+-   **Medicina e Saúde**: Análise de dados médicos, previsão de doenças e desenvolvimento de terapias.
 
-- **Finanças**: Modelagem financeira, previsão de mercados e detecção de fraudes.
+-   **Finanças**: Modelagem financeira, previsão de mercados e detecção de fraudes.
 
-- **Marketing**: Segmentação de público-alvo, análise de sentimentos e recomendação personalizada.
+-   **Marketing**: Segmentação de público-alvo, análise de sentimentos e recomendação personalizada.
 
-- **Astronomia**: Análise de dados astronômicos, detecção de planetas e pesquisa espacial.
+-   **Astronomia**: Análise de dados astronômicos, detecção de planetas e pesquisa espacial.
 
-- **Governo**: Análise de políticas públicas, previsão de tendências e tomada de decisões baseada em dados.
+-   **Governo**: Análise de políticas públicas, previsão de tendências e tomada de decisões baseada em dados.
 
 ## O Futuro Brilhante da Ciência de Dados em Python
 

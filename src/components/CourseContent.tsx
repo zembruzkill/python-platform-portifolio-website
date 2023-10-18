@@ -13,7 +13,7 @@ export default function CourseContent() {
                                         stroke-width="2"
                                         viewBox="0 0 24 24"
                                         stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinejoin="round"
                                         height="25"
                                         width="25"
                                         xmlns="http://www.w3.org/2000/svg"
