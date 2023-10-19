@@ -84,10 +84,7 @@ export default function Testimonials() {
                         <div>
                             <span className="font-bold mr-1">4.7</span>
                             de 5 baseado em{' '}
-                            <a
-                                target="_blank"
-                                href="https://www.trustpilot.com/review/codewithmosh.com"
-                            >
+                            <a target="_blank" href="">
                                 <span className="font-bold">256</span>{' '}
                                 avaliações
                             </a>

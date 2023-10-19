@@ -66,7 +66,7 @@ export default function Features() {
                                             decoding="async"
                                             data-nimg="1"
                                             className="w-5/6 md:w-full lg:pt-4 xl:w-5/6"
-                                            src="https://codewithmosh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeature-01%402x.dbff860c.png&w=1200&q=75"
+                                            src="https://res.cloudinary.com/doorwkexf/image/upload/v1697698941/feature-01_uyce0n.webp"
                                         ></img>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@ export default function Features() {
                                             decoding="async"
                                             data-nimg="1"
                                             className="w-5/6 md:w-full md:pt-20 xl:w-4/5"
-                                            src="https://codewithmosh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeature-02%402x.5cf5e26a.png&w=1080&q=75"
+                                            src="https://res.cloudinary.com/doorwkexf/image/upload/v1697698941/feature-02_dzmqjx.webp"
                                         ></img>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@ export default function Features() {
                                             decoding="async"
                                             data-nimg="1"
                                             className="w-3/5 md:w-4/6 md:pt-20 lg:pt-8 xl:w-3/5"
-                                            src="https://codewithmosh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeature-03%402x.0028f5d1.png&w=828&q=75"
+                                            src="https://res.cloudinary.com/doorwkexf/image/upload/v1697698941/feature-03_wwecb4.webp"
                                         ></img>
                                     </div>
                                 </div>
@@ -206,7 +206,7 @@ export default function Features() {
                                             decoding="async"
                                             data-nimg="1"
                                             className="w-4/6 md:pt-20 lg:pt-10 xl:w-3/5"
-                                            src="https://codewithmosh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeature-04%402x.a95119f3.png&w=750&q=75"
+                                            src="https://res.cloudinary.com/doorwkexf/image/upload/v1697698941/feature-04_sevxwu.webp"
                                         ></img>
                                     </div>
                                 </div>
@@ -255,7 +255,7 @@ export default function Features() {
                                             decoding="async"
                                             data-nimg="1"
                                             className="md:w-full md:pt-28 lg:pt-16 xl:w-4/5"
-                                            src="https://codewithmosh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffeature-05%402x.c788aad2.png&w=1080&q=75"
+                                            src="https://res.cloudinary.com/doorwkexf/image/upload/v1697698941/feature-05_fmjvfh.webp"
                                         ></img>
                                     </div>
                                 </div>
