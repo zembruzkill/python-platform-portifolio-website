@@ -13,18 +13,15 @@ export default async function Lectures({
         if (course.href === '/courses/' + params.course) {
             foundCourse = course
 
-            if (course.lectures) {
-                for (const module of course.lectures.modules) {
-                    for (const classe of module.classes) {
-                        if (classe.class_id) {
-                            redirect(
-                                '/courses/' +
-                                    params.course +
-                                    '/lectures/' +
-                                    classe.class_id
-                            )
-                            return null
-                        }
+            for (const module of course.modules || []) {
+                for (const classe of module.classes || []) {
+                    if (classe.class_id) {
+                        redirect(
+                            '/courses/' +
+                                params.course +
+                                '/lectures/' +
+                                classe.class_id
+                        )
                     }
                 }
             }

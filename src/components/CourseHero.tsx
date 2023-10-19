@@ -6,7 +6,7 @@ export default function CourseHero() {
             <div className="bg-[#0D1224] pb-12">
                 <div className="bg-grid-background">
                     <Header items={true} />
-                    <div className="mx-auto max-w-6xl">
+                    <div className="mx-auto max-w-6xl p-3">
                         <div className="flex flex-col lg:flex-row justify-between gap-2 relative">
                             <div className="max-w-xl text-center md:text-left pt-5 lg:pt-24">
                                 <h1 className="mt-0 text-white text-title-xl font-bold">
@@ -91,7 +91,7 @@ export default function CourseHero() {
                                                 <svg
                                                     stroke="currentColor"
                                                     fill="currentColor"
-                                                    stroke-width="0"
+                                                    strokeWidth="0"
                                                     viewBox="0 0 24 24"
                                                     className="mr-4 inline text-violet-500"
                                                     height="20"
@@ -112,7 +112,7 @@ export default function CourseHero() {
                                                 <svg
                                                     stroke="currentColor"
                                                     fill="currentColor"
-                                                    stroke-width="0"
+                                                    strokeWidth="0"
                                                     viewBox="0 0 16 16"
                                                     className="mr-4 inline text-violet-500"
                                                     height="20"
@@ -121,13 +121,13 @@ export default function CourseHero() {
                                                 >
                                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
                                                 </svg>
-                                                12 horas de video HD
+                                                12 horas de Video HD
                                             </li>
                                             <li>
                                                 <svg
                                                     stroke="currentColor"
                                                     fill="currentColor"
-                                                    stroke-width="0"
+                                                    strokeWidth="0"
                                                     viewBox="0 0 512 512"
                                                     className="mr-4 inline text-violet-500"
                                                     height="20"
@@ -139,7 +139,7 @@ export default function CourseHero() {
                                                 200 Aulas
                                             </li>
                                             {/* <li>
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" className="mr-4 inline text-violet-500" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 640 512" className="mr-4 inline text-violet-500" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                             <path d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7L299.3 420.7c-6.2 6.2-16.4 6.2-22.6 0L171.3 315.3c-10.1-10.1-2.9-27.3 11.3-27.3H248V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z"></path>
                         </svg>
                         Downloadable content
@@ -148,7 +148,7 @@ export default function CourseHero() {
                                                 <svg
                                                     stroke="currentColor"
                                                     fill="currentColor"
-                                                    stroke-width="0"
+                                                    strokeWidth="0"
                                                     viewBox="0 0 24 24"
                                                     aria-hidden="true"
                                                     className="mr-4 inline text-violet-500"
@@ -157,11 +157,11 @@ export default function CourseHero() {
                                                     xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                     <path
-                                                        fill-rule="evenodd"
+                                                        fillRule="evenodd"
                                                         d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm1-10V7h-2v7h6v-2h-4z"
                                                     ></path>
                                                 </svg>
-                                                Exercícios mão no código
+                                                Exercícios mão no Código
                                             </li>
                                             <li>
                                                 <svg
@@ -174,13 +174,13 @@ export default function CourseHero() {
                                                 >
                                                     <path d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
                                                 </svg>
-                                                Pratique no celular
+                                                Pratique no Celular
                                             </li>
                                             <li>
                                                 <svg
                                                     stroke="currentColor"
                                                     fill="currentColor"
-                                                    stroke-width="0"
+                                                    strokeWidth="0"
                                                     viewBox="0 0 512 512"
                                                     className="mr-4 inline text-violet-500"
                                                     height="20"
@@ -195,7 +195,7 @@ export default function CourseHero() {
                                                 <svg
                                                     stroke="currentColor"
                                                     fill="currentColor"
-                                                    stroke-width="0"
+                                                    strokeWidth="0"
                                                     viewBox="0 0 640 512"
                                                     className="mr-4 inline text-violet-500"
                                                     height="20"

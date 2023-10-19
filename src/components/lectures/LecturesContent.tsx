@@ -30,7 +30,7 @@ export default function LecturesContent({
     let lecture = null
     let modules = null
 
-    for (const module of course.lectures.modules) {
+    for (const module of course.modules) {
         for (const classe of module.classes) {
             if (classe.class_id === currentLecture) {
                 lecture = classe
@@ -106,38 +106,32 @@ export default function LecturesContent({
                         }`}
                     >
                         <LecturesCourseName courseName={course.name} />
-                        {course.lectures.modules.map(
-                            (module: any, index: number) => (
-                                <div key={index}>
-                                    <LecturesModuleName
-                                        index={index}
-                                        moduleName={module.name}
-                                    />
-                                    {module.classes.map(
-                                        (classe: any, classIndex: number) => (
-                                            <ul key={classIndex}>
-                                                <li>
-                                                    <LecturesLectureName
-                                                        index={classIndex}
-                                                        lectureName={
-                                                            classe.name
-                                                        }
-                                                        lectureType={
-                                                            classe.type
-                                                        }
-                                                        currentLecture={
-                                                            classe.class_id ===
-                                                            currentLecture
-                                                        }
-                                                        href={classe.class_id}
-                                                    />
-                                                </li>
-                                            </ul>
-                                        )
-                                    )}
-                                </div>
-                            )
-                        )}
+                        {course.modules.map((module: any, index: number) => (
+                            <div key={index}>
+                                <LecturesModuleName
+                                    index={index}
+                                    moduleName={module.name}
+                                />
+                                {module.classes.map(
+                                    (classe: any, classIndex: number) => (
+                                        <ul key={classIndex}>
+                                            <li>
+                                                <LecturesLectureName
+                                                    index={classIndex}
+                                                    lectureName={classe.name}
+                                                    lectureType={classe.type}
+                                                    currentLecture={
+                                                        classe.class_id ===
+                                                        currentLecture
+                                                    }
+                                                    href={classe.class_id}
+                                                />
+                                            </li>
+                                        </ul>
+                                    )
+                                )}
+                            </div>
+                        ))}
                     </div>
                     <div
                         className={`${

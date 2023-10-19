@@ -1,20 +1,18 @@
-import Header from './layout/headers/Header'
-
 export default function CourseFeatures() {
     return (
         <>
             <div className="bg-[#0D1224]">
                 <div className="mx-auto max-w-6xl">
-                    <div className="grid grid-cols-1 gap-8">
+                    <div className="grid grid-cols-1 gap-8 p-3">
                         <div className="md:mx-4">
                             <div className="grid place-items-center w-12 h-12 rounded-full my-3 bg-violet-50 dark:bg-blue-800">
                                 <div className="text-violet-500 dark:text-violet-60">
                                     <svg
                                         stroke="currentColor"
                                         fill="none"
-                                        stroke-width="2"
+                                        strokeWidth="2"
                                         viewBox="0 0 24 24"
-                                        stroke-linecap="round"
+                                        strokeLinecap="round"
                                         strokeLinejoin="round"
                                         height="25"
                                         width="25"
@@ -27,37 +25,37 @@ export default function CourseFeatures() {
                                         ></path>
                                         <path
                                             d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             fill="currentColor"
                                         ></path>
                                         <path
                                             d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             fill="currentColor"
                                         ></path>
                                         <path
                                             d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             fill="currentColor"
                                         ></path>
                                         <path
-                                            d="M4.893 4.893a1 1 9-2 1 1.2.12v-1a1 1 0 0 1 1 -1z"
-                                            stroke-width="0"
+                                            d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z"
+                                            strokeWidth="0"
                                             fill="currentColor"
                                         ></path>
                                         <path
                                             d="M17.693 4.893a1 1 0 0 1 1.497 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7z"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             fill="currentColor"
                                         ></path>
                                         <path
                                             d="M14 18a1 1 0 0 1 1 1a3 3 0 0 1 -6 0a1 1 0 0 1 .883 -.993l.117 -.007h4z"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             fill="currentColor"
                                         ></path>
                                         <path
                                             d="M12 6a6 6 0 0 1 3.6 10.8a1 1 0 0 1 -.471 .192l-.129 .008h-6a1 1 0 0 1 -.6 -.2a6 6 0 0 1 3.6 -10.8z"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             fill="currentColor"
                                         ></path>
                                     </svg>
@@ -75,7 +73,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -95,7 +93,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -116,7 +114,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -137,7 +135,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -158,7 +156,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -178,7 +176,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -198,7 +196,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -219,7 +217,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -239,7 +237,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -260,7 +258,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -280,7 +278,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"
@@ -301,7 +299,7 @@ export default function CourseFeatures() {
                                         <svg
                                             stroke="currentColor"
                                             fill="currentColor"
-                                            stroke-width="0"
+                                            strokeWidth="0"
                                             viewBox="0 0 16 16"
                                             className="w-5 h-5 inline flex-shrink-0"
                                             color="#4ccfaf"

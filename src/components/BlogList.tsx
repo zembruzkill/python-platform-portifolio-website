@@ -47,9 +47,14 @@ export default async function BlogList({
                                     category,
                                 }) => (
                                     <li className="sm:w-full" key={slug}>
+                                        <div className="flex justify-center">
+                                            <div className="w-3/4">
+                                                <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full"></div>
+                                            </div>
+                                        </div>
                                         <a
                                             href={`/blog/post/${slug}`}
-                                            className="flex flex-col items-center bg-[#11152C] text-white border border-[#CFCFCF] rounded-lg shadow lg:flex-row hover:bg-gray-100"
+                                            className="flex flex-col items-center bg-[#11152C] border border-zinc-800 text-white  rounded-lg shadow lg:flex-row hover:bg-gray-100"
                                         >
                                             <img
                                                 className="object-cover w-full rounded-t-lg lg:w-60 "
