@@ -9,9 +9,6 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
 const ForgotPassword = () => {
     const router = useRouter()
     return (
-        <div>
-            <div className="h-screen bg-gradient-to-r from-[#F6F6F6] to-[#F6F6F6]">
-                <Header items={false} />
         <>
             <div className="bg-[#0D1224] min-h-screen">
                 <div className="bg-grid-background">
