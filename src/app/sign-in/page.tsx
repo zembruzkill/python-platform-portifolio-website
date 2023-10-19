@@ -56,7 +56,7 @@ export default function SignIn() {
     if (session) return redirect('/dashboard')
 
     return (
-        <div className="bg-[#0D1224]">
+        <div className="bg-[#0D1224] min-h-screen">
             <div className="bg-grid-background">
                 <Header items={false} />
                 <div className="mx-auto max-w-7xl items-center p-4 lg:px-8 pt-6">
