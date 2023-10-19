@@ -178,7 +178,7 @@ const Pricing = () => {
                                             <svg
                                                 fill="none"
                                                 height="24"
-                                                shape-rendering="geometricPrecision"
+                                                shapeRendering="geometricPrecision"
                                                 stroke="currentColor"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
@@ -214,7 +214,7 @@ const Pricing = () => {
                                             <svg
                                                 fill="none"
                                                 height="24"
-                                                shape-rendering="geometricPrecision"
+                                                shapeRendering="geometricPrecision"
                                                 stroke="currentColor"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
@@ -248,7 +248,7 @@ const Pricing = () => {
                                             <svg
                                                 fill="none"
                                                 height="24"
-                                                shape-rendering="geometricPrecision"
+                                                shapeRendering="geometricPrecision"
                                                 stroke="currentColor"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
@@ -285,7 +285,7 @@ const Pricing = () => {
                                             <svg
                                                 fill="none"
                                                 height="24"
-                                                shape-rendering="geometricPrecision"
+                                                shapeRendering="geometricPrecision"
                                                 stroke="currentColor"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
@@ -316,7 +316,7 @@ const Pricing = () => {
                                             <svg
                                                 fill="none"
                                                 height="24"
-                                                shape-rendering="geometricPrecision"
+                                                shapeRendering="geometricPrecision"
                                                 stroke="currentColor"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
@@ -345,7 +345,7 @@ const Pricing = () => {
                                             <svg
                                                 fill="none"
                                                 height="24"
-                                                shape-rendering="geometricPrecision"
+                                                shapeRendering="geometricPrecision"
                                                 stroke="currentColor"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"

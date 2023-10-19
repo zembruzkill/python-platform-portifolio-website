@@ -70,7 +70,7 @@ export default function SignUp() {
     if (session) router.push('/dashboard')
 
     return (
-        <div className="bg-[#0D1224] h-screen">
+        <div className="bg-[#0D1224]">
             <div className="bg-grid-background">
                 <Header items={false} />
                 <div className="mx-auto max-w-7xl items-center p-4 lg:px-8 pt-6">

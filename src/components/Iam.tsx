@@ -22,7 +22,7 @@ export default function Iam() {
                         <div className="max-w-[725px] mx-auto px-3 w-full">
                             <video
                                 src=""
-                                poster="https://res.cloudinary.com/doorwkexf/image/upload/v1697512674/poster-video_ppjc9o.webp"
+                                poster="https://res.cloudinary.com/doorwkexf/image/upload/v1697694128/yhrce7v3rzhklir8zeie_zdzeji.webp"
                             ></video>
                         </div>
                         <div className="grid grid-cols-2 gap-4 md:grid-cols-4 justify-center mx-auto my-20">

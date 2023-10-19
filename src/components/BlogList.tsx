@@ -75,7 +75,7 @@ export default async function BlogList({
                                                             )
                                                         )}
                                                 </div>
-                                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-zinc-300">
+                                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-violet-100">
                                                     {title}
                                                 </h5>
                                                 <p className="font-light text-zinc-400 mt-1 mb-1">
