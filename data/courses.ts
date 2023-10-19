@@ -29,7 +29,7 @@ const courses = [
                             'Nesta aula, vamos configurar o ambiente de desenvolvimento e criar a estrutura inicial de arquivos do projeto.',
                         page_order: 1,
                         duration: '00:05:00',
-                        href: 'https://player.vimeo.com/video/873550054',
+                        href: 'https://player.vimeo.com/video/76979871',
                         type: 'video',
                     },
                     {
@@ -121,7 +121,7 @@ Lembre-se de fornecer instruções claras aos alunos sobre como realizar a entra
                         autoplay: true,
                         page_order: 1,
                         duration: '00:10:00',
-                        href: 'https://player.vimeo.com/video/23456789',
+                        href: 'https://player.vimeo.com/video/76979871',
                         type: 'video',
                     },
                     {
@@ -133,40 +133,26 @@ Lembre-se de fornecer instruções claras aos alunos sobre como realizar a entra
                         autoplay: true,
                         page_order: 2,
                         duration: '00:10:00',
-                        href: 'https://player.vimeo.com/video/34567890',
+                        href: 'https://player.vimeo.com/video/76979871',
                         type: 'video',
                     },
                 ],
             },
         ],
     },
-    {
-        id: 2,
-        name: 'Python para Ciência de Dados',
-        imageSrc:
-            'https://res.cloudinary.com/doorwkexf/image/upload/v1697160269/Python_para_Ciencia_de_Dados_r7fooq.png',
-        imageAlt: 'Frente da camiseta básica masculina em preto.',
-        href: '/courses/python-data-science',
-        popularity: 4,
-        level: 'Avançado',
-        categories: ['ciência de dados', 'programação em Python'],
-        description:
-            'Já se perguntou o que você precisa fazer para começar a analisar dados em Python? Então, esta mini faixa é a resposta...',
-    },
-    {
-        id: 3,
-        name: 'Python com Interface Gráfica - QtDesigner e Qt6/PySide6',
-        imageSrc:
-            'https://res.cloudinary.com/doorwkexf/image/upload/v1697173347/Design_Python_bl1xow.png',
-        imageAlt:
-            'Banner do Curso Criando Aplicações Python com Interface Gráfica utilizando o QtDesigner e Qt6/PySide6.',
-        href: 'https://pythonsimplificado.com.br/curso-criando-aplicacoes-com-qtdesigner-e-pyside6/',
-        popularity: 3,
-        level: 'Avançado',
-        categories: ['ciência de dados', 'programação em Python'],
-        description:
-            'Pare de procurar como criar aplicações Python com interface — está tudo aqui...',
-    },
+    // {
+    //     id: 2,
+    //     name: 'Python para Ciência de Dados',
+    //     imageSrc:
+    //         'https://res.cloudinary.com/doorwkexf/image/upload/v1697160269/Python_para_Ciencia_de_Dados_r7fooq.png',
+    //     imageAlt: 'Frente da camiseta básica masculina em preto.',
+    //     href: '/courses/python-data-science',
+    //     popularity: 4,
+    //     level: 'Avançado',
+    //     categories: ['ciência de dados', 'programação em Python'],
+    //     description:
+    //         'Já se perguntou o que você precisa fazer para começar a analisar dados em Python? Então, esta mini faixa é a resposta...',
+    // },
 ]
 
 export default courses
