@@ -21,7 +21,7 @@ export default function Footer() {
             ></div>
             <footer className="bg-[#0D1224] dark:bg-gray-900 pt-8">
                 <FloatingWhatsApp
-                    phoneNumber="+5555997239401"
+                    phoneNumber="+5551995475558"
                     accountName="Luciano"
                     statusMessage="Usualmente responde em 1 hora!"
                     chatMessage="Olá, como posso te ajudar?"
@@ -73,8 +73,8 @@ export default function Footer() {
                                 <ul className="text-white dark:text-gray-400">
                                     <li className="mb-4">
                                         <p className="">
-                                            Precisa de ajuda? Envie um email
-                                            para: contato@cursopython.pro
+                                            Precisa de ajuda? Mande uma mensagem
+                                            pelo Whatsapp
                                         </p>
                                     </li>
                                 </ul>
