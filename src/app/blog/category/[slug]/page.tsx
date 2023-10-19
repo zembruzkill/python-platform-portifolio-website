@@ -1,30 +1,47 @@
-import { GetStaticProps } from 'next';
+import { GetStaticProps } from 'next'
 
-import  Header  from "../../../../components/layout/headers/Header";
-import Footer from "@/components/layout/footers/Footer";
+import Header from '../../../../components/layout/headers/Header'
+import Footer from '@/components/layout/footers/Footer'
 
-import getPosts from "../../../../../lib/posts";
-import { getUniqueCategories } from "../../../../../lib/posts";
-import BlogList from '@/components/BlogList';
-import { redirect } from 'next/navigation';
+import getPosts from '../../../../../lib/posts'
+import { getUniqueCategories } from '../../../../../lib/posts'
+import BlogList from '@/components/BlogList'
+import { redirect } from 'next/navigation'
 
-export default async function BlogCategory({ params }: { params: { slug: string } }) {  
-        const decodedSlug = decodeURIComponent(params.slug);
-        const posts = await getPosts();
-        const categories = await getUniqueCategories();
+export default async function BlogCategory({
+    params,
+}: {
+    params: { slug: string }
+}) {
+    const decodedSlug = decodeURIComponent(params.slug)
+    const posts = await getPosts()
+    const categories = await getUniqueCategories()
 
-        const category_posts = posts.filter(post => post.category.split(',').map((c: string) => c.trim()).includes(decodedSlug))
+    const category_posts = posts.filter((post) =>
+        post.category
+            .split(',')
+            .map((c: string) => c.trim())
+            .includes(decodedSlug)
+    )
 
-        if (category_posts.length == 0) {
-            redirect('/404');
-            return null;
-          }
+    if (category_posts.length == 0) {
+        redirect('/404')
+        return null
+    }
 
-        return (
-            <>
-                <Header items={true}/>
-                    <BlogList all_posts={posts} posts={category_posts} categories={categories} />
-                <Footer />
-            </>
-        );
-    };
+    return (
+        <>
+            <div className="bg-[#0D1224] pb-16">
+                <div className="bg-grid-background">
+                    <Header items={true} />
+                    <BlogList
+                        all_posts={posts}
+                        posts={category_posts}
+                        categories={categories}
+                    />
+                    <Footer />
+                </div>
+            </div>
+        </>
+    )
+}

@@ -1,10 +1,10 @@
 ---
-title: "PyQt6 vs PySide6"
-subtitle: "Descubra de uma vez por todas qual a diferênça entre essas bibliotecas"
-image: "https://res.cloudinary.com/doorwkexf/image/upload/v1697338989/Pyside6_refslr.png"
-category: "duvidas,dicas"
-date: "15/10/2023"
-author: "Luciano Zembruzki"
+title: 'PyQt6 vs PySide6'
+subtitle: 'Descubra de uma vez por todas qual a diferênça entre essas bibliotecas'
+image: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697338989/Pyside6_refslr.png'
+category: 'duvidas,dicas'
+date: '15/10/2023'
+author: 'Luciano Zembruzki'
 ---
 
 ## Qual é a diferença entre as duas bibliotecas Python Qt?
@@ -39,15 +39,15 @@ Abaixo veremos algumas diferenças entre as bibliotecas.
 
 ##### A licença do **PyQ*t*** *é uma licença GPL ou comercial:* 
 
-- A GNU General Public License (GPL) é uma licença de software livre que garante aos usuários finais a liberdade de executar, estudar, compartilhar e modificar seu software. O principal mecanismo pelo qual isso é feito é garantindo que os usuários finais tenham acesso ao código-fonte dos aplicativos que recebem (como binários).
-- Se você está planejando lançar seu próprio software sob a GPL, ou está desenvolvendo software que não será distribuído , é improvável que o requisito GPL de PyQt6 seja um problema. No entanto, se você planeja distribuir seu software sem distribuir a fonte, você precisará comprar uma licença comercial da Riverbank para PyQt6 ou usar PySide6.
-- Resumindo, se você desenvolveu usando o PyQt6 e for vender o sistema que você desenvolveu: ou você deixa o código aberto (público) ou você compra a licença com a Riverbank.
+-   A GNU General Public License (GPL) é uma licença de software livre que garante aos usuários finais a liberdade de executar, estudar, compartilhar e modificar seu software. O principal mecanismo pelo qual isso é feito é garantindo que os usuários finais tenham acesso ao código-fonte dos aplicativos que recebem (como binários).
+-   Se você está planejando lançar seu próprio software sob a GPL, ou está desenvolvendo software que não será distribuído , é improvável que o requisito GPL de PyQt6 seja um problema. No entanto, se você planeja distribuir seu software sem distribuir a fonte, você precisará comprar uma licença comercial da Riverbank para PyQt6 ou usar PySide6.
+-   Resumindo, se você desenvolveu usando o PyQt6 e for vender o sistema que você desenvolveu: ou você deixa o código aberto (público) ou você compra a licença com a Riverbank.
 
 ##### _A licença do **PySide** é LGPL:_
 
-- A GNU Lesser General Public License (LGPL) é outra licença de software livre publicada pela Free Software Foundation (FSF). Esta licença é modelada na GPL, mas permite que os desenvolvedores usem componentes de software lançados sob a LGPL em seu próprio software, sem a necessidade de liberar seu código-fonte.
-  A licença LGPL não exige que você compartilhe o código-fonte de seus próprios aplicativos, mesmo se eles estiverem incluídos no PySide6.
-- Resumindo, se você desenvolveu seu software com o PySide6, você pode vender o software sem precisar deixar seu código aberto e nem comprar licença.
+-   A GNU Lesser General Public License (LGPL) é outra licença de software livre publicada pela Free Software Foundation (FSF). Esta licença é modelada na GPL, mas permite que os desenvolvedores usem componentes de software lançados sob a LGPL em seu próprio software, sem a necessidade de liberar seu código-fonte.
+    A licença LGPL não exige que você compartilhe o código-fonte de seus próprios aplicativos, mesmo se eles estiverem incluídos no PySide6.
+-   Resumindo, se você desenvolveu seu software com o PySide6, você pode vender o software sem precisar deixar seu código aberto e nem comprar licença.
 
 Posso usar o PyQt para aplicações comerciais? Sim. A GPL não o impede de vender seu pacote de software, apenas exige que você compartilhe seu código-fonte com as pessoas que o compram (caso a pessoa solicite).
 
@@ -132,14 +132,14 @@ No PyQt6, os objetos QMouseEvent não possuem mais os métodos de propriedade ab
 
 Não há muito mais a dizer - as duas bibliotecas são realmente semelhantes. No entanto, se você se deparar com outros exemplos ou recursos do PyQt6/PySide6 que você não pode converter facilmente.
 
-- O que é exatamente igual? A maior parte
-- Qual você deve usar? Bem, honestamente, isso realmente não importa. Ambos os pacotes envolvem a mesma biblioteca - Qt6 - e portanto têm funcionalidades 99,9% identicas.
-- Tudo o que você aprender com uma biblioteca será facilmente aplicado a um projeto usando a outra.
-- Resumindo: Elas tem poucos detalhes de diferença (poucos mesmo). E tudo que tu faz em uma tu consegue fazer na outra.
+-   O que é exatamente igual? A maior parte
+-   Qual você deve usar? Bem, honestamente, isso realmente não importa. Ambos os pacotes envolvem a mesma biblioteca - Qt6 - e portanto têm funcionalidades 99,9% identicas.
+-   Tudo o que você aprender com uma biblioteca será facilmente aplicado a um projeto usando a outra.
+-   Resumindo: Elas tem poucos detalhes de diferença (poucos mesmo). E tudo que tu faz em uma tu consegue fazer na outra.
 
 Os motivos pelos quais eu particularmente prefiro o PySide6:
 
-- PySide se tornou a biblioteca oficial do Qt pro Python [https://www.qt.io/qt-for-python](https://www.qt.io/qt-for-python).
-- Questão do licenciamento
+-   PySide se tornou a biblioteca oficial do Qt pro Python [https://www.qt.io/qt-for-python](https://www.qt.io/qt-for-python).
+-   Questão do licenciamento
 
 [![Banner do Curso PyQt6 e PySide6](https://pythonsimplificado.com.br/wp-content/uploads/2022/03/banner-conheca-1024x576.png)](https://pythonsimplificado.com.br/curso-criando-aplicacoes-com-qtdesigner-e-pyside6/)

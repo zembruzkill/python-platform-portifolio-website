@@ -1,21 +1,19 @@
-
 interface Props {
-    index: number;
-    href: string;
-    category: string;
+    index: number
+    href: string
+    category: string
 }
 
-export default async function CategoryButton({category, index, href}: Props) {  
-
+export default async function CategoryButton({ category, index, href }: Props) {
     return (
-      <>
-        <a
-          href={`${href}`}
-          key={index}
-          className="p-1 bg-blue-200 text-zinc-700 rounded hover:bg-blue-300 text-title-xxsm uppercase text-center flex items-center justify-center"
-        >
-          {category}
-        </a>
-      </>
-    );
-  };
+        <>
+            <a
+                href={`${href}`}
+                key={index}
+                className="p-1 text-white bg-[#2B1F59] rounded hover:bg-[#374a9d] text-title-xxsm uppercase text-center flex items-center justify-center"
+            >
+                {category}
+            </a>
+        </>
+    )
+}

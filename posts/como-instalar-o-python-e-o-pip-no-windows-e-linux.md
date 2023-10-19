@@ -1,10 +1,10 @@
 ---
-title: "Como Instalar o Python e o PIP no Windows e Linux"
-subtitle: "O jeito mais simples e fácil de ter o Python instalado no seu computador"
-image: "https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-category: "tutoriais"
-date: "27/10/2023"
-author: "Luciano Zembruzki"
+title: 'Como Instalar o Python e o PIP no Windows e Linux'
+subtitle: 'O jeito mais simples e fácil de ter o Python instalado no seu computador'
+image: 'https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+category: 'tutoriais'
+date: '27/10/2023'
+author: 'Luciano Zembruzki'
 ---
 
 ## Instalação Pyhton Windows

@@ -1,10 +1,10 @@
 ---
-title: "Qt Designer"
-subtitle: "Conheça essa ferramenta de criação de interfaces Python"
-image: "https://res.cloudinary.com/doorwkexf/image/upload/v1697339184/QtDesigner_baupld.png"
-category: "ferramentas"
-date: "30/10/2023"
-author: "Luciano Zembruzki"
+title: 'Qt Designer'
+subtitle: 'Conheça essa ferramenta de criação de interfaces Python'
+image: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697339184/QtDesigner_baupld.png'
+category: 'ferramentas'
+date: '30/10/2023'
+author: 'Luciano Zembruzki'
 ---
 
 ## **Construa suas interfaces e componentes gráficos mais rápido**
@@ -43,7 +43,7 @@ Aqui, você instala o PyQt6 ou o PySide6 que juntamente com a biblioteca instala
 
 A instalação colocará o executável do Qt Designer no mesmo diretório de instalacão da biblioteca, usualmente em:
 
-- _.../python3.x/site-packages/PySide6/_
+-   _.../python3.x/site-packages/PySide6/_
 
 Outra opção é você baixar o instalador do Qt para sua plataforma atual no [site oficial de download](https://www.qt.io/download-qt-installer) e seguir as instruções na tela. Nesse caso, para concluir o processo de instalação, você precisa [registrar uma conta Qt](https://login.qt.io/register).
 
