@@ -1,10 +1,10 @@
 ---
-title: "Tkinter vs PySide/PyQt"
-subtitle: "Qual biblioteca GUI Python você deve usar?"
-category: "duvidas"
-image: "https://res.cloudinary.com/doorwkexf/image/upload/v1697339708/tkinter-vs-pyside_uuveiq.png"
-date: "04/11/2023"
-author: "Luciano Zembruzki"
+title: 'Tkinter vs PySide/PyQt'
+subtitle: 'Qual biblioteca GUI Python você deve usar?'
+category: 'duvidas'
+image: 'https://res.cloudinary.com/doorwkexf/image/upload/v1697339708/tkinter-vs-pyside_uuveiq.png'
+date: '04/11/2023'
+author: 'Luciano Zembruzki'
 ---
 
 ## Comparando as bibliotecas de GUI do Python disponíveis em 2023
@@ -43,21 +43,21 @@ Tkinter é uma biblioteca simples com suporte para layouts e widgets padrão, be
 
 #### Porque não usar o Tkinter
 
-- Tkinter não inclui widgets avançados.
+-   Tkinter não inclui widgets avançados.
 
-- Não possui ferramenta semelhante ao Qt Designer para Tkinter.
+-   Não possui ferramenta semelhante ao Qt Designer para Tkinter.
 
-- Não tem uma aparência nativa
+-   Não tem uma aparência nativa
 
-- Aparência ultrapassada
+-   Aparência ultrapassada
 
 #### Porque usar o PySide/PyQt
 
-- Flexibilidade de codificação – a programação GUI com Qt é projetada em torno do conceito de sinais e slots para estabelecer comunicação entre objetos. Isso permite flexibilidade ao lidar com eventos de GUI e resulta em uma base de código mais suave.
+-   Flexibilidade de codificação – a programação GUI com Qt é projetada em torno do conceito de sinais e slots para estabelecer comunicação entre objetos. Isso permite flexibilidade ao lidar com eventos de GUI e resulta em uma base de código mais suave.
 
-- Mais do que uma estrutura – o Qt usa uma ampla variedade de APIs de plataforma nativa para fins de rede, criação de banco de dados e muito mais. Ele oferece acesso primário a eles por meio de uma API exclusiva.
+-   Mais do que uma estrutura – o Qt usa uma ampla variedade de APIs de plataforma nativa para fins de rede, criação de banco de dados e muito mais. Ele oferece acesso primário a eles por meio de uma API exclusiva.
 
-- Vários componentes de interface do usuário – o Qt oferece vários widgets, como botões ou menus, todos projetados com uma aparência básica em todas as plataformas suportadas.  
-   Vários recursos de aprendizado – como o PyQt é uma das estruturas de interface do usuário mais usadas para Python, você pode obter acesso fácil a uma ampla variedade de documentação.
+-   Vários componentes de interface do usuário – o Qt oferece vários widgets, como botões ou menus, todos projetados com uma aparência básica em todas as plataformas suportadas.  
+     Vários recursos de aprendizado – como o PyQt é uma das estruturas de interface do usuário mais usadas para Python, você pode obter acesso fácil a uma ampla variedade de documentação.
 
 [![](https://pythonsimplificado.com.br/wp-content/uploads/2022/03/banner-conheca-1024x576.png)](https://pythonsimplificado.com.br/curso-criando-aplicacoes-com-qtdesigner-e-pyside6/)
