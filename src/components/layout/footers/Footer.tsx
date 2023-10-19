@@ -19,7 +19,7 @@ export default function Footer() {
                 id="blur"
                 className="absolute w-full bg-gradient-to-r from-transparent via-violet-900 to-transparent h-1"
             ></div>
-            <footer className="bg-[#0D1224] dark:bg-gray-900 pt-8">
+            <footer className="bg-[#0D1224] pt-8">
                 <FloatingWhatsApp
                     phoneNumber="+5551995475558"
                     accountName="Luciano"
@@ -36,10 +36,10 @@ export default function Footer() {
                     <div className="md:flex md:justify-between">
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
-                                <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+                                <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                                     Links rápidos
                                 </h2>
-                                <ul className="text-white dark:text-gray-400">
+                                <ul className="text-white">
                                     <li className="mb-4">
                                         <a
                                             href="/courses"
@@ -67,10 +67,10 @@ export default function Footer() {
                                 </ul>
                             </div>
                             <div>
-                                <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+                                <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                                     Suporte
                                 </h2>
-                                <ul className="text-white dark:text-gray-400">
+                                <ul className="text-white">
                                     <li className="mb-4">
                                         <p className="">
                                             Precisa de ajuda? Mande uma mensagem
@@ -80,10 +80,10 @@ export default function Footer() {
                                 </ul>
                             </div>
                             <div>
-                                <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+                                <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                                     Legal
                                 </h2>
-                                <ul className="text-white dark:text-gray-400">
+                                <ul className="text-white">
                                     <li className="mb-4">
                                         <a href="#" className="hover:underline">
                                             Política de Privacidade
@@ -98,9 +98,9 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <hr className="my-6 border-violet-900 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                    <hr className="my-6 border-violet-900 sm:mx-auto lg:my-8" />
                     <div className="sm:flex sm:items-center sm:justify-between">
-                        <span className="text-sm text-white sm:text-center dark:text-gray-400">
+                        <span className="text-sm text-white sm:text-center">
                             © 2023{' '}
                             <a href="/" className="hover:underline">
                                 Curso Python Pro™
@@ -117,10 +117,7 @@ export default function Footer() {
                             />
                         </div>
                         <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                            <a
-                                href="#"
-                                className="text-white hover:text-white dark:hover:text-white"
-                            >
+                            <a href="#" className="text-white hover:text-white">
                                 <svg
                                     className="w-4 h-4"
                                     aria-hidden="true"
@@ -136,10 +133,7 @@ export default function Footer() {
                                 </svg>
                                 <span className="sr-only">Facebook page</span>
                             </a>
-                            <a
-                                href="#"
-                                className="text-white hover:text-white dark:hover:text-white"
-                            >
+                            <a href="#" className="text-white hover:text-white">
                                 <svg
                                     className="w-4 h-4"
                                     aria-hidden="true"
@@ -153,10 +147,7 @@ export default function Footer() {
                                     Discord community
                                 </span>
                             </a>
-                            <a
-                                href="#"
-                                className="text-white hover:text-white dark:hover:text-white"
-                            >
+                            <a href="#" className="text-white hover:text-white">
                                 <svg
                                     className="w-4 h-4"
                                     aria-hidden="true"
@@ -172,10 +163,7 @@ export default function Footer() {
                                 </svg>
                                 <span className="sr-only">Twitter page</span>
                             </a>
-                            <a
-                                href="#"
-                                className="text-white hover:text-white dark:hover:text-white"
-                            >
+                            <a href="#" className="text-white hover:text-white">
                                 <svg
                                     className="w-4 h-4"
                                     aria-hidden="true"
@@ -191,10 +179,7 @@ export default function Footer() {
                                 </svg>
                                 <span className="sr-only">GitHub account</span>
                             </a>
-                            <a
-                                href="#"
-                                className="text-white hover:text-white dark:hover:text-white"
-                            >
+                            <a href="#" className="text-white hover:text-white">
                                 <svg
                                     className="w-4 h-4"
                                     aria-hidden="true"

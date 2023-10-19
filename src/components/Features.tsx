@@ -165,8 +165,8 @@ export default function Features() {
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
                                     <div className="md:mx-4">
-                                        <div className="grid place-items-center w-12 h-12 rounded-full my-3 bg-violet-50 dark:bg-blue-800">
-                                            <div className="text-violet-500 dark:text-violet-60">
+                                        <div className="grid place-items-center w-12 h-12 rounded-full my-3 bg-violet-50">
+                                            <div className="text-violet-500">
                                                 <svg
                                                     stroke="currentColor"
                                                     fill="currentColor"
@@ -180,7 +180,7 @@ export default function Features() {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <span className="text-violet-500 dark:text-violet-60 mb-3 inline-block font-medium md:font-semibold">
+                                        <span className="text-violet-500 mb-3 inline-block font-medium md:font-semibold">
                                             Se prepare para o trabalho
                                         </span>
                                         <h2 className="text-3xl">
@@ -212,8 +212,8 @@ export default function Features() {
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
                                     <div className="md:mx-4">
-                                        <div className="grid place-items-center w-12 h-12 rounded-full my-3 bg-pink-100 dark:bg-blue-800">
-                                            <div className="text-pink-75 dark:text-pink-530">
+                                        <div className="grid place-items-center w-12 h-12 rounded-full my-3 bg-pink-100">
+                                            <div className="text-pink-75">
                                                 <svg
                                                     stroke="currentColor"
                                                     fill="currentColor"
@@ -227,7 +227,7 @@ export default function Features() {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <span className="text-pink-75 dark:text-pink-530 mb-3 inline-block font-medium md:font-semibold">
+                                        <span className="text-pink-75 mb-3 inline-block font-medium md:font-semibold">
                                             Do iniciante ao Avançado
                                         </span>
                                         <h2 className="text-3xl">

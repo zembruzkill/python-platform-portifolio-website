@@ -5,8 +5,8 @@ export default function CourseFeatures() {
                 <div className="mx-auto max-w-6xl">
                     <div className="grid grid-cols-1 gap-8 p-3">
                         <div className="md:mx-4">
-                            <div className="grid place-items-center w-12 h-12 rounded-full my-3 bg-violet-50 dark:bg-blue-800">
-                                <div className="text-violet-500 dark:text-violet-60">
+                            <div className="grid place-items-center w-12 h-12 rounded-full my-3 bg-violet-50">
+                                <div className="text-violet-500">
                                     <svg
                                         stroke="currentColor"
                                         fill="none"
@@ -61,7 +61,7 @@ export default function CourseFeatures() {
                                     </svg>
                                 </div>
                             </div>
-                            <span className="text-violet-500 dark:text-violet-60 mb-3 inline-block font-medium md:font-semibold">
+                            <span className="text-violet-500 mb-3 inline-block font-medium md:font-semibold">
                                 Muita prática
                             </span>
                             <h2 className="text-3xl text-white">

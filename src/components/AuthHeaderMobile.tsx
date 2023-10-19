@@ -38,7 +38,7 @@ export default function AuthHeaderMobile() {
                     <Link
                         href="/sign-up"
                         type="button"
-                        className="inline-block rounded px-6 py-2 text-md font-semibold leading-6 bg-primary text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                        className="inline-block rounded px-6 py-2 text-md font-semibold leading-6 bg-primary text-[#172645] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]]"
                     >
                         Criar Conta Grátis
                     </Link>
@@ -57,7 +57,7 @@ export default function AuthHeaderMobile() {
                                     />
                                     {session?.user?.image ? (
                                         <img
-                                            className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+                                            className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300"
                                             src={session.user.image}
                                             alt="Bordered avatar"
                                         />
@@ -107,7 +107,7 @@ export default function AuthHeaderMobile() {
                                             <div className="flex gap-2 p-4 bg-primary items-center">
                                                 {session?.user?.image ? (
                                                     <img
-                                                        className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+                                                        className="w-11 h-11 p-1 rounded-full ring-2 ring-gray-300"
                                                         src={session.user.image}
                                                         alt="Bordered avatar"
                                                     />
@@ -160,7 +160,7 @@ export default function AuthHeaderMobile() {
                                                     </div>
                                                 </div>
                                             ))}
-                                            <hr className="my-1 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+                                            <hr className="my-1 h-0.5 border-t-0 bg-neutral-100 opacity-100" />
                                             <div className="flex gap-2 items-center">
                                                 <a
                                                     onClick={handleLogout}

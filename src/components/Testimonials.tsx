@@ -57,7 +57,7 @@ export default function Testimonials() {
             <div className="mx-auto max-w-6xl pb-12 p-4">
                 <section className="flex flex-col">
                     <header className="my-12 mb-6 text-center">
-                        <p className="font-medium my-4 text-violet-500 dark:text-violet-75 text-sm tracking-widest uppercase">
+                        <p className="font-medium my-4 text-violet-500 text-sm tracking-widest uppercase">
                             Testemunhos
                         </p>
                         <h2 className="text-white text-3xl">
@@ -138,7 +138,7 @@ export default function Testimonials() {
                                                         src={testimonial.avatar}
                                                     ></img>
                                                     <div>
-                                                        <div className="font-semibold text-gray-800 dark:text-white text-sm">
+                                                        <div className="font-semibold text-gray-800 text-sm">
                                                             {
                                                                 testimonial.student
                                                             }
