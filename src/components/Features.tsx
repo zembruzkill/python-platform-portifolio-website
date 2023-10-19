@@ -1,7 +1,7 @@
 export default function Features() {
     return (
         <>
-            <div className="relative overflow-hidden border-t-blue-600">
+            <div className="relative overflow-hidden border-t-blue-600 p-4">
                 <div className="absolute w-full bg-blue-300"></div>
                 <div className="relative">
                     <div className="flex flex-row justify-center">

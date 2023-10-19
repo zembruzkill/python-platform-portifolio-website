@@ -267,7 +267,7 @@ export default function CourseContent() {
 
     return (
         <>
-            <div className="bg-[#0D1224]">
+            <div className="bg-[#0D1224] p-2">
                 <div className="mx-auto max-w-6xl">
                     <div className="grid grid-cols-1 gap-8">
                         <div className="md:mx-4">

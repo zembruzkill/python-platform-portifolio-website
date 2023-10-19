@@ -1,7 +1,7 @@
 export default function CourseOffer() {
     return (
         <>
-            <div className="bg-[#0D1224] pb-12">
+            <div className="bg-[#0D1224] pb-12 p-2">
                 <div className="mx-auto max-w-6xl p-3">
                     <section
                         className="flex flex-col mb-10 my-5"
