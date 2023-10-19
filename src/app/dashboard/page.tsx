@@ -9,8 +9,12 @@ export default async function Dashboard() {
 
     return (
         <div>
-            <Header items={true} />
-            <h1 className="">Dashboard</h1>
+            <div className="bg-[#0D1224] pb-16">
+                <div className="bg-grid-background">
+                    <Header items={true} />
+                    <h1 className="text-white">Dashboard</h1>
+                </div>
+            </div>
         </div>
     )
 }
