@@ -8,7 +8,7 @@ export default function Iam() {
                             Olá,
                         </p>
                         <h2 className=" text-white text-3xl">
-                            Eu sou o Professor Luciano.
+                            Eu sou o Luciano.
                         </h2>
                     </header>
                     <div className="flex flex-col items-center text-zinc-100">

@@ -206,7 +206,7 @@ const ForgotPassword = () => {
                                 size={20}
                                 color="rgb(79 70 229)"
                             />
-                            <button className="pl-2 hover:text-indigo-600">
+                            <button className="pl-2 hover:text-indigo-600 text-white">
                                 Voltar ao Início
                             </button>
                         </div>

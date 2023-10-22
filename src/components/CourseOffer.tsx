@@ -58,7 +58,7 @@ export default function CourseOffer() {
                                             >
                                                 <div>
                                                     <span className="font-bold text-4xl text-pink-500">
-                                                        R$79,90/m
+                                                        R$99,90/m
                                                     </span>
                                                 </div>
                                                 <div className="uppercase text-sm font-medium tracking-wider text-white">
@@ -284,7 +284,7 @@ export default function CourseOffer() {
                                             >
                                                 <div>
                                                     <span className="font-bold text-4xl text-pink-500 ">
-                                                        R$397,90
+                                                        R$697,90
                                                     </span>
                                                 </div>
                                                 <div className="uppercase text-sm font-medium tracking-wider text-white">

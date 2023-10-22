@@ -19,8 +19,8 @@ export default function AuthHeader() {
 
     const profile_options = [
         { name: 'Dashboard', href: '/dashboard' },
-        { name: 'Meu Perfil', href: '/my-profile' },
-        { name: 'Pagamentos e Faturas', href: 'payment-billing' },
+        // { name: 'Meu Perfil', href: '/my-profile' },
+        // { name: 'Pagamentos e Faturas', href: 'payment-billing' },
     ]
 
     return (

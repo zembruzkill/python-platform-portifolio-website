@@ -52,7 +52,7 @@ export default function CourseHero() {
                                         role="button"
                                         href="#"
                                     >
-                                        Acesse todos os cursos por R$79,90/m
+                                        Acesse todos os cursos por R$99,90/m
                                     </a>
                                 </div>
                                 <div className="mt-4 flex items-center justify-center md:justify-start">
@@ -66,7 +66,7 @@ export default function CourseHero() {
                                         role="button"
                                         href="#"
                                     >
-                                        Compre esse curso por R$397,90
+                                        Compre esse curso por R$697,90
                                     </a>
                                 </div>
                             </div>
