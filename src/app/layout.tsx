@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { Analytics } from '@vercel/analytics/react'
-import Provider from '@/components/Provider'
+import Providers from '@/components/Providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'Curso Python Pro',
-    description: 'Seu Portal Para o Mundo Python',
+    title: 'Nutrição para Todos',
+    description: 'Alimentação inteligente para uma vida saudável.',
 }
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <Provider>{children}</Provider>
+                <Providers>{children}</Providers>
             </body>
             <Analytics />
         </html>

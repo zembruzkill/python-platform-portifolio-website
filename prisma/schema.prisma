@@ -49,6 +49,53 @@ model User {
   sessions       Session[]
 }
 
+model Module {
+  id             String   @id @default(cuid())
+  title          String
+  is_public      Boolean  @default(false)
+  total_lessons  Int
+  total_duration Int
+  description    String
+  course         Course   @relation(fields: [courseId], references: [id])
+  courseId       String
+  Lesson         Lesson[]
+}
+
+model Lesson {
+  id              String  @id @default(cuid())
+  title           String
+  description     String
+  is_public       Boolean @default(false)
+  liberation_days Int
+  liberation_type String
+  page_order      Int
+  duration        Int
+  auto_play       Boolean @default(true)
+  slug            String  @unique
+  modules         Module  @relation(fields: [moduleId], references: [id])
+  moduleId        String
+  type            String
+  content         String
+}
+
+model Category {
+  id     String   @id @default(cuid())
+  name   String
+  Course Course[]
+}
+
+model Course {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  slug        String   @unique
+  popularity  Int      @default(0)
+  level       String
+  Module      Module[]
+  categories  Category @relation(fields: [categoryId], references: [id])
+  categoryId  String
+}
+
 model VerificationToken {
   identifier String
   token      String   @unique

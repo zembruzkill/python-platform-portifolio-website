@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     const data = await request.json()
 
     if (data) {
-        console.log('Received data from Hotmart: ')
+        console.log('Received data from Kiwify: ')
     }
 
     return NextResponse.json({ status: 201 })

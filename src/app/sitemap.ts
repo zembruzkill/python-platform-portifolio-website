@@ -3,25 +3,25 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: 'https://cursopython.pro',
+            url: 'https://nutrionline.store',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,
         },
         {
-            url: 'https://cursopython.pro/courses',
+            url: 'https://nutrionline.store/courses',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: 'https://cursopython.pro/pricing',
+            url: 'https://nutrionline.store/pricing',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.5,
         },
         {
-            url: 'https://cursopython.pro/blog',
+            url: 'https://nutrionline.store/blog',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,

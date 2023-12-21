@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: 'Curso Python Pro',
-        short_name: 'CursoPython.pro',
-        description: 'Seu Portal Para o Mundo Python',
+        name: 'Nutrição para Todos',
+        short_name: 'Nutri Online',
+        description: 'Alimentação inteligente para uma vida saudável.',
         start_url: '/',
         display: 'standalone',
         background_color: '#fff',

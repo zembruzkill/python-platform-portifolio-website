@@ -51,22 +51,16 @@ export default function Header(props: any) {
                         </div>
                         <div className="hidden lg:flex lg:gap-x-12">
                             <Link
-                                href="/courses"
+                                href="/dietas"
                                 className="text-md font-semibold leading-6 text-white hover:text-primary"
                             >
-                                Cursos
+                                Dietas
                             </Link>
                             <Link
-                                href="/pricing"
+                                href="/treinos"
                                 className="text-md font-semibold leading-6 text-white hover:text-primary"
                             >
-                                Preços
-                            </Link>
-                            <Link
-                                href="/blog"
-                                className="text-md font-semibold leading-6 text-white hover:text-primary"
-                            >
-                                Blog
+                                Treinos
                             </Link>
                         </div>
                         <AuthHeader />
@@ -111,22 +105,16 @@ export default function Header(props: any) {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 <Link
-                                    href="/courses"
+                                    href="/dietas"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
                                 >
-                                    Cursos
+                                    Dietas
                                 </Link>
                                 <Link
-                                    href="/pricing"
+                                    href="/treinos"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
                                 >
-                                    Preços
-                                </Link>
-                                <Link
-                                    href="/blog"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-primary"
-                                >
-                                    Blog
+                                    Treinos
                                 </Link>
                             </div>
                             <AuthHeaderMobile />

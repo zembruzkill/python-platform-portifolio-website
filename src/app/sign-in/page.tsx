@@ -24,6 +24,7 @@ export default function SignIn() {
     })
 
     const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState('')
 
     async function onSubmit(event: React.SyntheticEvent) {
         event.preventDefault()
@@ -53,7 +54,7 @@ export default function SignIn() {
 
     const { data: session } = useSession()
 
-    if (session) return redirect('/dashboard')
+    if (session) return redirect('/')
 
     return (
         <div className="bg-[#0D1224] min-h-screen">
@@ -288,6 +289,13 @@ export default function SignIn() {
                         </label>
                       </div> */}
                                         </div>
+
+                                        {error && (
+                                            <p className="text-[#EB4335] text-center pb-4 font-bold">
+                                                {' '}
+                                                {error}
+                                            </p>
+                                        )}
 
                                         <div className="mb-5">
                                             <input

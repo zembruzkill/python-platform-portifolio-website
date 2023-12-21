@@ -1,12 +1,13 @@
 import type { Config } from 'tailwindcss'
 const defaultTheme = require('tailwindcss/defaultTheme')
+const { nextui } = require('@nextui-org/react')
 
 const config: Config = {
-    mode: 'jit',
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+        './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
         fontFamily: {
@@ -41,7 +42,7 @@ const config: Config = {
                 'meta-2': '#EFF2F7',
                 'meta-3': '#10B981',
                 'meta-4': '#313D4A',
-                'meta-5': '#259AE6',
+                meta: '#259AE6',
                 'meta-6': '#FFBA00',
                 'meta-7': '#FF6766',
                 'meta-8': '#F0950C',
@@ -262,9 +263,7 @@ const config: Config = {
             },
         },
     },
-    plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/typography'),
-    ],
+    darkMode: 'class',
+    plugins: [require('@tailwindcss/typography'), nextui()],
 }
 export default config

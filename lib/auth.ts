@@ -1,16 +1,19 @@
-import type { GetServerSidePropsContext, NextApiRequest, NextApiResponse } from "next"
-import type { NextAuthOptions } from "next-auth"
-import { getServerSession } from "next-auth"
+import type {
+    GetServerSidePropsContext,
+    NextApiRequest,
+    NextApiResponse,
+} from 'next'
+import type { NextAuthOptions } from 'next-auth'
+import { getServerSession } from 'next-auth'
 
-import { PrismaAdapter } from "@auth/prisma-adapter";
+import { PrismaAdapter } from '@auth/prisma-adapter'
 
-import Google from "next-auth/providers/google"
-import GitHub from "next-auth/providers/github"
-import CredentialsProvider from "next-auth/providers/credentials"
-import { redirect } from "next/navigation"
-import { db } from "./db";
+import Google from 'next-auth/providers/google'
+import CredentialsProvider from 'next-auth/providers/credentials'
+import { redirect } from 'next/navigation'
+import { db } from './db'
 
-import bcrypt from "bcrypt";
+import bcrypt from 'bcrypt'
 
 export const config: NextAuthOptions = {
     adapter: PrismaAdapter(db as any),
@@ -24,73 +27,82 @@ export const config: NextAuthOptions = {
             // e.g. domain, username, password, 2FA token, etc.
             // You can pass any HTML attribute to the <input> tag through the object.
             credentials: {
-              email: { label: "Email", type: "text", placeholder: "email@email.com.br" },
-              password: { label: "Password", type: "password" }
+                email: {
+                    label: 'Email',
+                    type: 'text',
+                    placeholder: 'email@email.com.br',
+                },
+                password: { label: 'Password', type: 'password' },
             },
-            async authorize(credentials, req) : Promise<any>{
-              // You need to provide your own logic here that takes the credentials
-              // submitted and returns either a object representing a user or value
-              // that is false/null if the credentials are invalid.
-              // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
-              // You can also use the `req` object to obtain additional parameters
-              // (i.e., the request IP address)
-              console.log('Authorize method: ',credentials)
+            async authorize(credentials, req): Promise<any> {
+                // You need to provide your own logic here that takes the credentials
+                // submitted and returns either a object representing a user or value
+                // that is false/null if the credentials are invalid.
+                // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
+                // You can also use the `req` object to obtain additional parameters
+                // (i.e., the request IP address)
+                console.log('Authorize method: ', credentials)
 
-              if (!credentials?.email || !credentials.password) throw new Error("Missing credentials");
+                if (!credentials?.email || !credentials.password)
+                    throw new Error('Credenciais inválidas.')
 
-              const user = await db.user.findUnique({
-                where: {
-                  email: credentials.email
+                const user = await db.user.findUnique({
+                    where: {
+                        email: credentials.email,
+                    },
+                })
+
+                if (!user || !user.hashedPassword) {
+                    throw new Error('Usuário cadstrado pelo Google.')
                 }
-              })
 
-              if (!user || !user.hashedPassword){
-                throw new Error("User not registered through credentials");
-              } 
+                const isPasswordValid = await bcrypt.compare(
+                    credentials.password,
+                    user.hashedPassword
+                )
 
-              const isPasswordValid = await bcrypt.compare(credentials.password, user.hashedPassword)
+                if (!isPasswordValid) {
+                    throw new Error('Senha inválida.')
+                }
 
-              if (!isPasswordValid) {
-                throw new Error("Invalid password");
-              }
-
-              return user
-            }
-          }),
-        GitHub({
-            clientId: process.env.AUTH_GITHUB_ID as string,
-            clientSecret: process.env.AUTH_GITHUB_SECRET as string
+                return user
+            },
         }),
         Google({
             clientId: process.env.AUTH_GOOGLE_ID as string,
-            clientSecret: process.env.AUTH_GOOGLE_SECRET as string
+            clientSecret: process.env.AUTH_GOOGLE_SECRET as string,
         }),
     ],
     pages: {
-        signIn: "/sign-in"
+        signIn: '/sign-in',
     },
     session: {
-      strategy: "jwt",
+        strategy: 'jwt',
     },
     secret: process.env.NEXTAUTH_SECRET,
-    debug: process.env.NODE_ENV === "development",
+    debug: process.env.NODE_ENV === 'development',
 }
 
 // Helper function to get session without passing config every time
 // https://next-auth.js.org/configuration/nextjs#getserversession
-export function auth(...args: [GetServerSidePropsContext["req"], GetServerSidePropsContext["res"]] | [NextApiRequest, NextApiResponse] | []) {
+export function auth(
+    ...args:
+        | [GetServerSidePropsContext['req'], GetServerSidePropsContext['res']]
+        | [NextApiRequest, NextApiResponse]
+        | []
+) {
     return getServerSession(...args, config)
 }
 
 // export function loginIsRequiredClientSide() {
 //     if (typeof window === "undefined") {
-//         const session = useSession() 
+//         const session = useSession()
 //     }
 // }
 
 export async function loginIsRequiredClientSide() {
-    const session = await getServerSession(config);
+    const session = await getServerSession(config)
     if (!session) {
-        return redirect("/sign-in");
+        return redirect('/sign-in')
     }
 }
