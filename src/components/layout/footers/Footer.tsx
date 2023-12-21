@@ -19,8 +19,8 @@ export default function Footer() {
                 id="blur"
                 className="absolute w-full bg-gradient-to-r from-transparent via-violet-900 to-transparent h-1"
             ></div>
-            <footer className="bg-[#F5CA2A] pt-8">
-                {/* <FloatingWhatsApp
+            <footer className="bg-[#0D1224] pt-8">
+                <FloatingWhatsApp
                     phoneNumber="+5551995475558"
                     accountName="Luciano"
                     statusMessage="Usualmente responde em 1 hora!"
@@ -31,7 +31,7 @@ export default function Footer() {
                     allowEsc
                     notification
                     notificationSound
-                /> */}
+                />
                 <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div className="md:flex md:justify-between">
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

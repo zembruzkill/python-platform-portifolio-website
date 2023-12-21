@@ -26,7 +26,6 @@ export default function SignUp() {
     const router = useRouter()
 
     const [isLoading, setIsLoading] = useState(false)
-    const [error, setError] = useState('')
 
     async function onSubmit(event: React.SyntheticEvent) {
         event.preventDefault()
@@ -49,7 +48,7 @@ export default function SignUp() {
         const response = await request.json()
 
         if (response.error) {
-            setError(response.error)
+            console.log(response)
         } else {
             router.push('/sign-in')
         }
@@ -68,7 +67,7 @@ export default function SignUp() {
 
     const { data: session } = useSession()
 
-    if (session) router.push('/')
+    if (session) router.push('/dashboard')
 
     return (
         <div className="bg-[#0D1224] min-h-screen">
@@ -311,16 +310,10 @@ export default function SignUp() {
                                             </div>
                                         </div>
 
-                                        {error && (
-                                            <p className="text-[#EB4335] text-center pb-4 font-bold">
-                                                {' '}
-                                                {error}
-                                            </p>
-                                        )}
                                         <div className="mb-5">
                                             <input
                                                 type="submit"
-                                                value="Criar conta"
+                                                value="Criar conta grátis"
                                                 className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 font-bold text-black transition hover:bg-opacity-60"
                                             />
                                         </div>

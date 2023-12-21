@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/dashboard/*', '/api/*', '/auth/*'],
         },
-        sitemap: 'https://nutrionline.store/sitemap.xml',
+        sitemap: 'https://cursopython.pro/sitemap.xml',
     }
 }

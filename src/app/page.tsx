@@ -1,12 +1,12 @@
-import Hero from '@/components/NutriForm'
+import Hero from '@/components/Hero'
 
 import Header from '../components/layout/headers/Header'
 import Footer from '@/components/layout/footers/Footer'
 import Iam from '@/components/Iam'
 
 export const metadata = {
-    title: 'Nutrição para Todos',
-    description: 'Alimentação inteligente para uma vida saudável.',
+    title: 'Curso Python Online | CursoPython.pro',
+    description: 'Seu Portal Para o Mundo Python',
 }
 
 export default function HomePage() {
@@ -15,6 +15,7 @@ export default function HomePage() {
             {/* <Header /> */}
             <div>
                 <Hero />
+                <Footer />
             </div>
         </>
     )
