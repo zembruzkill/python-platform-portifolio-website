@@ -1,7 +1,3 @@
-Here's the README translated into English:
-
----
-
 # Python Programming Courses Portal (Fictitious)
 
 Welcome to the repository of our Python programming courses portal! This fictitious project was developed using React.js with Next.js to provide a fast and efficient development experience. Our portal aims to fictitiously provide a platform for delivering high-quality Python programming courses to a wide range of users, from beginners to experienced programmers seeking improvement.
